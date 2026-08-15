@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T22:22:40.115Z",
+  "updatedAt": "2026-08-15T22:27:02.450Z",
   "stories": [
     {
       "id": "eb1cb13c",
@@ -15,15 +15,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T22:02:49.000Z",
-      "age": "19 minutes ago",
-      "ageMinutes": 20,
+      "age": "24 minutes ago",
+      "ageMinutes": 24,
       "category": "USA",
       "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T22:22:39.228Z",
+      "fetchedAt": "2026-08-15T22:27:00.934Z",
       "finalScore": 119
     },
     {
@@ -2052,14 +2052,14 @@
       "videoAvailable": false,
       "publishedAt": "2026-08-15T13:00:56.000Z",
       "age": "9 hours ago",
-      "ageMinutes": 562,
+      "ageMinutes": 566,
       "category": "World",
       "importance": 58,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T22:22:39.254Z",
+      "fetchedAt": "2026-08-15T22:27:00.958Z",
       "finalScore": 85
     },
     {
@@ -2607,14 +2607,14 @@
       "videoAvailable": false,
       "publishedAt": "2026-08-15T11:00:54.000Z",
       "age": "11 hours ago",
-      "ageMinutes": 682,
+      "ageMinutes": 686,
       "category": "China",
       "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T22:22:39.229Z",
+      "fetchedAt": "2026-08-15T22:27:00.935Z",
       "finalScore": 87
     },
     {
@@ -2647,6 +2647,31 @@
         "Euronews"
       ],
       "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
+      "id": "8e0394f3",
+      "title": "Ukraine strikes Russian aerospace facility and MiG-31 base in overnight attacks",
+      "description": "Europe News: Ukraine said on Saturday that its forces carried out strikes on two Russian military-related targets, including a rocket and space centre in Samara an.",
+      "source": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/europe/ukraine-strikes-russian-aerospace-facility-and-mig-31-base-in-overnight-attacks/articleshow/133260276.cms",
+      "imageUrl": "https://static.toiimg.com/thumb/msid-133260454,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "imageSource": "Times of India",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://static.toiimg.com/thumb/msid-133260454,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T10:23:00.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 724,
+      "category": "Russia-Ukraine",
+      "importance": 65,
+      "verified": false,
+      "sources": [
+        "Times of India"
+      ],
+      "fetchedAt": "2026-08-15T22:27:00.931Z",
+      "finalScore": 76
     },
     {
       "id": "4d5ac0fb",
@@ -2904,6 +2929,81 @@
       "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
+      "id": "fffe636b",
+      "title": "Manchester Airport flight forced to make emergency landing 3,500 miles away",
+      "description": "The Beijing to Manchester flight was forced to land in Siberia, in Russia",
+      "source": "Manchester Evening News",
+      "url": "https://www.manchestereveningnews.co.uk/news/greater-manchester-news/manchester-airport-flight-forced-make-34464101",
+      "imageUrl": "https://i2-prod.manchestereveningnews.co.uk/article30204124.ece/ALTERNATES/s1200d/0_First-passenger-flights-between-mainland-China-and-regional-UK-airport.jpg",
+      "imageSource": "Manchester Evening News",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://i2-prod.manchestereveningnews.co.uk/article30204124.ece/ALTERNATES/s1200d/0_First-passenger-flights-between-mainland-China-and-regional-UK-airport.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T09:34:25.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 773,
+      "category": "China",
+      "importance": 40,
+      "verified": false,
+      "sources": [
+        "Manchester Evening News"
+      ],
+      "fetchedAt": "2026-08-15T22:27:00.933Z",
+      "finalScore": 51
+    },
+    {
+      "id": "7ef3132e",
+      "title": "Russian Forces Secure Control over Multiple Ukrainian Settlements",
+      "description": "Russian troops have captured 19 settlements in the Dnipropetrovsk and Zaporizhzhia regions of southeastern Ukraine, according to a statement from the Russian defense ministry. While independent verification is pending, Russian advances appear to have slowed despite intensified strikes on Ukrainian cities. Ukrainian President Zelenskyy reports significant territorial gains this year.",
+      "source": "Devdiscourse",
+      "url": "https://www.devdiscourse.com/article/politics/3964229-russian-forces-secure-control-over-multiple-ukrainian-settlements",
+      "imageUrl": "https://www.devdiscourse.com/img?imageUrl=https://devdiscourse.blob.core.windows.net/aiimagegallery/04_09_2025_12_34_14_1483954.png&width=920&format=jpeg",
+      "imageSource": "Devdiscourse",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://www.devdiscourse.com/img?imageUrl=https://devdiscourse.blob.core.windows.net/aiimagegallery/04_09_2025_12_34_14_1483954.png&width=920&format=jpeg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T09:30:12.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 777,
+      "category": "Russia-Ukraine",
+      "importance": 60,
+      "verified": false,
+      "sources": [
+        "Devdiscourse"
+      ],
+      "fetchedAt": "2026-08-15T22:27:00.933Z",
+      "finalScore": 71
+    },
+    {
+      "id": "6ab28a9e",
+      "title": "Letters - Dallas Stars, Big Bend, wars, Dallas Cowboys",
+      "description": "Readers ask about the Dallas Stars move, are outraged about Big Bend and military deportations, criticize Trump and Putin and remain loyal to the Cowboys.",
+      "source": "The Dallas Morning News",
+      "url": "https://www.dallasnews.com/opinion/letters-to-the-editor/article/dallas-stars-plano-big-bend-dallas-cowboys-22386960.php",
+      "imageUrl": "https://s.hdnux.com/photos/01/66/62/36/31139738/3/rawImage.jpg",
+      "imageSource": "The Dallas Morning News",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://s.hdnux.com/photos/01/66/62/36/31139738/3/rawImage.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T09:30:00.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 777,
+      "category": "USA",
+      "importance": 50,
+      "verified": false,
+      "sources": [
+        "The Dallas Morning News"
+      ],
+      "fetchedAt": "2026-08-15T22:27:00.934Z",
+      "finalScore": 61
+    },
+    {
       "id": "3b66eeab",
       "title": "Watch: Chaos as powerful earthquake hits Indonesia",
       "description": "A powerful 7.7-magnitude earthquake struck off Indonesia, damaging buildings and sending people running for safety as the shaking was caught on camera in Maumere.",
@@ -3100,14 +3200,14 @@
       "videoAvailable": false,
       "publishedAt": "2026-08-15T01:53:30.000Z",
       "age": "20 hours ago",
-      "ageMinutes": 1229,
+      "ageMinutes": 1234,
       "category": "Russia-Ukraine",
       "importance": 85,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T22:22:39.235Z",
+      "fetchedAt": "2026-08-15T22:27:00.939Z",
       "finalScore": 104
     },
     {

@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-08-15T22:22:45.381Z",
+  "updatedAt": "2026-08-15T22:27:17.071Z",
   "posts": [
+    {
+      "id": "dff1bc2cd35519d9d14e52b8",
+      "storyId": "8e0394f3",
+      "post": "Ukrainian forces targeted two military sites in Russia during overnight attacks, hitting a rocket and space center in Samara alongside a MiG-31 base, according to the Times of India.",
+      "source": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/europe/ukraine-strikes-russian-aerospace-facility-and-mig-31-base-in-overnight-attacks/articleshow/133260276.cms",
+      "category": "Russia-Ukraine",
+      "importance": 65,
+      "verified": false,
+      "publishedAt": "2026-08-15T10:23:00.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 724,
+      "imageAvailable": true,
+      "imageUrl": "https://static.toiimg.com/thumb/msid-133260454,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "imageDownloadUrl": "https://static.toiimg.com/thumb/msid-133260454,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "imageSource": "Times of India",
+      "videoAvailable": false,
+      "videoUrl": null,
+      "videoSource": null,
+      "sources": [
+        "Times of India"
+      ],
+      "createdAt": "2026-08-15T22:27:17.070Z",
+      "ready": true
+    },
+    {
+      "id": "2774334452598328c085dc31",
+      "storyId": "7ef3132e",
+      "post": "Russia's defense ministry claims its forces took control of 19 settlements in Ukraine's Dnipropetrovsk and Zaporizhzhia regions, though Russian advances have slowed despite heavy strikes.",
+      "source": "Devdiscourse",
+      "url": "https://www.devdiscourse.com/article/politics/3964229-russian-forces-secure-control-over-multiple-ukrainian-settlements",
+      "category": "Russia-Ukraine",
+      "importance": 60,
+      "verified": false,
+      "publishedAt": "2026-08-15T09:30:12.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 777,
+      "imageAvailable": true,
+      "imageUrl": "https://www.devdiscourse.com/img?imageUrl=https://devdiscourse.blob.core.windows.net/aiimagegallery/04_09_2025_12_34_14_1483954.png&width=920&format=jpeg",
+      "imageDownloadUrl": "https://www.devdiscourse.com/img?imageUrl=https://devdiscourse.blob.core.windows.net/aiimagegallery/04_09_2025_12_34_14_1483954.png&width=920&format=jpeg",
+      "imageSource": "Devdiscourse",
+      "videoAvailable": false,
+      "videoUrl": null,
+      "videoSource": null,
+      "sources": [
+        "Devdiscourse"
+      ],
+      "createdAt": "2026-08-15T22:27:17.070Z",
+      "ready": true
+    },
     {
       "id": "bd6d18de97b2b4e5676234f5",
       "storyId": "eb1cb13c",
