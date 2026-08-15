@@ -1,180 +1,278 @@
-const GEMINI_MODEL = "gemini-3.6-flash";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-async function callGemini(prompt) {
-  const apiKey = process.env.GEMINI_API_KEY;
+const MODEL = "gemini-2.5-flash";
 
-  if (!apiKey) {
-    throw new Error("GEMINI_API_KEY is not configured");
-  }
-
-  const url =
-    `https://generativelanguage.googleapis.com/v1beta/models/` +
-    `${GEMINI_MODEL}:generateContent?key=${encodeURIComponent(apiKey)}`;
-
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      contents: [
-        {
-          parts: [
-            {
-              text: prompt
-            }
-          ]
-        }
-      ],
-      generationConfig: {
-        maxOutputTokens: 2048
-      }
-    })
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-
-    throw new Error(
-      `Gemini API error ${response.status}: ${errorText}`
-    );
-  }
-
-  const data = await response.json();
-
-  const text = data.candidates?.[0]?.content?.parts
-    ?.map((part) => part.text || "")
-    .join("")
-    .trim();
-
+function cleanJsonText(text) {
   if (!text) {
-    throw new Error("Gemini returned an empty response");
+    return "";
   }
 
-  return text;
-}
+  let value = String(text).trim();
 
-function extractJson(text) {
-  const cleaned = text
+  value = value
     .replace(/^```json\s*/i, "")
     .replace(/^```\s*/i, "")
     .replace(/\s*```$/i, "")
     .trim();
 
-  try {
-    return JSON.parse(cleaned);
-  } catch {
-    const start = cleaned.indexOf("[");
-    const end = cleaned.lastIndexOf("]");
+  const firstArray = value.indexOf("[");
+  const lastArray = value.lastIndexOf("]");
 
-    if (start === -1 || end === -1 || end <= start) {
-      throw new Error("Gemini did not return valid JSON");
-    }
-
-    return JSON.parse(cleaned.slice(start, end + 1));
+  if (
+    firstArray !== -1 &&
+    lastArray !== -1 &&
+    lastArray > firstArray
+  ) {
+    value = value.slice(
+      firstArray,
+      lastArray + 1
+    );
   }
+
+  return value.trim();
+}
+
+function getResponseText(data) {
+  return (
+    data?.candidates?.[0]?.content?.parts
+      ?.map(part => part?.text || "")
+      .join("") ||
+    ""
+  );
+}
+
+function validatePosts(posts, stories) {
+  if (!Array.isArray(posts)) {
+    return [];
+  }
+
+  const storyIds = new Set(
+    stories.map(story => String(story.id))
+  );
+
+  return posts
+    .map(item => ({
+      storyId: String(
+        item?.storyId || ""
+      ),
+      post: String(
+        item?.post || ""
+      ).trim()
+    }))
+    .filter(item => {
+      if (!item.storyId) {
+        return false;
+      }
+
+      if (!storyIds.has(item.storyId)) {
+        return false;
+      }
+
+      if (!item.post) {
+        return false;
+      }
+
+      return true;
+    });
 }
 
 export async function generatePosts(stories) {
-  if (!Array.isArray(stories) || stories.length === 0) {
+  if (!GEMINI_API_KEY) {
+    throw new Error(
+      "GEMINI_API_KEY is not configured."
+    );
+  }
+
+  if (!Array.isArray(stories)) {
+    throw new Error(
+      "Stories must be an array."
+    );
+  }
+
+  if (stories.length === 0) {
     return [];
   }
 
-  const storyData = stories.map((story) => ({
-    id: story.id,
-    title: story.title,
-    description: story.description || "",
-    source: story.source || "",
-    category: story.category || "",
-    url: story.url || ""
-  }));
+  const selectedStories =
+    stories.slice(0, 12);
+
+  const compactStories =
+    selectedStories.map(story => ({
+      storyId: String(story.id),
+      title: story.title,
+      description:
+        story.description || "",
+      source:
+        story.source || "Unknown",
+      publishedAt:
+        story.publishedAt || "",
+      category:
+        story.category || "World",
+      importance:
+        story.importance || 0,
+      url:
+        story.url || ""
+    }));
 
   const prompt = `
-You are an expert X/Twitter content writer.
+You are an expert X/Twitter news writer.
 
-Create one high-quality X post for every news story below.
-
-Rules:
-- Write in natural English.
-- Make each post informative and engaging.
-- Do not invent facts.
-- Do not use hashtags.
-- Do not use emojis.
-- Keep each post concise.
-- Do not mention that AI generated the post.
-- Preserve the story ID exactly.
-- Return ONLY valid JSON.
-- Return an array.
-- Each item must contain exactly these fields:
-  storyId
-  post
-
-News stories:
-
-${JSON.stringify(storyData, null, 2)}
-`;
-
-  const text = await callGemini(prompt);
-  const result = extractJson(text);
-
-  if (!Array.isArray(result)) {
-    throw new Error("Gemini posts response is not an array");
-  }
-
-  return result
-    .filter(
-      (item) =>
-        item &&
-        typeof item.storyId === "string" &&
-        typeof item.post === "string" &&
-        item.post.trim().length > 0
-    )
-    .map((item) => ({
-      storyId: item.storyId,
-      post: item.post.trim()
-    }));
-}
-
-export async function generateReplies(posts) {
-  if (!Array.isArray(posts) || posts.length === 0) {
-    return [];
-  }
-
-  const prompt = `
-Create one short, useful reply for each X post below.
+Create ONE original X post for each news story below.
 
 Rules:
-- Natural English.
-- No hashtags.
-- No emojis.
-- Do not spam.
-- Do not make unsupported claims.
-- Return ONLY valid JSON.
-- Each item must contain:
-  postId
-  reply
 
-Posts:
+1. Return ONLY valid JSON.
+2. Return a JSON array.
+3. Every object must contain exactly:
+   "storyId"
+   "post"
+4. storyId must exactly match the supplied storyId.
+5. Do not invent facts.
+6. Use only information contained in the supplied story.
+7. Keep each post concise and natural.
+8. Write for X/Twitter.
+9. Do not use hashtags.
+10. Do not use emojis.
+11. Do not write "breaking" unless the story clearly indicates it.
+12. Do not copy the article description word for word.
+13. Rewrite the information in original wording.
+14. Do not include the article URL inside the post.
+15. Mention the source when useful.
+16. Do not create multiple posts for one story.
+17. Do not add explanations outside the JSON array.
 
-${JSON.stringify(posts, null, 2)}
+Stories:
+
+${JSON.stringify(
+  compactStories,
+  null,
+  2
+)}
 `;
 
-  const text = await callGemini(prompt);
-  const result = extractJson(text);
+  const url =
+    "https://generativelanguage.googleapis.com/v1beta/" +
+    `models/${MODEL}:generateContent`;
 
-  if (!Array.isArray(result)) {
-    throw new Error("Gemini replies response is not an array");
+  const body = {
+    contents: [
+      {
+        role: "user",
+        parts: [
+          {
+            text: prompt
+          }
+        ]
+      }
+    ],
+
+    generationConfig: {
+      temperature: 0.4,
+      responseMimeType:
+        "application/json",
+
+      responseSchema: {
+        type: "array",
+
+        items: {
+          type: "object",
+
+          properties: {
+            storyId: {
+              type: "string"
+            },
+
+            post: {
+              type: "string"
+            }
+          },
+
+          required: [
+            "storyId",
+            "post"
+          ]
+        }
+      }
+    }
+  };
+
+  let response;
+
+  try {
+    response = await fetch(url, {
+      method: "POST",
+
+      headers: {
+        "Content-Type":
+          "application/json",
+
+        "x-goog-api-key":
+          GEMINI_API_KEY
+      },
+
+      body: JSON.stringify(body)
+    });
+  } catch (error) {
+    throw new Error(
+      `Gemini network request failed: ${error.message}`
+    );
   }
 
-  return result
-    .filter(
-      (item) =>
-        item &&
-        typeof item.postId === "string" &&
-        typeof item.reply === "string"
-    )
-    .map((item) => ({
-      postId: item.postId,
-      reply: item.reply.trim()
-    }));
+  const data =
+    await response.json();
+
+  if (!response.ok) {
+    const message =
+      data?.error?.message ||
+      "Unknown Gemini API error.";
+
+    throw new Error(
+      `Gemini API error ${response.status}: ${message}`
+    );
+  }
+
+  const text =
+    getResponseText(data);
+
+  if (!text) {
+    const reason =
+      data?.candidates?.[0]?.finishReason ||
+      data?.promptFeedback?.blockReason ||
+      "No response text";
+
+    throw new Error(
+      `Gemini returned no text. Reason: ${reason}`
+    );
+  }
+
+  let parsed;
+
+  try {
+    parsed = JSON.parse(
+      cleanJsonText(text)
+    );
+  } catch (error) {
+    console.error(
+      "Gemini raw response:",
+      text
+    );
+
+    throw new Error(
+      "Gemini returned invalid JSON."
+    );
+  }
+
+  const posts =
+    validatePosts(
+      parsed,
+      selectedStories
+    );
+
+  if (posts.length === 0) {
+    throw new Error(
+      "Gemini returned JSON, but no valid posts were found."
+    );
+  }
+
+  return posts;
 }
