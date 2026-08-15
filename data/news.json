@@ -1,628 +1,125 @@
 {
-  "updatedAt": "2026-08-15T22:53:46.940Z",
+  "updatedAt": "2026-08-15T23:11:15.058Z",
   "stories": [
     {
-      "id": "eb1cb13c",
+      "id": "663828b0",
+      "title": "Australia news live: Pauline Hanson opposes major gun buyback agreed in wake of Bondi terror attack",
+      "description": "Follow live updates",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/live/2026/aug/16/politics-reactions-nsw-gun-buyback-anthony-albanese-labor-angus-taylor-coalition-pauline-hanson-one-nation-bird-flu-ntwnfb",
+      "category": "World",
+      "publishedAt": "2026-08-15T23:08:57.000Z",
+      "age": "1 minute ago",
+      "ageMinutes": 2,
+      "imageUrl": "https://media.guim.co.uk/504362984ed2fef2b8e6384eb71d24c8415d6514/360_230_2363_1890/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/504362984ed2fef2b8e6384eb71d24c8415d6514/360_230_2363_1890/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "importance": 91,
+      "fetchedAt": "2026-08-15T23:10:51.354Z"
+    },
+    {
+      "id": "88e71bf5",
+      "title": "Novak Djokovic suffers in Cincinnati heat as Thiago Agustín Tirante inflicts shock defeat",
+      "description": "Novak Djokovic toiled in the heat and humidity as he lost his opening game at the Cincinnati Masters to Argentina’s Thiago Agustín Tirante",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/sport/2026/aug/15/novak-djokovic-suffers-in-cincinnati-heat-as-thiago-agustin-tirante-inflicts-shock-defeat",
+      "category": "Middle East",
+      "publishedAt": "2026-08-15T22:35:21.000Z",
+      "age": "35 minutes ago",
+      "ageMinutes": 36,
+      "imageUrl": "https://media.guim.co.uk/1e643d95823d07c6ae0fef3a5f49ea937963f33e/494_0_3120_2496/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/1e643d95823d07c6ae0fef3a5f49ea937963f33e/494_0_3120_2496/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "importance": 93,
+      "fetchedAt": "2026-08-15T23:10:51.354Z"
+    },
+    {
+      "id": "a334bc3a",
       "title": "Trump shows off article on lower drug prices that says Biden deserves credit, not him",
       "description": "US president credits himself with lowest drug prices in 60 years, when article says drop is more likely due to Biden",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/us-news/2026/aug/15/trump-washington-post-drug-prices",
-      "imageUrl": "https://media.guim.co.uk/b5ec570afc2dee43bb60935bd60f1a08bb21d097/688_0_6880_5504/1000.jpg",
+      "category": "USA",
+      "publishedAt": "2026-08-15T22:02:49.000Z",
+      "age": "1 hour ago",
+      "ageMinutes": 68,
+      "imageUrl": "https://media.guim.co.uk/b5ec570afc2dee43bb60935bd60f1a08bb21d097/688_0_6880_5504/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
-      "imageDownloadUrl": "https://media.guim.co.uk/b5ec570afc2dee43bb60935bd60f1a08bb21d097/688_0_6880_5504/1000.jpg",
+      "imageDownloadUrl": "https://media.guim.co.uk/b5ec570afc2dee43bb60935bd60f1a08bb21d097/688_0_6880_5504/500.jpg",
       "videoUrl": null,
-      "videoSource": null,
       "videoAvailable": false,
-      "publishedAt": "2026-08-15T22:02:49.000Z",
-      "age": "50 minutes ago",
-      "ageMinutes": 51,
-      "category": "USA",
-      "importance": 60,
+      "videoSource": null,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T22:53:44.330Z",
-      "finalScore": 114
+      "importance": 85,
+      "fetchedAt": "2026-08-15T23:10:51.354Z"
     },
     {
-      "id": "2402178a",
+      "id": "2e7852a1",
       "title": "Borges and Me review – a sweetly imagined literary odyssey through the Highlands",
       "description": "Luis Gnecco brings warmth, wit and quiet melancholy to Jorge Luis Borges in this gently enchanting adaptation of Jay Parini’s semi-fictional memoir",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/film/2026/aug/15/borges-and-me-review-alan-cumming-fionn-whitehead",
-      "imageUrl": "https://media.guim.co.uk/6174a3a68033ab35b9bd61bd8650cf20b9b38884/0_0_4000_6000/667.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "imageDownloadUrl": "https://media.guim.co.uk/6174a3a68033ab35b9bd61bd8650cf20b9b38884/0_0_4000_6000/667.jpg",
-      "videoUrl": null,
-      "videoSource": null,
-      "videoAvailable": false,
+      "category": "World",
       "publishedAt": "2026-08-15T20:36:06.000Z",
-      "age": "1 hour ago",
-      "ageMinutes": 64,
-      "category": "World",
-      "importance": 76,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T21:40:31.644Z"
-    },
-    {
-      "id": "253b8cd0",
-      "title": "Canadian petition to expel US ambassador gains over 170,000 signatures",
-      "description": "The petition is set to be discussed by House of Commons in a sign of discontent with policies of US President Trump.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/8/15/canadian-petition-to-expel-us-ambassador-gains-over-170000-signatures?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T20:09:33.000Z",
-      "category": "USA",
-      "importance": 90,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.109Z"
-    },
-    {
-      "id": "49bf0697",
-      "title": "Monero (XMR) moved 3.70% in 24 hours",
-      "description": "Market cap: $7,742,759,877. 24h volume: $71,644,329.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/monero",
-      "imageUrl": "https://coin-images.coingecko.com/coins/images/69/large/monero_logo.png?1696501460",
-      "imageSource": "CoinGecko",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:09:13.657Z",
-      "age": "0 seconds ago",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "65038ef5",
-      "title": "Chainlink (LINK) moved 7.10% in 24 hours",
-      "description": "Market cap: $7,160,689,416. 24h volume: $504,974,989.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/chainlink",
-      "imageUrl": "https://coin-images.coingecko.com/coins/images/877/large/Chainlink_Logo_500.png?1760023405",
-      "imageSource": "CoinGecko",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:09:13.657Z",
-      "age": "0 seconds ago",
-      "category": "AI & Tech",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "8e334654",
-      "title": "Hyperliquid (HYPE) moved 3.10% in 24 hours",
-      "description": "Market cap: $12,719,010,283. 24h volume: $127,377,984.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/hyperliquid",
-      "imageUrl": "https://coin-images.coingecko.com/coins/images/50882/large/hyperliquid.jpg?1729431300",
-      "imageSource": "CoinGecko",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:09:13.656Z",
-      "age": "0 seconds ago",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "dc86528",
-      "title": "Moroccan Police Intercept Migrants Heading for Ceuta Enclave",
-      "description": "Security forces in Fnideq have stepped up operations to prevent migrants from crossing into Ceuta.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/moroccan-police-intercept-migrants-heading-for-ceuta-enclave?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T20:07:07.000Z",
-      "category": "World",
-      "importance": 80,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.109Z"
-    },
-    {
-      "id": "2ba8a58a",
-      "title": "The Midwest braces for more heavy flooding, as Indiana seeks federal aid",
-      "description": "Indiana, Illinois and surrounding states are preparing for another stretch of flooding through this weekend.",
-      "source": "NPR",
-      "url": "https://www.npr.org/2026/08/15/nx-s1-5932552/midwest-flooding-indiana-fema",
-      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x2000+0+0/resize/3000x2000!/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F3f%2F26%2F0f584d12440d84f472e564abd51d%2Fap26227676878406.jpg",
-      "publishedAt": "2026-08-15T20:04:13.000Z",
-      "category": "India",
-      "importance": 85,
-      "verified": true,
-      "sources": [
-        "NPR"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.122Z"
-    },
-    {
-      "id": "b02974b9",
-      "title": "Powerful magnitude 7.7 earthquake kills at least 47 in Indonesia",
-      "description": "A search and rescue operation is under way to find survivors in Flores, an island in eastern Indonesia.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbf0/live/97cf9550-9877-11f1-a7ab-8b30adf0800a.jpg",
-      "imageSource": "BBC News",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:00:15.000Z",
-      "age": "8 minutes ago",
-      "category": "World",
-      "importance": 55,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "7a775b0f",
-      "title": "Powerful magnitude 7.7 earthquake kills at least 47 in Indonesia",
-      "description": "A search and rescue operation is under way to find survivors in Flores, an island in eastern Indonesia.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbf0/live/97cf9550-9877-11f1-a7ab-8b30adf0800a.jpg",
-      "publishedAt": "2026-08-15T20:00:15.000Z",
-      "category": "World",
-      "importance": 85,
-      "verified": true,
-      "sources": [
-        "BBC News",
-        "BBC World"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.111Z"
-    },
-    {
-      "id": "52215939",
-      "title": "Labor is facing an insurgent One Nation. The path it takes on immigration will define its identity for years to come",
-      "description": "Labor has always had a divided soul over immigration. Now it faces a predicament as it looks to hold on to suburban and regional seats",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/australia-news/commentisfree/2026/aug/16/labor-is-facing-an-insurgent-one-nation-the-path-it-takes-on-immigration-will-define-its-identity-for-years-to-come",
-      "imageUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/500.jpg",
+      "age": "2 hours ago",
+      "ageMinutes": 155,
+      "imageUrl": "https://media.guim.co.uk/6174a3a68033ab35b9bd61bd8650cf20b9b38884/230_3331_3210_2568/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:00:08.000Z",
-      "age": "9 minutes ago",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "2d81d22b",
-      "title": "Labor is facing an insurgent One Nation. The path it takes on immigration will define its identity for years to come",
-      "description": "Labor has always had a divided soul over immigration. Now it faces a predicament as it looks to hold on to suburban and regional seats",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/australia-news/commentisfree/2026/aug/16/labor-is-facing-an-insurgent-one-nation-the-path-it-takes-on-immigration-will-define-its-identity-for-years-to-come",
-      "imageUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/140.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "imageDownloadUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/140.jpg",
+      "imageDownloadUrl": "https://media.guim.co.uk/6174a3a68033ab35b9bd61bd8650cf20b9b38884/230_3331_3210_2568/500.jpg",
       "videoUrl": null,
-      "videoSource": null,
       "videoAvailable": false,
-      "publishedAt": "2026-08-15T20:00:08.000Z",
-      "age": "1 hour ago",
-      "ageMinutes": 100,
-      "category": "World",
-      "importance": 76,
+      "videoSource": null,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T21:40:31.644Z"
+      "importance": 65,
+      "fetchedAt": "2026-08-15T23:10:51.354Z"
     },
     {
-      "id": "64e3ddfa",
-      "title": "Australia’s ‘pioneer’ colonists profited from slavery. That truth must be acknowledged | Paul Daley",
-      "description": "The veil is slowly being lifted on the forced or coerced migration – ‘blackbirding’ – of Pacific Islanders for labour",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/16/australia-pioneer-colonists-profited-slavery-blackbirding-ntwnfb",
-      "imageUrl": "https://media.guim.co.uk/bb76452283c44aa10effa33b985a96d613edcbae/188_0_5768_4617/500.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:00:07.000Z",
-      "age": "9 minutes ago",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "24c2a0d5",
-      "title": "Science or fiction? Shadowy ‘paper mills’ let you pay to be a published author – of fraudulent research",
-      "description": "Paper mill activity has exploded in recent years, polluting the scientific ecosystem with falsified data and compromising medical research",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/science/2026/aug/16/science-or-fiction-shadowy-paper-mills-let-you-pay-to-be-a-published-author-of-fraudulent-research",
-      "imageUrl": "https://media.guim.co.uk/c24b904cd92f04cf967365e94f8c56bb8eb039c0/0_0_5000_4000/500.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:00:07.000Z",
-      "age": "9 minutes ago",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "f6e44902",
-      "title": "Australia’s ‘pioneer’ colonists profited from slavery. That truth must be acknowledged | Paul Daley",
-      "description": "The veil is slowly being lifted on the forced or coerced migration – ‘blackbirding’ – of Pacific Islanders for labour",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/16/australia-pioneer-colonists-profited-slavery-blackbirding-ntwnfb",
-      "imageUrl": "https://media.guim.co.uk/bb76452283c44aa10effa33b985a96d613edcbae/188_0_5768_4617/500.jpg",
-      "publishedAt": "2026-08-15T20:00:07.000Z",
-      "category": "World",
-      "importance": 80,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.105Z"
-    },
-    {
-      "id": "1ce9a0f8",
-      "title": "Science or fiction? Shadowy ‘paper mills’ let you pay to be a published author – of fraudulent research",
-      "description": "Paper mill activity has exploded in recent years, polluting the scientific ecosystem with falsified data and compromising medical research",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/science/2026/aug/16/science-or-fiction-shadowy-paper-mills-let-you-pay-to-be-a-published-author-of-fraudulent-research",
-      "imageUrl": "https://media.guim.co.uk/c24b904cd92f04cf967365e94f8c56bb8eb039c0/0_0_5000_4000/500.jpg",
-      "publishedAt": "2026-08-15T20:00:07.000Z",
-      "category": "World",
-      "importance": 80,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.105Z"
-    },
-    {
-      "id": "c9587aca",
+      "id": "d8baeecc",
       "title": "Les Kiss reaps rewards of derring-do approach to Australia’s team selection",
       "description": "Issac Henry, Carlo Tizzano, Charlie Cale and Massimo de Lutiis repay faith shown by Les Kiss, the Wallabies coach, and highlight squad’s strength in depth",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/sport/2026/aug/15/les-kiss-australia-team-selection-rugby-union",
-      "imageUrl": "https://media.guim.co.uk/aa9f5e1d4e0a5015a1ff846223cd2535290b3f03/569_0_5693_4555/1000.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "imageDownloadUrl": "https://media.guim.co.uk/aa9f5e1d4e0a5015a1ff846223cd2535290b3f03/569_0_5693_4555/1000.jpg",
-      "videoUrl": null,
-      "videoSource": null,
-      "videoAvailable": false,
+      "category": "World",
       "publishedAt": "2026-08-15T20:00:06.000Z",
-      "age": "1 hour ago",
-      "ageMinutes": 100,
-      "category": "AI & Tech",
-      "importance": 76,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T21:40:31.645Z"
-    },
-    {
-      "id": "ca111cbd",
-      "title": "Delivery drivers will get a minimum wage in Australia’s ‘world-first’ deal. But is it fair – and will your Uber Eats cost more?",
-      "description": "A closer look at the new rules for gig workers – agreed to by Uber Eats and Doordash – shows ‘minimum wage’ looks a little different than usual",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/aug/16/delivery-drivers-will-get-a-minimum-wage-in-australias-world-first-deal-but-is-it-fair-and-will-your-uber-eats-cost-more",
-      "imageUrl": "https://media.guim.co.uk/2c4108a8cbb779f0bc7ba2fd1843d8be8093c5cc/406_0_2594_2076/500.jpg",
+      "age": "3 hours ago",
+      "ageMinutes": 191,
+      "imageUrl": "https://media.guim.co.uk/aa9f5e1d4e0a5015a1ff846223cd2535290b3f03/569_0_5693_4555/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
-      "publishedAt": "2026-08-15T20:00:05.000Z",
-      "age": "9 minutes ago",
-      "category": "AI & Tech",
-      "importance": 50,
+      "imageDownloadUrl": "https://media.guim.co.uk/aa9f5e1d4e0a5015a1ff846223cd2535290b3f03/569_0_5693_4555/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "730d533c",
-      "title": "Delivery drivers will get a minimum wage in Australia’s ‘world-first’ deal. But is it fair – and will your Uber Eats cost more?",
-      "description": "A closer look at the new rules for gig workers – agreed to by Uber Eats and Doordash – shows ‘minimum wage’ looks a little different than usual",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/aug/16/delivery-drivers-will-get-a-minimum-wage-in-australias-world-first-deal-but-is-it-fair-and-will-your-uber-eats-cost-more",
-      "imageUrl": "https://media.guim.co.uk/2c4108a8cbb779f0bc7ba2fd1843d8be8093c5cc/406_0_2594_2076/500.jpg",
-      "publishedAt": "2026-08-15T20:00:05.000Z",
-      "category": "AI & Tech",
-      "importance": 80,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.105Z"
-    },
-    {
-      "id": "851456ea",
-      "title": "Europe’s tallest Virgin Mary statue unveiled in Polish village",
-      "description": "A 55.6-metre Virgin Mary statue has been inaugurated in a small Polish village, with hundreds attending a ceremony featuring a Mass, traditional music and helicopters scattering rose petals.",
-      "source": "Euronews",
-      "url": "http://www.euronews.com/video/2026/08/15/europes-tallest-virgin-mary-statue-unveiled-in-polish-village",
-      "imageUrl": "https://images.euronews.com/articles/stories/09/87/58/26/1200x675_cmsv2_7e78b3b9-82d4-54c2-a62f-a4de1869655a-9875826.jpg",
-      "imageSource": "Euronews",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T19:59:30.000Z",
-      "age": "9 minutes ago",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "Euronews"
-      ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
-    },
-    {
-      "id": "c66cab5f",
-      "title": "Europe’s tallest Virgin Mary statue unveiled in Polish village",
-      "description": "A 55.6-metre Virgin Mary statue has been inaugurated in a small Polish village, with hundreds attending a ceremony featuring a Mass, traditional music and helicopters scattering rose petals.",
-      "source": "Euronews",
-      "url": "http://www.euronews.com/video/2026/08/15/europes-tallest-virgin-mary-statue-unveiled-in-polish-village",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T19:59:30.000Z",
-      "category": "World",
-      "importance": 80,
-      "verified": true,
-      "sources": [
-        "Euronews"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.120Z"
-    },
-    {
-      "id": "70345196",
-      "title": "Moroccan police arrest over 100 migrants trying to reach Spanish enclave",
-      "description": "A social media campaign encouraged people to flock to Ceuta just weeks after many died while making the crossing.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/8/15/moroccan-police-arrest-over-100-migrants-trying-to-reach-spanish-enclave?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T19:46:20.000Z",
-      "category": "AI & Tech",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.109Z"
-    },
-    {
-      "id": "ac08121f",
-      "title": "Monero (XMR) moved 3.10% in 24 hours",
-      "description": "Market cap: $7,722,065,304. 24h volume: $70,418,995.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/monero",
-      "imageUrl": "https://coin-images.coingecko.com/coins/images/69/large/monero_logo.png?1696501460",
-      "imageSource": "CoinGecko",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T19:45:29.886Z",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T19:45:30.660Z"
-    },
-    {
-      "id": "a79b120b",
-      "title": "Chainlink (LINK) moved 7.30% in 24 hours",
-      "description": "Market cap: $7,165,500,108. 24h volume: $507,854,024.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/chainlink",
-      "imageUrl": "https://coin-images.coingecko.com/coins/images/877/large/Chainlink_Logo_500.png?1760023405",
-      "imageSource": "CoinGecko",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T19:45:29.886Z",
-      "category": "AI & Tech",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T19:45:30.660Z"
-    },
-    {
-      "id": "db8e9ff6",
-      "title": "Liechtenstein changes succession rule to allow women to ascend the throne",
-      "description": "The declaration was made on the national day of the central European country, which has a population of just 44,000.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/cn9nnxrxg4qo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b3eb/live/39b85200-98cb-11f1-9687-fb984065014d.jpg",
-      "publishedAt": "2026-08-15T19:41:57.000Z",
-      "category": "World",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "BBC News",
-        "BBC World"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.111Z"
-    },
-    {
-      "id": "366e9a27",
-      "title": "Monero (XMR) moved 3.10% in 24 hours",
-      "description": "Market cap: $7,689,863,462. 24h volume: $69,397,277.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/monero",
-      "publishedAt": "2026-08-15T19:31:55.282Z",
-      "category": "Finance",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.439Z"
-    },
-    {
-      "id": "4e9c79b9",
-      "title": "Chainlink (LINK) moved 7.30% in 24 hours",
-      "description": "Market cap: $7,154,892,938. 24h volume: $509,665,335.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/chainlink",
-      "publishedAt": "2026-08-15T19:31:55.282Z",
-      "category": "Finance",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.439Z"
-    },
-    {
-      "id": "144c4391",
-      "title": "European Athletics Championships: O’Connor wins heptathlon gold, with Anning out of 400m final on day six – live",
-      "description": "The penultimate day of action in Birmingham features the conclusion of the women’s heptathlon, the men’s 1,500m final, and the 4x100m relays",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/sport/live/2026/aug/15/european-athletics-championships-oconnor-goes-for-heptathlon-gold-on-day-six-live",
-      "publishedAt": "2026-08-15T19:30:08Z",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.431Z"
-    },
-    {
-      "id": "17bccf9",
-      "title": "Rashford returns as AC Milan highlight issues facing Carrick",
-      "description": "Manchester United finish their pre-season campaign with a 4-2 defeat by Ruben Amorim's AC Milan in Poland, as Marcus Rashford returns to Red Devils action.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cg5ll71pqv1o?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/130f/live/5dfdd470-98d8-11f1-8216-1399f248beea.jpg",
-      "publishedAt": "2026-08-15T19:25:09.000Z",
-      "category": "AI & Tech",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.112Z"
-    },
-    {
-      "id": "225b79ab",
-      "title": "Newcastle’s Matthias Jaissle looks on bright side despite lacklustre Leverkusen defeat",
-      "description": "In spite of a 2-1 loss to Bayer Leverkusen, the new head coach at St James’ Park showed signs he is on the right path, and is closing in on Benfica’s Amar Dedic",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/football/2026/aug/15/newcastle-matthias-jaissle-bayer-leverkusen-defeat-amar-dedic",
-      "imageUrl": "https://media.guim.co.uk/e0a55c087df35ce72d154c103d55e9251db4ac86/380_0_3798_3038/1000.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T19:18:10Z",
-      "category": "AI & Tech",
-      "importance": 49,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T19:45:30.658Z"
-    },
-    {
-      "id": "a55a0c41",
-      "title": "Newcastle’s Matthias Jaissle looks on bright side despite lacklustre Leverkusen defeat",
-      "description": "In spite of a 2-1 loss to Bayer Leverkusen, the new head coach at St James’ Park showed signs he is on the right path, and is closing in on Benfica’s Amar Dedic",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/football/2026/aug/15/newcastle-matthias-jaissle-bayer-leverkusen-defeat-amar-dedic",
-      "imageUrl": "https://media.guim.co.uk/e0a55c087df35ce72d154c103d55e9251db4ac86/380_0_3798_3038/500.jpg",
-      "publishedAt": "2026-08-15T19:18:10.000Z",
-      "category": "AI & Tech",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "The Guardian"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.105Z"
-    },
-    {
-      "id": "f72a9b95",
-      "title": "Death toll from Zimbabwe ferry disaster rises to 69",
-      "description": "Police say 23 more bodies have been recovered from Lake Kariba after the overloaded vessel capsized on Tuesday.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/8/15/death-toll-from-zimbabwe-ferry-disaster-rises-to-69?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 19:10:06 +0000",
-      "category": "World",
-      "importance": 49,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
-    },
-    {
-      "id": "6fd33c3d",
-      "title": "Death toll from Zimbabwe ferry disaster rises to 72",
-      "description": "Police say 26 more bodies have been recovered from Lake Kariba after the overloaded vessel capsized on Tuesday.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/8/15/death-toll-from-zimbabwe-ferry-disaster-rises-to-69?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T19:10:06.000Z",
-      "category": "World",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.109Z"
-    },
-    {
-      "id": "d6d8b6ff",
-      "title": "'Fury' at Tarling death as cycling union calls for better helmets",
-      "description": "The cyclists' union expresses \"fury\" over the death of British rider Fin Tarling during Friday's stage of the Volta a Portugal.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/sport/cycling/articles/czxqqlpnx98o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 19:05:32 GMT",
-      "category": "World",
-      "importance": 49,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
-    },
-    {
-      "id": "131e2531",
-      "title": "'Fury' at Tarling death as cycling union calls for better helmets",
-      "description": "The cyclists' union expresses \"fury\" over the death of British rider Fin Tarling during Friday's stage of the Volta a Portugal.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/sport/cycling/articles/czxqqlpnx98o?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dd85/live/2dff1f70-98d0-11f1-9687-fb984065014d.jpg",
-      "publishedAt": "2026-08-15T19:05:32.000Z",
-      "category": "World",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.111Z"
+      "importance": 63,
+      "fetchedAt": "2026-08-15T23:10:51.354Z"
     },
     {
       "id": "ce1f69e8",
@@ -630,234 +127,119 @@
       "description": "Fans line streets singing Total Eclipse of the Heart ahead of Welsh singer’s Swansea funeral",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/music/2026/aug/15/bonnie-tyler-fans-gather-pay-respects-swansea",
-      "publishedAt": "2026-08-15T18:44:49Z",
-      "category": "World",
-      "importance": 49,
+      "category": "USA",
+      "publishedAt": "2026-08-15T18:44:49.000Z",
+      "age": "4 hours ago",
+      "ageMinutes": 266,
+      "imageUrl": "https://media.guim.co.uk/2121b0163cb27f7b515baef179471bedb844bead/540_0_5375_4303/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/2121b0163cb27f7b515baef179471bedb844bead/540_0_5375_4303/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.431Z"
+      "importance": 77,
+      "fetchedAt": "2026-08-15T23:10:51.354Z"
     },
     {
-      "id": "bec70fdf",
-      "title": "Families of USS Lincoln crew say Trump should be &apos;ashamed&apos; of conditions on board",
-      "description": "President Trump said the USS Abraham Lincoln deployment is \"not nearly long enough.\" A family member of a sailor on board that ship said those comments are shameful.",
-      "source": "NPR",
-      "url": "https://www.npr.org/2026/08/15/nx-s1-5932539/uss-lincoln-trump-dire-conditions",
-      "publishedAt": "Sat, 15 Aug 2026 14:21:32 -0400",
+      "id": "a1a8d8f",
+      "title": "Powerful earthquake kills dozens in eastern Indonesia",
+      "description": "Quake struck Flores region early on Saturday, prompting thousands to seek higher ground for fear of a tsunami",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/indonesia-earthquake",
       "category": "USA",
-      "importance": 58,
+      "publishedAt": "2026-08-15T15:34:38.000Z",
+      "age": "7 hours ago",
+      "ageMinutes": 456,
+      "imageUrl": "https://media.guim.co.uk/c1dfcbb24723c11ca26889b87c4ab19df23653f6/93_0_1333_1067/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/c1dfcbb24723c11ca26889b87c4ab19df23653f6/93_0_1333_1067/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
       "verified": true,
       "sources": [
-        "NPR"
+        "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.439Z"
+      "importance": 70,
+      "fetchedAt": "2026-08-15T23:10:51.355Z"
     },
     {
-      "id": "e44fa989",
-      "title": "Families of USS Lincoln crew say Trump should be 'ashamed' of conditions on board",
-      "description": "President Trump said the USS Abraham Lincoln deployment is \"not nearly long enough.\" A family member of a sailor on board that ship said those comments are shameful.",
-      "source": "NPR",
-      "url": "https://www.npr.org/2026/08/15/nx-s1-5932539/uss-lincoln-trump-dire-conditions",
-      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5636x3757+0+0/resize/5636x3757!/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F13%2Fa1%2F6e38896b4a979ffd096341a82971%2Fap26226626090930.jpg",
-      "publishedAt": "2026-08-15T18:21:32.000Z",
+      "id": "3a79f925",
+      "title": "UK’s biggest EV battery gigafactory shelves expansion as Jaguar Land Rover talks stall",
+      "description": "Chinese-owned AESC has pushed back plans in sign of slowing transition from petrol and diesel to electric cars",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/uk-ev-battery-gigafactory-aesc-jaguar-land-rover-nissan",
+      "category": "China",
+      "publishedAt": "2026-08-15T11:00:54.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 730,
+      "imageUrl": "https://media.guim.co.uk/1ebc842f555e9a252aa9f08271d730845eed33e1/881_0_4800_3840/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/1ebc842f555e9a252aa9f08271d730845eed33e1/881_0_4800_3840/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "importance": 70,
+      "fetchedAt": "2026-08-15T23:10:51.356Z"
+    },
+    {
+      "id": "b7298898",
+      "title": "‘I don’t even drink whisky’: Scotland reels in visitors as much of Europe swelters",
+      "description": "More direct flights from North America and, say tourism chiefs, Highland warriors and Tartan Army have helped",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/scotland-visitors-tourists-europe-heat-north-america-tartan-army",
       "category": "USA",
-      "importance": 80,
+      "publishedAt": "2026-08-15T09:00:52.000Z",
+      "age": "14 hours ago",
+      "ageMinutes": 850,
+      "imageUrl": "https://media.guim.co.uk/454d2b3d60e48ea05cddbd0f9f0f7ac13bdf5829/621_0_6211_4971/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/454d2b3d60e48ea05cddbd0f9f0f7ac13bdf5829/621_0_6211_4971/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
       "verified": true,
       "sources": [
-        "NPR",
-        "NPR World"
+        "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:19:20.122Z"
+      "importance": 73,
+      "fetchedAt": "2026-08-15T23:10:51.356Z"
     },
     {
-      "id": "19671321",
-      "title": "La Liga: Real Madrid key talking points heading into new 2026-27 season",
-      "description": "Real Madrid welcome back Jose Mourinho as manager as they attempt to stop a three-peat by Barcelona in La Liga.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/8/15/la-liga-real-madrid-key-talking-points-heading-into-new-2026-27-season?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 18:19:23 +0000",
-      "category": "World",
-      "importance": 48,
+      "id": "4ed0d011",
+      "title": "Ukraine war briefing: Zelenskyy warns Egypt of food supply threat caused by Russian strikes in Black Sea",
+      "description": "Ukraine president says exports to Egypt under threat from Russian attacks; Russia dismisses idea of Black Sea ceasefire. What we know on day 1,635",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/ukraine-war-briefing-zelenskyy-warns-egypt-of-food-supply-threat-caused-by-russian-strikes-in-black-sea",
+      "category": "Russia-Ukraine",
+      "publishedAt": "2026-08-15T01:53:30.000Z",
+      "age": "21 hours ago",
+      "ageMinutes": 1277,
+      "imageUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/500.jpg",
+      "videoUrl": null,
+      "videoAvailable": false,
+      "videoSource": null,
       "verified": true,
       "sources": [
-        "Al Jazeera"
+        "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
-    },
-    {
-      "id": "6afaaa83",
-      "title": "La Liga: Real Madrid key talking points heading into new 2026-27 season",
-      "description": "Real Madrid welcome back Jose Mourinho as manager as they attempt to stop a three-peat by Barcelona in La Liga.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/8/15/la-liga-real-madrid-key-talking-points-heading-into-new-2026-27-season?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T18:19:23.000Z",
-      "category": "World",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.110Z"
-    },
-    {
-      "id": "c50cd835",
-      "title": "Cleanup underway as Russian oil spill reaches Oman’s coastline",
-      "description": "Cleanup crews are responding along 12 kilometres of Omani coastline following an oil spill from the grounded tanker.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/15-08-sv-oil-spill-oman-on?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 18:11:12 +0000",
-      "category": "World",
-      "importance": 58,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
-    },
-    {
-      "id": "d582a6d7",
-      "title": "Cleanup underway as Russian oil spill reaches Oman’s coastline",
-      "description": "Cleanup crews are responding along 12 kilometres of Omani coastline following an oil spill from the grounded tanker.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/15-08-sv-oil-spill-oman-on?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T18:11:12.000Z",
-      "category": "World",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.110Z"
-    },
-    {
-      "id": "a1e56516",
-      "title": "US aircraft carrier expected to relieve USS Lincoln in Middle East",
-      "description": "The USS Washington&#039;s movement comes amid reports of dire conditions on the USS Lincoln amid the ongoing Iran war.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/8/15/us-aircraft-carrier-expected-to-relieve-uss-lincoln-in-middle-east?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T17:49:42.000Z",
-      "category": "Middle East",
-      "importance": 70,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.110Z"
-    },
-    {
-      "id": "34255a2a",
-      "title": "Inter Milan sign England’s Djed Spence from Tottenham Hotspur",
-      "description": "The 26-year-old, who has signed a five-year deal, cost the Italian champions about $40m, according to media reports.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/8/15/inter-milan-sign-englands-djed-spence-from-tottenham-hotspur?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:48:32 +0000",
-      "category": "World",
-      "importance": 47,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
-    },
-    {
-      "id": "4ff02252",
-      "title": "Inter Milan sign England’s Djed Spence from Tottenham Hotspur",
-      "description": "The 26-year-old, who has signed a five-year deal, cost the Italian champions about $40m, according to media reports.",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/8/15/inter-milan-sign-englands-djed-spence-from-tottenham-hotspur?traffic_source=rss",
-      "imageUrl": null,
-      "publishedAt": "2026-08-15T17:48:32.000Z",
-      "category": "World",
-      "importance": 60,
-      "verified": true,
-      "sources": [
-        "Al Jazeera"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.110Z"
-    },
-    {
-      "id": "b8f99571",
-      "title": "Firefighters battle wildfire tearing through Belgian nature reserve",
-      "description": "The fire burning through the major park was described as the country's worst in recent years.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/cp8eex1nmpvo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fa32/live/1695a180-98ba-11f1-9a0b-ef36d15fc6b3.jpg",
-      "publishedAt": "2026-08-15T17:47:42.000Z",
-      "category": "World",
-      "importance": 60,
-      "verified": true,
-      "sources": [
-        "BBC News",
-        "BBC World"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.111Z"
-    },
-    {
-      "id": "28b0cbfb",
-      "title": "Jason Arday death 'tragedy on so many levels' says PM",
-      "description": "Andy Burnham says the former Cambridge professor's death is a \"really sad, sad and sorry state of affairs\".",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/c9982znvyk4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:43:04 GMT",
-      "category": "World",
-      "importance": 47,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
-    },
-    {
-      "id": "2b5494c5",
-      "title": "Jason Arday death 'tragedy on so many levels' says PM",
-      "description": "Andy Burnham says the former Cambridge professor's death is a \"really sad, sad and sorry state of affairs\".",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/c9982znvyk4o?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ea6e/live/9024e850-988b-11f1-83ef-33838a09c7c1.jpg",
-      "publishedAt": "2026-08-15T17:43:04.000Z",
-      "category": "AI & Tech",
-      "importance": 60,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.111Z"
-    },
-    {
-      "id": "b3dd08be",
-      "title": "Major incidents across UK put firefighters under 'incredible pressure', fire chief says",
-      "description": "Major incidents are declared across the UK including in Stourbridge, Sandwell and Pershore.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/cwyjjvd4g0qo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:41:54 GMT",
-      "category": "World",
-      "importance": 47,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
-    },
-    {
-      "id": "f1de6900",
-      "title": "Major incidents across UK put firefighters under 'incredible pressure', fire chief says",
-      "description": "Major incidents are declared across the UK including in Stourbridge, Sandwell and Pershore.",
-      "source": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/cwyjjvd4g0qo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/befa/live/85626670-98bf-11f1-9a0b-ef36d15fc6b3.jpg",
-      "publishedAt": "2026-08-15T17:41:54.000Z",
-      "category": "World",
-      "importance": 60,
-      "verified": true,
-      "sources": [
-        "BBC News"
-      ],
-      "fetchedAt": "2026-08-15T20:19:20.111Z"
+      "importance": 85,
+      "fetchedAt": "2026-08-15T23:10:51.357Z"
     }
   ]
 }
