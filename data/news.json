@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T20:45:44.972Z",
+  "updatedAt": "2026-08-15T21:40:32.676Z",
   "stories": [
     {
       "id": "2402178a",
@@ -15,15 +15,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T20:36:06.000Z",
-      "age": "9 minutes ago",
-      "ageMinutes": 10,
+      "age": "1 hour ago",
+      "ageMinutes": 64,
       "category": "World",
-      "importance": 96,
+      "importance": 76,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.419Z"
+      "fetchedAt": "2026-08-15T21:40:31.644Z"
     },
     {
       "id": "253b8cd0",
@@ -199,15 +199,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T20:00:08.000Z",
-      "age": "45 minutes ago",
-      "ageMinutes": 46,
+      "age": "1 hour ago",
+      "ageMinutes": 100,
       "category": "World",
-      "importance": 86,
+      "importance": 76,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.420Z"
+      "fetchedAt": "2026-08-15T21:40:31.644Z"
     },
     {
       "id": "64e3ddfa",
@@ -293,15 +293,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T20:00:06.000Z",
-      "age": "45 minutes ago",
-      "ageMinutes": 46,
+      "age": "1 hour ago",
+      "ageMinutes": 100,
       "category": "AI & Tech",
-      "importance": 86,
+      "importance": 76,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.420Z"
+      "fetchedAt": "2026-08-15T21:40:31.645Z"
     },
     {
       "id": "ca111cbd",
@@ -1366,15 +1366,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T15:54:15.000Z",
-      "age": "4 hours ago",
-      "ageMinutes": 291,
+      "age": "5 hours ago",
+      "ageMinutes": 346,
       "category": "China",
       "importance": 77,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.421Z"
+      "fetchedAt": "2026-08-15T21:40:31.646Z"
     },
     {
       "id": "fc6f7e96",
@@ -2163,15 +2163,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T12:30:56.000Z",
-      "age": "8 hours ago",
-      "ageMinutes": 495,
+      "age": "9 hours ago",
+      "ageMinutes": 550,
       "category": "World",
       "importance": 65,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.422Z"
+      "fetchedAt": "2026-08-15T21:40:31.647Z"
     },
     {
       "id": "f93fe5bc",
@@ -2266,15 +2266,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T12:00:56.000Z",
-      "age": "8 hours ago",
-      "ageMinutes": 525,
+      "age": "9 hours ago",
+      "ageMinutes": 580,
       "category": "China",
       "importance": 71,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.422Z"
+      "fetchedAt": "2026-08-15T21:40:31.647Z"
     },
     {
       "id": "fdce01ab",
@@ -2556,15 +2556,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T11:00:54.000Z",
-      "age": "9 hours ago",
-      "ageMinutes": 585,
+      "age": "10 hours ago",
+      "ageMinutes": 640,
       "category": "China",
       "importance": 71,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.422Z"
+      "fetchedAt": "2026-08-15T21:40:31.647Z"
     },
     {
       "id": "8f986ef9",
@@ -2689,15 +2689,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T10:00:54.000Z",
-      "age": "10 hours ago",
-      "ageMinutes": 645,
+      "age": "11 hours ago",
+      "ageMinutes": 700,
       "category": "USA",
       "importance": 74,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.422Z"
+      "fetchedAt": "2026-08-15T21:40:31.648Z"
     },
     {
       "id": "b860d69",
@@ -2839,15 +2839,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T09:00:52.000Z",
-      "age": "11 hours ago",
-      "ageMinutes": 705,
+      "age": "12 hours ago",
+      "ageMinutes": 760,
       "category": "USA",
-      "importance": 74,
+      "importance": 68,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.423Z"
+      "fetchedAt": "2026-08-15T21:40:31.648Z"
     },
     {
       "id": "a53dea0c",
@@ -2973,15 +2973,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T01:53:30.000Z",
-      "age": "18 hours ago",
-      "ageMinutes": 1132,
+      "age": "19 hours ago",
+      "ageMinutes": 1187,
       "category": "Russia-Ukraine",
       "importance": 89,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:45:44.423Z"
+      "fetchedAt": "2026-08-15T21:40:31.648Z"
     },
     {
       "id": "91878018",
