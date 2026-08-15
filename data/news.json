@@ -1,6 +1,30 @@
 {
-  "updatedAt": "2026-08-15T20:19:20.128Z",
+  "updatedAt": "2026-08-15T20:38:31.445Z",
   "stories": [
+    {
+      "id": "2402178a",
+      "title": "Borges and Me review – a sweetly imagined literary odyssey through the Highlands",
+      "description": "Luis Gnecco brings warmth, wit and quiet melancholy to Jorge Luis Borges in this gently enchanting adaptation of Jay Parini’s semi-fictional memoir",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/film/2026/aug/15/borges-and-me-review-alan-cumming-fionn-whitehead",
+      "imageUrl": "https://media.guim.co.uk/6174a3a68033ab35b9bd61bd8650cf20b9b38884/0_0_4000_6000/667.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/6174a3a68033ab35b9bd61bd8650cf20b9b38884/0_0_4000_6000/667.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T20:36:06.000Z",
+      "age": "2 minutes ago",
+      "ageMinutes": 2,
+      "category": "World",
+      "importance": 96,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:38:30.820Z"
+    },
     {
       "id": "253b8cd0",
       "title": "Canadian petition to expel US ambassador gains over 170,000 signatures",
@@ -167,15 +191,23 @@
       "description": "Labor has always had a divided soul over immigration. Now it faces a predicament as it looks to hold on to suburban and regional seats",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/australia-news/commentisfree/2026/aug/16/labor-is-facing-an-insurgent-one-nation-the-path-it-takes-on-immigration-will-define-its-identity-for-years-to-come",
-      "imageUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/500.jpg",
+      "imageUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/140.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/140.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
       "publishedAt": "2026-08-15T20:00:08.000Z",
+      "age": "38 minutes ago",
+      "ageMinutes": 38,
       "category": "World",
-      "importance": 85,
+      "importance": 86,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:19:20.105Z"
+      "fetchedAt": "2026-08-15T20:38:30.821Z"
     },
     {
       "id": "64e3ddfa",
@@ -246,6 +278,30 @@
         "The Guardian"
       ],
       "fetchedAt": "2026-08-15T20:19:20.105Z"
+    },
+    {
+      "id": "c9587aca",
+      "title": "Les Kiss reaps rewards of derring-do approach to Australia’s team selection",
+      "description": "Issac Henry, Carlo Tizzano, Charlie Cale and Massimo de Lutiis repay faith shown by Les Kiss, the Wallabies coach, and highlight squad’s strength in depth",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/sport/2026/aug/15/les-kiss-australia-team-selection-rugby-union",
+      "imageUrl": "https://media.guim.co.uk/aa9f5e1d4e0a5015a1ff846223cd2535290b3f03/569_0_5693_4555/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/aa9f5e1d4e0a5015a1ff846223cd2535290b3f03/569_0_5693_4555/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T20:00:06.000Z",
+      "age": "38 minutes ago",
+      "ageMinutes": 38,
+      "category": "AI & Tech",
+      "importance": 86,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:38:30.821Z"
     },
     {
       "id": "ca111cbd",
@@ -1297,6 +1353,30 @@
       "fetchedAt": "2026-08-15T20:19:20.120Z"
     },
     {
+      "id": "86f53d20",
+      "title": "Alarmed by the alarm: people react to ‘severe alert’ on phones over UK wildfires",
+      "description": "Many complained online that piercingly loud tone was ‘overreach’ while others lamented lack of action on decarbonisation",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/people-react-severe-alert-phones-message-uk-wildfires",
+      "imageUrl": "https://media.guim.co.uk/c8ddaa2f96fff21941e65f1095ab4fa6411ded9c/2277_1630_3110_2487/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/c8ddaa2f96fff21941e65f1095ab4fa6411ded9c/2277_1630_3110_2487/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T15:54:15.000Z",
+      "age": "4 hours ago",
+      "ageMinutes": 284,
+      "category": "China",
+      "importance": 77,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:38:30.822Z"
+    },
+    {
       "id": "fc6f7e96",
       "title": "Ukraine hits Russian Starlink-style network, Moscow tracks arms package",
       "description": "Ukraine used domestically produced Flamingo missiles to hit targets in Russia&#039;s southwestern Samara region.",
@@ -2075,14 +2155,23 @@
       "description": "Scheme announced in wake of Bondi beach terror attack will launch in November, with costs shared between NSW and commonwealth",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/australia-news/2026/aug/15/australia-nsw-gun-buyback-funding-deal-federal-government-ntwnfb",
-      "publishedAt": "2026-08-15T12:30:56Z",
+      "imageUrl": "https://media.guim.co.uk/53dd86c1dba6e51b796f9e5ca7dc35bff3a1a027/1057_0_5268_4215/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/53dd86c1dba6e51b796f9e5ca7dc35bff3a1a027/1057_0_5268_4215/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T12:30:56.000Z",
+      "age": "8 hours ago",
+      "ageMinutes": 488,
       "category": "World",
-      "importance": 49,
+      "importance": 65,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.432Z"
+      "fetchedAt": "2026-08-15T20:38:30.823Z"
     },
     {
       "id": "f93fe5bc",
@@ -2162,6 +2251,30 @@
         "The Guardian"
       ],
       "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "16b5f266",
+      "title": "‘The bar here is low’: the best (and worst) supermarket brioche burger buns, tasted and rated",
+      "description": "Brioche buns make an indulgent, rich home for a burger – but which have the perfect fluffy texture and which come with a chemical-like plastic aroma?",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/thefilter/2026/aug/15/best-supermarket-brioche-burger-buns-tasted-rated",
+      "imageUrl": "https://media.guim.co.uk/99bfc8a99f6ba41a6f59d4419ae558cf9b85fbb6/729_0_6827_5464/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/99bfc8a99f6ba41a6f59d4419ae558cf9b85fbb6/729_0_6827_5464/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T12:00:56.000Z",
+      "age": "8 hours ago",
+      "ageMinutes": 518,
+      "category": "China",
+      "importance": 71,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:38:30.824Z"
     },
     {
       "id": "fdce01ab",
@@ -2430,6 +2543,30 @@
       "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
+      "id": "922de46e",
+      "title": "UK’s biggest EV battery gigafactory shelves expansion as Jaguar Land Rover talks stall",
+      "description": "Chinese-owned AESC has pushed back plans in sign of slowing transition from petrol and diesel to electric cars",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/uk-ev-battery-gigafactory-aesc-jaguar-land-rover-nissan",
+      "imageUrl": "https://media.guim.co.uk/1ebc842f555e9a252aa9f08271d730845eed33e1/881_0_4800_3840/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/1ebc842f555e9a252aa9f08271d730845eed33e1/881_0_4800_3840/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T11:00:54.000Z",
+      "age": "9 hours ago",
+      "ageMinutes": 578,
+      "category": "China",
+      "importance": 71,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:38:30.824Z"
+    },
+    {
       "id": "8f986ef9",
       "title": "Ukraine strikes rocket and space centre in Russia's Samara",
       "description": "Additional strikes were carried out on Savasleyka air base - which Ukraine said housed aircraft used for missile attacks - and an oil facility in Ust-Luga, per Zelenskyy.",
@@ -2537,6 +2674,30 @@
         "The Guardian"
       ],
       "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "d41d0728",
+      "title": "Donald Trump doesn’t just love billionaires, he loves multimillionaires too",
+      "description": "US tax policy deprives the government of revenue and overwhelmingly serves the interests of the rich",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/trump-big-beautiful-bill-millionaires",
+      "imageUrl": "https://media.guim.co.uk/9279099305e657622fd3938d007a475b177b2576/481_0_6507_5208/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/9279099305e657622fd3938d007a475b177b2576/481_0_6507_5208/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T10:00:54.000Z",
+      "age": "10 hours ago",
+      "ageMinutes": 638,
+      "category": "USA",
+      "importance": 74,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:38:30.824Z"
     },
     {
       "id": "b860d69",
@@ -2665,6 +2826,30 @@
       "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
+      "id": "97b4ffdc",
+      "title": "‘I don’t even drink whisky’: Scotland reels in visitors as much of Europe swelters",
+      "description": "More direct flights from North America and, say tourism chiefs, Highland warriors and Tartan Army have helped",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/scotland-visitors-tourists-europe-heat-north-america-tartan-army",
+      "imageUrl": "https://media.guim.co.uk/454d2b3d60e48ea05cddbd0f9f0f7ac13bdf5829/621_0_6211_4971/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/454d2b3d60e48ea05cddbd0f9f0f7ac13bdf5829/621_0_6211_4971/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T09:00:52.000Z",
+      "age": "11 hours ago",
+      "ageMinutes": 698,
+      "category": "USA",
+      "importance": 74,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:38:30.824Z"
+    },
+    {
       "id": "a53dea0c",
       "title": "US urges Netanyahu to condemn settlers besieging Palestinians in West Bank",
       "description": "The United States is urging Israeli Prime Minister Benjamin Netanyahu to publicly condemn Israeli settlers who have besieged Palestinian homes in Qusra, while France is calling for their arrest and prosecution. As residents remain cut off from food and other supplies, settler violence is putting further political pressure on Netanyahu ahead of Israel’s election.",
@@ -2780,15 +2965,23 @@
       "description": "Ukraine president says exports to Egypt under threat from Russian attacks; Russia dismisses idea of Black Sea ceasefire. What we know on day 1,635",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/world/2026/aug/15/ukraine-war-briefing-zelenskyy-warns-egypt-of-food-supply-threat-caused-by-russian-strikes-in-black-sea",
-      "imageUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/500.jpg",
+      "imageUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
       "publishedAt": "2026-08-15T01:53:30.000Z",
-      "category": "World",
-      "importance": 80,
+      "age": "18 hours ago",
+      "ageMinutes": 1125,
+      "category": "Russia-Ukraine",
+      "importance": 89,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T20:19:20.107Z"
+      "fetchedAt": "2026-08-15T20:38:30.825Z"
     },
     {
       "id": "91878018",

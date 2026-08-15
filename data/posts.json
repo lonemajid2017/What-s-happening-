@@ -1,6 +1,102 @@
 {
-  "updatedAt": "2026-08-15T20:19:34.126Z",
+  "updatedAt": "2026-08-15T20:38:39.843Z",
   "posts": [
+    {
+      "id": "747343bb7fab10ffa30b563d",
+      "storyId": "2402178a",
+      "post": "Luis Gnecco brings warmth and wit to his portrayal of Jorge Luis Borges in a new adaptation of Jay Parini's semi-fictional memoir, according to a review by The Guardian.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/film/2026/aug/15/borges-and-me-review-alan-cumming-fionn-whitehead",
+      "category": "World",
+      "importance": 96,
+      "publishedAt": "2026-08-15T20:36:06.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
+    {
+      "id": "700b3fcc5354b780df0a6adf",
+      "storyId": "c9587aca",
+      "post": "Wallabies head coach Les Kiss is seeing results from his bold selection strategy, as players like Issac Henry and Carlo Tizzano showcase Australia's squad depth.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/sport/2026/aug/15/les-kiss-australia-team-selection-rugby-union",
+      "category": "AI & Tech",
+      "importance": 86,
+      "publishedAt": "2026-08-15T20:00:06.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
+    {
+      "id": "5060a73b0602ff6ec17b6d3f",
+      "storyId": "86f53d20",
+      "post": "A loud emergency mobile alert regarding UK wildfires triggered mixed responses online, with some criticizing the intrusive tone and others calling for stronger climate action.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/people-react-severe-alert-phones-message-uk-wildfires",
+      "category": "China",
+      "importance": 77,
+      "publishedAt": "2026-08-15T15:54:15.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
+    {
+      "id": "1b2f6317b75d105e8760ad8a",
+      "storyId": "bb61552",
+      "post": "New South Wales and the Australian federal government will jointly fund the nation's largest gun buyback in decades, launching this November following the Bondi Beach attack.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/aug/15/australia-nsw-gun-buyback-funding-deal-federal-government-ntwnfb",
+      "category": "World",
+      "importance": 65,
+      "publishedAt": "2026-08-15T12:30:56.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
+    {
+      "id": "57aca446a6937953bd175393",
+      "storyId": "16b5f266",
+      "post": "The Guardian tested and ranked supermarket brioche burger buns to reveal which deliver proper fluffiness and which suffer from unappealing chemical aromas.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/thefilter/2026/aug/15/best-supermarket-brioche-burger-buns-tasted-rated",
+      "category": "China",
+      "importance": 71,
+      "publishedAt": "2026-08-15T12:00:56.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
+    {
+      "id": "ee5f7d47f55c64e6938ba3cf",
+      "storyId": "922de46e",
+      "post": "AESC has delayed expansion plans for the UK's largest EV battery factory as talks with Jaguar Land Rover hit a standstill, reflecting a broader slowdown in electric car adoption.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/uk-ev-battery-gigafactory-aesc-jaguar-land-rover-nissan",
+      "category": "China",
+      "importance": 71,
+      "publishedAt": "2026-08-15T11:00:54.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
+    {
+      "id": "4905f527858c8de305885c98",
+      "storyId": "d41d0728",
+      "post": "US tax policies continue to reduce government revenue while delivering substantial benefits to multimillionaires and billionaires.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/trump-big-beautiful-bill-millionaires",
+      "category": "USA",
+      "importance": 74,
+      "publishedAt": "2026-08-15T10:00:54.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
+    {
+      "id": "2283d213eadd9b6f47c9a308",
+      "storyId": "97b4ffdc",
+      "post": "Scotland is drawing record numbers of travelers escaping extreme heat across mainland Europe, supported by a boost in direct flights from North America.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/scotland-visitors-tourists-europe-heat-north-america-tartan-army",
+      "category": "USA",
+      "importance": 74,
+      "publishedAt": "2026-08-15T09:00:52.000Z",
+      "createdAt": "2026-08-15T20:38:39.842Z",
+      "ready": true
+    },
     {
       "id": "e0db86033a8a48b93c85fdd8",
       "storyId": "253b8cd0",
