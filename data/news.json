@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-08-15T20:09:14.283Z",
+  "updatedAt": "2026-08-15T20:19:20.128Z",
   "stories": [
+    {
+      "id": "253b8cd0",
+      "title": "Canadian petition to expel US ambassador gains over 170,000 signatures",
+      "description": "The petition is set to be discussed by House of Commons in a sign of discontent with policies of US President Trump.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/canadian-petition-to-expel-us-ambassador-gains-over-170000-signatures?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T20:09:33.000Z",
+      "category": "USA",
+      "importance": 90,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.109Z"
+    },
     {
       "id": "49bf0697",
       "title": "Monero (XMR) moved 3.70% in 24 hours",
@@ -59,6 +75,38 @@
       "fetchedAt": "2026-08-15T20:09:14.281Z"
     },
     {
+      "id": "dc86528",
+      "title": "Moroccan Police Intercept Migrants Heading for Ceuta Enclave",
+      "description": "Security forces in Fnideq have stepped up operations to prevent migrants from crossing into Ceuta.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/moroccan-police-intercept-migrants-heading-for-ceuta-enclave?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T20:07:07.000Z",
+      "category": "World",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.109Z"
+    },
+    {
+      "id": "2ba8a58a",
+      "title": "The Midwest braces for more heavy flooding, as Indiana seeks federal aid",
+      "description": "Indiana, Illinois and surrounding states are preparing for another stretch of flooding through this weekend.",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/08/15/nx-s1-5932552/midwest-flooding-indiana-fema",
+      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x2000+0+0/resize/3000x2000!/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F3f%2F26%2F0f584d12440d84f472e564abd51d%2Fap26227676878406.jpg",
+      "publishedAt": "2026-08-15T20:04:13.000Z",
+      "category": "India",
+      "importance": 85,
+      "verified": true,
+      "sources": [
+        "NPR"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.122Z"
+    },
+    {
       "id": "b02974b9",
       "title": "Powerful magnitude 7.7 earthquake kills at least 47 in Indonesia",
       "description": "A search and rescue operation is under way to find survivors in Flores, an island in eastern Indonesia.",
@@ -78,6 +126,23 @@
       "fetchedAt": "2026-08-15T20:09:14.281Z"
     },
     {
+      "id": "7a775b0f",
+      "title": "Powerful magnitude 7.7 earthquake kills at least 47 in Indonesia",
+      "description": "A search and rescue operation is under way to find survivors in Flores, an island in eastern Indonesia.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbf0/live/97cf9550-9877-11f1-a7ab-8b30adf0800a.jpg",
+      "publishedAt": "2026-08-15T20:00:15.000Z",
+      "category": "World",
+      "importance": 85,
+      "verified": true,
+      "sources": [
+        "BBC News",
+        "BBC World"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
       "id": "52215939",
       "title": "Labor is facing an insurgent One Nation. The path it takes on immigration will define its identity for years to come",
       "description": "Labor has always had a divided soul over immigration. Now it faces a predicament as it looks to hold on to suburban and regional seats",
@@ -95,6 +160,22 @@
         "The Guardian"
       ],
       "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "2d81d22b",
+      "title": "Labor is facing an insurgent One Nation. The path it takes on immigration will define its identity for years to come",
+      "description": "Labor has always had a divided soul over immigration. Now it faces a predicament as it looks to hold on to suburban and regional seats",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/commentisfree/2026/aug/16/labor-is-facing-an-insurgent-one-nation-the-path-it-takes-on-immigration-will-define-its-identity-for-years-to-come",
+      "imageUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/500.jpg",
+      "publishedAt": "2026-08-15T20:00:08.000Z",
+      "category": "World",
+      "importance": 85,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.105Z"
     },
     {
       "id": "64e3ddfa",
@@ -135,6 +216,38 @@
       "fetchedAt": "2026-08-15T20:09:14.281Z"
     },
     {
+      "id": "f6e44902",
+      "title": "Australia’s ‘pioneer’ colonists profited from slavery. That truth must be acknowledged | Paul Daley",
+      "description": "The veil is slowly being lifted on the forced or coerced migration – ‘blackbirding’ – of Pacific Islanders for labour",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/16/australia-pioneer-colonists-profited-slavery-blackbirding-ntwnfb",
+      "imageUrl": "https://media.guim.co.uk/bb76452283c44aa10effa33b985a96d613edcbae/188_0_5768_4617/500.jpg",
+      "publishedAt": "2026-08-15T20:00:07.000Z",
+      "category": "World",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.105Z"
+    },
+    {
+      "id": "1ce9a0f8",
+      "title": "Science or fiction? Shadowy ‘paper mills’ let you pay to be a published author – of fraudulent research",
+      "description": "Paper mill activity has exploded in recent years, polluting the scientific ecosystem with falsified data and compromising medical research",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/science/2026/aug/16/science-or-fiction-shadowy-paper-mills-let-you-pay-to-be-a-published-author-of-fraudulent-research",
+      "imageUrl": "https://media.guim.co.uk/c24b904cd92f04cf967365e94f8c56bb8eb039c0/0_0_5000_4000/500.jpg",
+      "publishedAt": "2026-08-15T20:00:07.000Z",
+      "category": "World",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.105Z"
+    },
+    {
       "id": "ca111cbd",
       "title": "Delivery drivers will get a minimum wage in Australia’s ‘world-first’ deal. But is it fair – and will your Uber Eats cost more?",
       "description": "A closer look at the new rules for gig workers – agreed to by Uber Eats and Doordash – shows ‘minimum wage’ looks a little different than usual",
@@ -152,6 +265,22 @@
         "The Guardian"
       ],
       "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "730d533c",
+      "title": "Delivery drivers will get a minimum wage in Australia’s ‘world-first’ deal. But is it fair – and will your Uber Eats cost more?",
+      "description": "A closer look at the new rules for gig workers – agreed to by Uber Eats and Doordash – shows ‘minimum wage’ looks a little different than usual",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/16/delivery-drivers-will-get-a-minimum-wage-in-australias-world-first-deal-but-is-it-fair-and-will-your-uber-eats-cost-more",
+      "imageUrl": "https://media.guim.co.uk/2c4108a8cbb779f0bc7ba2fd1843d8be8093c5cc/406_0_2594_2076/500.jpg",
+      "publishedAt": "2026-08-15T20:00:05.000Z",
+      "category": "AI & Tech",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.105Z"
     },
     {
       "id": "851456ea",
@@ -173,23 +302,36 @@
       "fetchedAt": "2026-08-15T20:09:14.281Z"
     },
     {
+      "id": "c66cab5f",
+      "title": "Europe’s tallest Virgin Mary statue unveiled in Polish village",
+      "description": "A 55.6-metre Virgin Mary statue has been inaugurated in a small Polish village, with hundreds attending a ceremony featuring a Mass, traditional music and helicopters scattering rose petals.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/video/2026/08/15/europes-tallest-virgin-mary-statue-unveiled-in-polish-village",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T19:59:30.000Z",
+      "category": "World",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
       "id": "70345196",
       "title": "Moroccan police arrest over 100 migrants trying to reach Spanish enclave",
       "description": "A social media campaign encouraged people to flock to Ceuta just weeks after many died while making the crossing.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/8/15/moroccan-police-arrest-over-100-migrants-trying-to-reach-spanish-enclave?traffic_source=rss",
-      "imageUrl": "https://www.aljazeera.com/wp-content/uploads/2026/08/afp_6a80b1ace52b-1786818988.jpg?resize=1920%2C1440",
-      "imageSource": "Al Jazeera",
-      "imageAvailable": true,
+      "imageUrl": null,
       "publishedAt": "2026-08-15T19:46:20.000Z",
-      "age": "22 minutes ago",
       "category": "AI & Tech",
-      "importance": 49,
+      "importance": 70,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
+      "fetchedAt": "2026-08-15T20:19:20.109Z"
     },
     {
       "id": "ac08121f",
@@ -234,17 +376,15 @@
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/news/articles/cn9nnxrxg4qo?at_medium=RSS&at_campaign=rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b3eb/live/39b85200-98cb-11f1-9687-fb984065014d.jpg",
-      "imageSource": "BBC News",
-      "imageAvailable": true,
       "publishedAt": "2026-08-15T19:41:57.000Z",
-      "age": "27 minutes ago",
       "category": "World",
-      "importance": 49,
+      "importance": 70,
       "verified": true,
       "sources": [
-        "BBC News"
+        "BBC News",
+        "BBC World"
       ],
-      "fetchedAt": "2026-08-15T20:09:14.281Z"
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "366e9a27",
@@ -297,14 +437,15 @@
       "description": "Manchester United finish their pre-season campaign with a 4-2 defeat by Ruben Amorim's AC Milan in Poland, as Marcus Rashford returns to Red Devils action.",
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/sport/football/articles/cg5ll71pqv1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 19:25:09 GMT",
-      "category": "World",
-      "importance": 50,
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/130f/live/5dfdd470-98d8-11f1-8216-1399f248beea.jpg",
+      "publishedAt": "2026-08-15T19:25:09.000Z",
+      "category": "AI & Tech",
+      "importance": 70,
       "verified": true,
       "sources": [
         "BBC News"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.112Z"
     },
     {
       "id": "225b79ab",
@@ -325,6 +466,22 @@
       "fetchedAt": "2026-08-15T19:45:30.658Z"
     },
     {
+      "id": "a55a0c41",
+      "title": "Newcastle’s Matthias Jaissle looks on bright side despite lacklustre Leverkusen defeat",
+      "description": "In spite of a 2-1 loss to Bayer Leverkusen, the new head coach at St James’ Park showed signs he is on the right path, and is closing in on Benfica’s Amar Dedic",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/football/2026/aug/15/newcastle-matthias-jaissle-bayer-leverkusen-defeat-amar-dedic",
+      "imageUrl": "https://media.guim.co.uk/e0a55c087df35ce72d154c103d55e9251db4ac86/380_0_3798_3038/500.jpg",
+      "publishedAt": "2026-08-15T19:18:10.000Z",
+      "category": "AI & Tech",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.105Z"
+    },
+    {
       "id": "f72a9b95",
       "title": "Death toll from Zimbabwe ferry disaster rises to 69",
       "description": "Police say 23 more bodies have been recovered from Lake Kariba after the overloaded vessel capsized on Tuesday.",
@@ -340,6 +497,22 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "6fd33c3d",
+      "title": "Death toll from Zimbabwe ferry disaster rises to 72",
+      "description": "Police say 26 more bodies have been recovered from Lake Kariba after the overloaded vessel capsized on Tuesday.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/death-toll-from-zimbabwe-ferry-disaster-rises-to-69?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T19:10:06.000Z",
+      "category": "World",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.109Z"
+    },
+    {
       "id": "d6d8b6ff",
       "title": "'Fury' at Tarling death as cycling union calls for better helmets",
       "description": "The cyclists' union expresses \"fury\" over the death of British rider Fin Tarling during Friday's stage of the Volta a Portugal.",
@@ -353,6 +526,22 @@
         "BBC News"
       ],
       "fetchedAt": "2026-08-15T19:31:55.434Z"
+    },
+    {
+      "id": "131e2531",
+      "title": "'Fury' at Tarling death as cycling union calls for better helmets",
+      "description": "The cyclists' union expresses \"fury\" over the death of British rider Fin Tarling during Friday's stage of the Volta a Portugal.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/sport/cycling/articles/czxqqlpnx98o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dd85/live/2dff1f70-98d0-11f1-9687-fb984065014d.jpg",
+      "publishedAt": "2026-08-15T19:05:32.000Z",
+      "category": "World",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "ce1f69e8",
@@ -385,6 +574,23 @@
       "fetchedAt": "2026-08-15T19:31:55.439Z"
     },
     {
+      "id": "e44fa989",
+      "title": "Families of USS Lincoln crew say Trump should be 'ashamed' of conditions on board",
+      "description": "President Trump said the USS Abraham Lincoln deployment is \"not nearly long enough.\" A family member of a sailor on board that ship said those comments are shameful.",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/08/15/nx-s1-5932539/uss-lincoln-trump-dire-conditions",
+      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5636x3757+0+0/resize/5636x3757!/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F13%2Fa1%2F6e38896b4a979ffd096341a82971%2Fap26226626090930.jpg",
+      "publishedAt": "2026-08-15T18:21:32.000Z",
+      "category": "USA",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "NPR",
+        "NPR World"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.122Z"
+    },
+    {
       "id": "19671321",
       "title": "La Liga: Real Madrid key talking points heading into new 2026-27 season",
       "description": "Real Madrid welcome back Jose Mourinho as manager as they attempt to stop a three-peat by Barcelona in La Liga.",
@@ -398,6 +604,22 @@
         "Al Jazeera"
       ],
       "fetchedAt": "2026-08-15T19:31:55.433Z"
+    },
+    {
+      "id": "6afaaa83",
+      "title": "La Liga: Real Madrid key talking points heading into new 2026-27 season",
+      "description": "Real Madrid welcome back Jose Mourinho as manager as they attempt to stop a three-peat by Barcelona in La Liga.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/8/15/la-liga-real-madrid-key-talking-points-heading-into-new-2026-27-season?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T18:19:23.000Z",
+      "category": "World",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "c50cd835",
@@ -415,19 +637,36 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "d582a6d7",
+      "title": "Cleanup underway as Russian oil spill reaches Oman’s coastline",
+      "description": "Cleanup crews are responding along 12 kilometres of Omani coastline following an oil spill from the grounded tanker.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/15-08-sv-oil-spill-oman-on?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T18:11:12.000Z",
+      "category": "World",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
+    },
+    {
       "id": "a1e56516",
       "title": "US aircraft carrier expected to relieve USS Lincoln in Middle East",
       "description": "The USS Washington&#039;s movement comes amid reports of dire conditions on the USS Lincoln amid the ongoing Iran war.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/8/15/us-aircraft-carrier-expected-to-relieve-uss-lincoln-in-middle-east?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:49:42 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T17:49:42.000Z",
       "category": "Middle East",
-      "importance": 57,
+      "importance": 70,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "34255a2a",
@@ -445,19 +684,37 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "4ff02252",
+      "title": "Inter Milan sign England’s Djed Spence from Tottenham Hotspur",
+      "description": "The 26-year-old, who has signed a five-year deal, cost the Italian champions about $40m, according to media reports.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/8/15/inter-milan-sign-englands-djed-spence-from-tottenham-hotspur?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T17:48:32.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
+    },
+    {
       "id": "b8f99571",
       "title": "Firefighters battle wildfire tearing through Belgian nature reserve",
       "description": "The fire burning through the major park was described as the country's worst in recent years.",
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/news/articles/cp8eex1nmpvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:47:42 GMT",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fa32/live/1695a180-98ba-11f1-9a0b-ef36d15fc6b3.jpg",
+      "publishedAt": "2026-08-15T17:47:42.000Z",
       "category": "World",
-      "importance": 47,
+      "importance": 60,
       "verified": true,
       "sources": [
-        "BBC News"
+        "BBC News",
+        "BBC World"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "28b0cbfb",
@@ -475,6 +732,22 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "2b5494c5",
+      "title": "Jason Arday death 'tragedy on so many levels' says PM",
+      "description": "Andy Burnham says the former Cambridge professor's death is a \"really sad, sad and sorry state of affairs\".",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c9982znvyk4o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ea6e/live/9024e850-988b-11f1-83ef-33838a09c7c1.jpg",
+      "publishedAt": "2026-08-15T17:43:04.000Z",
+      "category": "AI & Tech",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
       "id": "b3dd08be",
       "title": "Major incidents across UK put firefighters under 'incredible pressure', fire chief says",
       "description": "Major incidents are declared across the UK including in Stourbridge, Sandwell and Pershore.",
@@ -490,19 +763,36 @@
       "fetchedAt": "2026-08-15T19:31:55.434Z"
     },
     {
+      "id": "f1de6900",
+      "title": "Major incidents across UK put firefighters under 'incredible pressure', fire chief says",
+      "description": "Major incidents are declared across the UK including in Stourbridge, Sandwell and Pershore.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cwyjjvd4g0qo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/befa/live/85626670-98bf-11f1-9a0b-ef36d15fc6b3.jpg",
+      "publishedAt": "2026-08-15T17:41:54.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
       "id": "c5b159cb",
       "title": "Thousands of Bonnie Tyler fans line the streets as coffin taken to Swansea home",
       "description": "The Total Eclipse of the Heart singer died last month in a hospital in Portugal.",
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/news/articles/c9v43zry802o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:33:38 GMT",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/763c/live/77e4fe90-98d8-11f1-a7ab-8b30adf0800a.jpg",
+      "publishedAt": "2026-08-15T17:33:38.000Z",
       "category": "World",
-      "importance": 47,
+      "importance": 60,
       "verified": true,
       "sources": [
         "BBC News"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "2d37fc1f",
@@ -510,14 +800,15 @@
       "description": "Authorities warn residents to take precautions as storm expected to bring rain and strong winds to the island chain.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/8/15/tropical-storm-lala-expected-to-strengthen-as-it-nears-hawaii?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:27:57 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T17:27:57.000Z",
       "category": "World",
-      "importance": 52,
+      "importance": 65,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "35fb8202",
@@ -525,14 +816,15 @@
       "description": "The White House memorandum is thin on details, but it aims to give private businesses the ability to sabotage or spy on certain foreign actors.",
       "source": "NPR",
       "url": "https://www.npr.org/2026/08/15/nx-s1-5930311/trump-companies-hack-foreign-cybercriminals",
-      "publishedAt": "Sat, 15 Aug 2026 13:25:34 -0400",
+      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4493x3369+0+0/resize/4493x3369!/?url=https%3A%2F%2Fmedia.npr.org%2Fassets%2Fimg%2F2020%2F10%2F14%2Fgettyimages-1196823860.jpg",
+      "publishedAt": "2026-08-15T17:25:34.000Z",
       "category": "USA",
-      "importance": 52,
+      "importance": 65,
       "verified": true,
       "sources": [
         "NPR"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.439Z"
+      "fetchedAt": "2026-08-15T20:19:20.122Z"
     },
     {
       "id": "f1488eca",
@@ -540,14 +832,15 @@
       "description": "Jason Arday was found dead on Friday, just days after resigning amid intense scrutiny over his academic work.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/8/15/uk-pm-burnham-reacts-to-death-of-former-cambridge-professor?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 17:19:12 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T17:19:12.000Z",
       "category": "World",
-      "importance": 47,
+      "importance": 60,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "6e997ea9",
@@ -565,22 +858,36 @@
       "fetchedAt": "2026-08-15T19:31:55.434Z"
     },
     {
+      "id": "4a1d1a59",
+      "title": "Inter sign England full-back Spence from Tottenham",
+      "description": "England full-back Djed Spence signs a five-year deal at Inter Milan as he makes a move to Italy from Tottenham.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cz64vg6znz1o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2cdf/live/31e573a0-98cb-11f1-9687-fb984065014d.jpg",
+      "publishedAt": "2026-08-15T17:15:16.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.112Z"
+    },
+    {
       "id": "81039381",
       "title": "From laptops to sleep buds, 25 tech essentials for college students this year",
       "description": "With fall semester due to begin, our tech reviewer lays out the best back-to-school laptops, headphones, writing tablets, smartphones and more to ease back into studies",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/thefilter-us/2026/aug/15/best-tech-essentials-college-students",
-      "imageUrl": "https://media.guim.co.uk/80b4d063e45506a9eb99bad137eafa2465e2dabe/99_131_2758_2205/1000.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T17:15:02Z",
+      "imageUrl": "https://media.guim.co.uk/80b4d063e45506a9eb99bad137eafa2465e2dabe/99_131_2758_2205/500.jpg",
+      "publishedAt": "2026-08-15T17:15:02.000Z",
       "category": "World",
-      "importance": 46,
+      "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:45:30.658Z"
+      "fetchedAt": "2026-08-15T20:19:20.105Z"
     },
     {
       "id": "da51487d",
@@ -628,6 +935,23 @@
       "fetchedAt": "2026-08-15T19:31:55.439Z"
     },
     {
+      "id": "8469061a",
+      "title": "Jason Arday, Cambridge professor accused of plagiarism, is found dead",
+      "description": "Arday was 37 when he became Cambridge's youngest Black professor in 2023. He was found unresponsive Friday at a home in southwest London.",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/08/15/nx-s1-5932488/jason-arday-dead",
+      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2305x1534+0+0/resize/2305x1534!/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd5%2F1c%2F0b8a82da48ad86f9e33aba22900b%2Fap26218282881622.jpg",
+      "publishedAt": "2026-08-15T17:04:43.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "NPR",
+        "NPR World"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.122Z"
+    },
+    {
       "id": "3560a63",
       "title": "France's Léon Marchand wins 200-meter butterfly final at European Swimming Championships",
       "description": "",
@@ -673,19 +997,36 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "ca6db908",
+      "title": "Erdogan says Egypt could join Turkiye-Saudi-Pakistan defence pact",
+      "description": "Turkish president tells Al Jazeera that the recently signed agreement is open to new members as he pledges continued support.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/erdogan-says-egypt-could-join-turkiye-saudi-pakistan-defence-pact?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T16:39:52.000Z",
+      "category": "World",
+      "importance": 65,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
+    },
+    {
       "id": "3340d668",
       "title": "Body found in search for student missing on hike",
       "description": "A body is found during the search for George Smyth, who went missing while hiking in Romania.",
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/news/articles/cwy4413g6rko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 16:36:23 GMT",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5c88/live/840e2870-98bc-11f1-b2ab-0dd01740f9f6.png",
+      "publishedAt": "2026-08-15T16:36:23.000Z",
       "category": "World",
-      "importance": 46,
+      "importance": 60,
       "verified": true,
       "sources": [
         "BBC News"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "e13c6e04",
@@ -703,19 +1044,36 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "2882a7d4",
+      "title": "One killed, dozens injured after wildfire hits Croatian coast",
+      "description": "At least one person was killed and around 42 others were injured after a violent wildfire hit a coastal town in Croatia.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/one-killed-dozens-injured-after-wildfire-hits-croatian-coast?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T16:33:05.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
+    },
+    {
       "id": "b1b66e83",
       "title": "Fernandez booed by Chelsea fans as Alonso offers glimpse of blueprint",
       "description": "Enzo Fernandez is booed by sections of the Chelsea support, Morgan Rogers scores on his first appearance and Xabi Alonso offers a glimpse of what could be his blueprint for the season.",
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/sport/football/articles/c36dd10jj09o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 16:22:07 GMT",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3947/live/067a6270-98c1-11f1-baa7-c1f421a55365.jpg",
+      "publishedAt": "2026-08-15T16:22:07.000Z",
       "category": "World",
-      "importance": 45,
+      "importance": 60,
       "verified": true,
       "sources": [
         "BBC News"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.112Z"
     },
     {
       "id": "ca66725b",
@@ -751,6 +1109,22 @@
       "fetchedAt": "2026-08-15T19:31:55.431Z"
     },
     {
+      "id": "6cbaf2d7",
+      "title": "Middlesbrough 2-1 Lincoln, Bristol City 0-2 Millwall, Norwich 1-2 West Brom: football - as it happened",
+      "description": "The EFL is back, as Championship new boys Lincoln push promotion hopefuls Boro all the way",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/football/live/2026/aug/15/bolton-v-preston-middlesbrough-v-lincoln-bristol-city-v-millwall-and-more-football-live",
+      "imageUrl": "https://media.guim.co.uk/04d0346c28043e111ef8921dcd547782b435f5ba/478_0_5326_4262/500.jpg",
+      "publishedAt": "2026-08-15T16:18:08.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "355cea89",
       "title": "Sudan’s al-Burhan pledges immunity for dialogue, rules out Hemedti return",
       "description": "Al-Burhan pledged temporary immunity and legal protections for participants in a Sudanese national dialogue.",
@@ -766,19 +1140,36 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "b7b5a087",
+      "title": "Sudan’s al-Burhan pledges immunity for dialogue, rules out Hemedti return",
+      "description": "Al-Burhan pledged temporary immunity and legal protections for participants in a Sudanese national dialogue.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/sudans-al-burhan-pledges-immunity-for-dialogue-rules-out-hemedti-return?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T16:17:43.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
+    },
+    {
       "id": "682ca480",
       "title": "Newcastle change shirts during first half of friendly due to colour clash",
       "description": "Newcastle United change shirts in the first half of their pre-season friendly against Bayer Leverkusen.",
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/sport/football/articles/cd9wwny25z4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 16:03:59 GMT",
-      "category": "World",
-      "importance": 45,
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/05f7/live/7cd856f0-98c8-11f1-a7ab-8b30adf0800a.jpg",
+      "publishedAt": "2026-08-15T16:03:59.000Z",
+      "category": "AI & Tech",
+      "importance": 60,
       "verified": true,
       "sources": [
         "BBC News"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "7c3c73b0",
@@ -796,6 +1187,22 @@
       "fetchedAt": "2026-08-15T19:31:55.437Z"
     },
     {
+      "id": "6cd5fc36",
+      "title": "Deceased academic Jason Arday's family decries 'campaign of harassment' against him",
+      "description": "The academic was found dead a week after he quit his role as Cambridge University professor and Jesus College fellow after allegations he had plagiarised parts of his PhD thesis and embellished his life achievements.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/culture/2026/08/15/deceased-academic-jason-ardays-family-decries-campaign-of-harassment-against-him",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T16:03:41.000Z",
+      "category": "AI & Tech",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
       "id": "635fec38",
       "title": "Eleven killed in Israeli strikes on southern Lebanon, authorities say",
       "description": "Israel's military said it had struck \"Hezbollah terror infrastructure\" in response to what it described as earlier action against its soldiers.",
@@ -809,6 +1216,23 @@
         "BBC News"
       ],
       "fetchedAt": "2026-08-15T19:31:55.434Z"
+    },
+    {
+      "id": "f511cc",
+      "title": "Eleven killed in Israeli strikes on southern Lebanon, authorities say",
+      "description": "Israel's military said it had struck \"Hezbollah terror infrastructure\" in response to what it described as earlier action against its soldiers.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c4gjygx4gjeo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/387d/live/b67daca0-9893-11f1-a7ab-8b30adf0800a.jpg",
+      "publishedAt": "2026-08-15T16:02:49.000Z",
+      "category": "Middle East",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "BBC News",
+        "BBC World"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "77e340fa",
@@ -826,6 +1250,22 @@
       "fetchedAt": "2026-08-15T19:31:55.431Z"
     },
     {
+      "id": "18a783ec",
+      "title": "Massive egg recall in US south and south-west due to salmonella outbreak",
+      "description": "1.6m dozen eggs from Texas recalled amid one of the largest recorded foodborne illness outbreaks in US history",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/egg-recall-us-south-and-south-west-salmonella-outbreak",
+      "imageUrl": "https://media.guim.co.uk/8db29763d7dd93fbeef64134375888b2dd0a1629/997_0_4972_3979/500.jpg",
+      "publishedAt": "2026-08-15T16:01:10.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "74fbad4f",
       "title": "Latest news bulletin | August 15th, 2026 – Evening",
       "description": "Catch up with the most important stories from around Europe and beyond this August 15th, 2026 - latest news, breaking news, World, Business, Entertainment, Politics, Culture, Travel.",
@@ -839,6 +1279,22 @@
         "Euronews"
       ],
       "fetchedAt": "2026-08-15T19:31:55.438Z"
+    },
+    {
+      "id": "bcc1ae47",
+      "title": "Latest news bulletin | August 15th, 2026 – Evening",
+      "description": "Catch up with the most important stories from around Europe and beyond this August 15th, 2026 - latest news, breaking news, World, Business, Entertainment, Politics, Culture, Travel.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/video/2026/08/15/latest-news-bulletin-august-15th-2026-evening",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T16:00:29.000Z",
+      "category": "World",
+      "importance": 65,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
     },
     {
       "id": "fc6f7e96",
@@ -856,19 +1312,36 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "3f393d60",
+      "title": "Ukraine hits Russian Starlink-style network, Moscow tracks arms package",
+      "description": "Ukraine used domestically produced Flamingo missiles to hit targets in Russia&#039;s southwestern Samara region.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/ukraine-hits-russian-starlink-style-network-moscow-tracks-arms-package?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T15:50:06.000Z",
+      "category": "World",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
+    },
+    {
       "id": "915d6b0d",
       "title": "Israeli settlers besiege Palestinian families in occupied West Bank",
       "description": "Three Palestinian families say they have been trapped inside their homes in the occupied West Bank for nearly a week.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/15-08-reported-nour-west-bank-ps?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 15:48:07 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T15:48:07.000Z",
       "category": "Middle East",
-      "importance": 49,
+      "importance": 65,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "8d4f0671",
@@ -888,17 +1361,18 @@
     {
       "id": "c3f2a4ef",
       "title": "Lebanon says 11 killed in Israeli airstrikes",
-      "description": "Lebanon&apos;s prime minister denounced the attacks on villages in southern Lebanon for targeting civilians in their homes. Israel said it was firing on Hezbollah infrastructure.",
+      "description": "Lebanon's prime minister denounced the attacks on villages in southern Lebanon for targeting civilians in their homes. Israel said it was firing on Hezbollah infrastructure.",
       "source": "DW",
       "url": "https://www.dw.com/en/lebanon-says-11-killed-in-israeli-airstrikes/a-78383713?maca=en-rss-en-all-1573-rdf",
-      "publishedAt": "2026-08-15T15:35:00Z",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T15:35:00.000Z",
       "category": "Middle East",
-      "importance": 54,
+      "importance": 70,
       "verified": true,
       "sources": [
         "DW"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
     },
     {
       "id": "a1a8d8f",
@@ -906,14 +1380,15 @@
       "description": "Quake struck Flores region early on Saturday, prompting thousands to seek higher ground for fear of a tsunami",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/world/2026/aug/15/indonesia-earthquake",
-      "publishedAt": "2026-08-15T15:34:38Z",
+      "imageUrl": "https://media.guim.co.uk/c1dfcbb24723c11ca26889b87c4ab19df23653f6/93_0_1333_1067/500.jpg",
+      "publishedAt": "2026-08-15T15:34:38.000Z",
       "category": "World",
-      "importance": 44,
+      "importance": 65,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.431Z"
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
       "id": "33e844c7",
@@ -921,14 +1396,15 @@
       "description": "One person killed and hundreds evacuated in Croatia as blazes also hit Germany, Greece and Spain",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/world/2026/aug/14/arrested-suspicion-starting-wildfires-europe-france",
-      "publishedAt": "2026-08-15T15:32:38Z",
+      "imageUrl": "https://media.guim.co.uk/4e74294d7fc12a4f6c823be60d68e8ff43d71b97/984_0_5000_4000/500.jpg",
+      "publishedAt": "2026-08-15T15:32:38.000Z",
       "category": "World",
-      "importance": 44,
+      "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.431Z"
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
       "id": "ead6eef5",
@@ -961,19 +1437,36 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "681d7f1a",
+      "title": "Sedition to anthem: Many lives of ‘Azadi’ chants in India’s youth protests",
+      "description": "A decade ago, student leaders were jailed for shouting &#039;Azadi&#039;, which means freedom.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/features/2026/8/15/sedition-to-anthem-many-lives-of-aazadi-chants-in-indias-youth-protests?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T15:25:51.000Z",
+      "category": "India",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
+    },
+    {
       "id": "be62978d",
       "title": "How blind football is helping women overcome barriers in Mexico",
       "description": "Mexico is sending its first blind women&#039;s football team to compete in an international tournament. Players cannot wait.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/longform/2026/8/15/how-blind-football-is-helping-women-overcome-barriers-in-mexico?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 15:15:45 +0000",
-      "category": "World",
-      "importance": 44,
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T15:15:45.000Z",
+      "category": "AI & Tech",
+      "importance": 60,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "92fce627",
@@ -1006,6 +1499,22 @@
       "fetchedAt": "2026-08-15T19:31:55.431Z"
     },
     {
+      "id": "60d46928",
+      "title": "Alaska candidate for US Senate seat rejects Kamala Harris’s unsolicited support",
+      "description": "Former VP sent fundraising appeal for Democrat Mary Peltola’s campaign – with half of donations going to Harris’s organization",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/alaska-mary-peltola-rejects-kamala-harris-unsolicited-support",
+      "imageUrl": "https://media.guim.co.uk/46541bd5527a1eae60f3570b67456fe7118c170c/85_0_3047_2438/500.jpg",
+      "publishedAt": "2026-08-15T15:07:54.000Z",
+      "category": "AI & Tech",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "f2b82426",
       "title": "Heathrow airport roads reopen after flooding from burst water main",
       "description": "Heathrow says airport operating as normal after passengers told not to travel by road and use rail and tube instead",
@@ -1036,6 +1545,22 @@
       "fetchedAt": "2026-08-15T19:31:55.438Z"
     },
     {
+      "id": "f7b19c7d",
+      "title": "Israeli strikes that killed 11 send 'clear message' on negotiations, says Lebanese president",
+      "description": "In a statement on Saturday, Hezbollah warned that the latest Israeli attacks would \"be met with an appropriate response.\"",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/2026/08/15/lebanon-president-says-israeli-strikes-that-killed-11-send-clear-message-on-negotiations",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T14:52:09.000Z",
+      "category": "Middle East",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
       "id": "ec09c1eb",
       "title": "Climate action doesn&apos;t seem to be a priority for Germany — despite heat-related deaths and drought. Why aren&apos;t more people taking to the streets?",
       "description": "Climate action does not seem to be a priority for the German government — despite record temperatures, heat-related deaths and drought. Why aren&apos;t more people taking to the streets in protest?",
@@ -1049,6 +1574,22 @@
         "DW"
       ],
       "fetchedAt": "2026-08-15T19:31:55.434Z"
+    },
+    {
+      "id": "8a301e11",
+      "title": "Climate action doesn't seem to be a priority for Germany — despite heat-related deaths and drought. Why aren't more people taking to the streets?",
+      "description": "Climate action does not seem to be a priority for the German government — despite record temperatures, heat-related deaths and drought. Why aren't more people taking to the streets in protest?",
+      "source": "DW",
+      "url": "https://www.dw.com/en/climate-action-doesn-t-seem-to-be-a-priority-for-germany-despite-heat-related-deaths-and-drought-why-aren-t-more-people-taking-to-the-streets/a-78374727?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T14:51:00.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
     },
     {
       "id": "c85ee704",
@@ -1081,19 +1622,36 @@
       "fetchedAt": "2026-08-15T19:31:55.431Z"
     },
     {
+      "id": "6998fd1e",
+      "title": "Thirty years after Tupac Shakur’s killing, can a murder trial offer justice?",
+      "description": "Duane ‘Keffe D’ Davis faces trial on Monday over rap star’s death that marked notorious chapter in hip-hop’s history",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/music/2026/aug/15/tupac-shakur-duane-davis-murder-trial",
+      "imageUrl": "https://media.guim.co.uk/b602afdcbea6bcd512d47d08f7e8f2e1dae5e556/196_0_2607_2086/500.jpg",
+      "publishedAt": "2026-08-15T14:40:47.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "30137a4d",
       "title": "The next Yemen war might be different",
       "description": "Drones are no longer the advantage for only one side.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/features/2026/8/15/the-next-yemen-war-might-be-different?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 14:32:07 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T14:32:07.000Z",
       "category": "World",
-      "importance": 48,
+      "importance": 65,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "d761ddd",
@@ -1101,14 +1659,15 @@
       "description": "Alex McKee killed when picking up showerhead in ‘outdoor and rudimentary’ bathroom on Kimolos",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/world/2026/aug/15/irish-teenager-electrocuted-shower-greece",
-      "publishedAt": "2026-08-15T14:26:46Z",
+      "imageUrl": "https://media.guim.co.uk/4d1af1c7d6888db7ac35c6fcf0d90b70dd7a96f5/1159_0_4156_3328/500.jpg",
+      "publishedAt": "2026-08-15T14:26:46.000Z",
       "category": "World",
-      "importance": 42,
+      "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.431Z"
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
       "id": "1bf455e",
@@ -1141,6 +1700,22 @@
       "fetchedAt": "2026-08-15T19:31:55.431Z"
     },
     {
+      "id": "22645305",
+      "title": "‘Strategic change and grasping nettles’: where now for John Lewis as boss exits?",
+      "description": "Peter Ruis appeared ‘to be doing a good job in difficult circumstances’ at department store chain, says analyst",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/john-lewis-boss-peter-ruis-department-store-chain",
+      "imageUrl": "https://media.guim.co.uk/0dff74a3f21f5825cf1b4821a333b585fb32b0df/0_0_5000_4000/500.jpg",
+      "publishedAt": "2026-08-15T14:00:01.000Z",
+      "category": "AI & Tech",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "fd2a7b9",
       "title": "Teenager pleas guilty to attacking California sea lion in viral video",
       "description": "Tyler Muehl, 18, could face a year in prison for kicking marine animal four times on La Jolla coast",
@@ -1171,6 +1746,22 @@
       "fetchedAt": "2026-08-15T19:31:55.434Z"
     },
     {
+      "id": "c7d5c28d",
+      "title": "Analysis: Arday's death will send shockwaves through a divided academia",
+      "description": "Barely 1% of professors at UK universities are black, so he was joining a small and highly visible minority in academia, writes Education Editor Branwen Jeffreys.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cr59jg1ypd3o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e1f2/live/c7b603c0-91a2-11f1-964d-6f76397ea067.jpg",
+      "publishedAt": "2026-08-15T13:48:38.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
       "id": "59f242f3",
       "title": "Powerful magnitude 7.7 earthquake kills at least 47 in Indonesia",
       "description": "A search and rescue operation is under way to find survivors in Flores, an island in eastern Indonesia.",
@@ -1191,14 +1782,15 @@
       "description": "EU Commission President Ursula von der Leyen said on Saturday afternoon that Europe was on \"high wildfire alert\" and that there was increasing pressure on Eastern European nations.",
       "source": "Euronews",
       "url": "http://www.euronews.com/my-europe/2026/08/15/wildfires-continue-to-devastate-europe-as-thousands-are-forced-to-flee-their-homes",
-      "publishedAt": "Sat, 15 Aug 2026 15:30:37 +0200",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T13:30:37.000Z",
       "category": "World",
-      "importance": 46,
+      "importance": 60,
       "verified": true,
       "sources": [
         "Euronews"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.438Z"
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
     },
     {
       "id": "938b533e",
@@ -1221,14 +1813,15 @@
       "description": "Afghans have gathered in Kabul to mark five years since the Taliban returned to power.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/afghans-mark-five-years-of-taliban-rule?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 13:12:51 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T13:12:51.000Z",
       "category": "World",
-      "importance": 41,
+      "importance": 55,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "322e563e",
@@ -1236,14 +1829,15 @@
       "description": "Dr Jason Arday has been found dead days after resigning from Cambridge University due to plagiarism allegations.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/black-professor-at-centre-of-cambridge-plagiarism-row-found-dead?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 13:11:31 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T13:11:31.000Z",
       "category": "World",
-      "importance": 40,
+      "importance": 55,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.110Z"
     },
     {
       "id": "df47cb52",
@@ -1251,14 +1845,15 @@
       "description": "An Austrian activist in Vienna is challenging the city over public toilet fees.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/vienna-woman-sues-city-for-discrimination-over-toilet-fees?traffic_source=rss",
-      "publishedAt": "Sat, 15 Aug 2026 13:01:31 +0000",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T13:01:31.000Z",
       "category": "World",
-      "importance": 45,
+      "importance": 60,
       "verified": true,
       "sources": [
         "Al Jazeera"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.433Z"
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "cb710965",
@@ -1289,6 +1884,38 @@
         "The Guardian"
       ],
       "fetchedAt": "2026-08-15T19:31:55.432Z"
+    },
+    {
+      "id": "dd5d92d6",
+      "title": "US immigration judges are deporting people in mass hearings – some without notice",
+      "description": "Inside ‘mega master’ calendar hearings, the new tactic of scheduling hearings on short notice and deporting the people who don’t show up",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/immigration-judges-deportation-hearings",
+      "imageUrl": "https://media.guim.co.uk/35f82bc4ff698438c36fb94b33906bf8b98453e5/468_0_5000_4000/500.jpg",
+      "publishedAt": "2026-08-15T13:00:57.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "cd9bc81f",
+      "title": "Charlene Kaye: Diversity Shredder review – killer riffs slay toxic music industry",
+      "description": "This is a fun and feverish journey, with well-crafted comedy and screaming guitar, through the star’s career so far",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/stage/2026/aug/15/charlene-kaye-diversity-shredder-review-gilded-balloon-teviot-edinburgh",
+      "imageUrl": "https://media.guim.co.uk/a9d0936dc0e34c06eb471fb98493c374b3e8be66/0_218_3762_3010/500.jpg",
+      "publishedAt": "2026-08-15T13:00:57.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
       "id": "2ab0926c",
@@ -1336,6 +1963,22 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "2a4176eb",
+      "title": "Five wounded in shooting at Virginia State University, multiple suspects",
+      "description": "Police found the gunshot victims near the US university&#039;s halls of residence.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/five-wounded-in-shooting-at-virginia-state?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T12:57:08.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
       "id": "bea826a2",
       "title": "Ceuta: False social media posts fuel migration tensions",
       "description": "False social media posts claiming the Morocco-Ceuta border would open for Spain’s Assumption holiday have prompted migrants to gather near the crossing. Moroccan and Spanish authorities have tightened security after a recent mass influx into Ceuta, while Morocco says those spreading the false claims could face legal action.",
@@ -1379,6 +2022,22 @@
         "Al Jazeera"
       ],
       "fetchedAt": "2026-08-15T19:31:55.433Z"
+    },
+    {
+      "id": "5b76b9d1",
+      "title": "Five years on, how will Taliban deal with armed opposition?",
+      "description": "The United Nations says armed groups opposed to the government remain active.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/five-years-on-how-will-taliban-deal-with-armed-opposition?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T12:44:30.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "8be004d4",
@@ -1426,6 +2085,38 @@
       "fetchedAt": "2026-08-15T19:31:55.432Z"
     },
     {
+      "id": "f93fe5bc",
+      "title": "Afghan refugees face an uncertain future as Europe shifts to the right",
+      "description": "With the fall of the former government in Kabul, thousands of Afghans were forced to flee the country, many to Europe.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/afghan-refugees-face-uncertain-future-as-europe-shifts-to-the-right?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T12:14:30.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
+      "id": "a3b1c9ce",
+      "title": "Hawaii under state of emergency ahead of historic hurricane",
+      "description": "A hurricane is forecast to hit the Big Island of Hawaii this weekend, bringing heavy rain and wind. Should it make landfall, Lala would be the first hurricane to hit the island since 1871.",
+      "source": "DW",
+      "url": "https://www.dw.com/en/hawaii-under-state-of-emergency-ahead-of-historic-hurricane/a-78382001?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T12:11:00.000Z",
+      "category": "AI & Tech",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
+    },
+    {
       "id": "9233cef9",
       "title": "In JD Vance’s hometown, comment on his new memoir is hard to find",
       "description": "The US vice-president’s most recent memoir may be widely read in Middletown, Ohio, but no one seems to be talking about it",
@@ -1441,6 +2132,102 @@
       "fetchedAt": "2026-08-15T19:31:55.432Z"
     },
     {
+      "id": "39064a45",
+      "title": "In JD Vance’s hometown, comment on his new memoir is hard to find",
+      "description": "The US vice-president’s most recent memoir may be widely read in Middletown, Ohio, but no one seems to be talking about it",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/jd-vance-memoir-middletown-ohio",
+      "imageUrl": "https://media.guim.co.uk/ac9177d50d767fbdb3260f1efb24c5cb98f4705b/366_0_3268_2616/500.jpg",
+      "publishedAt": "2026-08-15T12:00:57.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "bf80015",
+      "title": "How to buy a ‘mega-dinghy’: the perilous new model of Channel crossing",
+      "description": "Boats carrying hundreds of people are a clear and alarming trend. But where do such large vessels come from?",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/15/how-to-buy-a-mega-dinghy-the-perilous-new-model-of-channel-crossing",
+      "imageUrl": "https://media.guim.co.uk/3ae2e65bcc2e471243121bcf231752d33e887ed2/226_0_2918_2334/500.jpg",
+      "publishedAt": "2026-08-15T12:00:57.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "fdce01ab",
+      "title": "Sure, ‘Woke 1’ had its issues – but we have far bigger problems on our hands | Arwa Mahdawi",
+      "description": "AOC’s remarks about past excesses have been ripped out of context. Progressives shouldn’t get roped into this sideshow",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/15/woke-1-aoc-progressives",
+      "imageUrl": "https://media.guim.co.uk/00f073218bce739792fa7aac3b5d4a46658812eb/531_0_5311_4249/500.jpg",
+      "publishedAt": "2026-08-15T12:00:55.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "e3fa9772",
+      "title": "Madrid hospital creates first bone metamaterial prosthesis, prevents leg amputation",
+      "description": "Madrid's Gregorio Marañón Hospital has created the world's first personalised metamaterial bone prosthesis, successfully implanted in a 38-year-old with tibial sarcoma, avoiding leg amputation.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/health/2026/08/15/madrid-hospital-creates-first-bone-metamaterial-prosthesis-prevents-leg-amputation",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T11:59:41.000Z",
+      "category": "AI & Tech",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
+      "id": "5d3d723e",
+      "title": "Sadie Sink and Adam Driver to star in new X-Men movie",
+      "description": "Heartstopper's Kit Connor and Christopher Abbot are also joining the Marvel Cinematic Universe.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c5y0zndql7po?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/89b0/live/c07efd60-988b-11f1-83ef-33838a09c7c1.jpg",
+      "publishedAt": "2026-08-15T11:57:25.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
+      "id": "e30b83da",
+      "title": "Met Police apologises for data breach involving alleged Al Fayed victims",
+      "description": "Scotland Yard copied in all those who had signed up to receive a monthly update.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c1w1yv987jqo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/63ce/live/13d0f320-9881-11f1-a43c-2dc5e6bd5d94.jpg",
+      "publishedAt": "2026-08-15T11:53:19.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
       "id": "faa090cc",
       "title": "Russians snap up new homes built on Ukraine &apos;graveyard&apos;",
       "description": "Russia is constructing high-rises in the occupied Ukrainian city of Mariupol, on the sites of buildings it destroyed. Who&apos;s buying these properties? And what happened to the Ukrainians who used to lived here?",
@@ -1454,6 +2241,38 @@
         "DW"
       ],
       "fetchedAt": "2026-08-15T19:31:55.434Z"
+    },
+    {
+      "id": "b457f7c6",
+      "title": "Russians snap up new homes built on Ukraine 'graveyard'",
+      "description": "Russia is constructing high-rises in the occupied Ukrainian city of Mariupol, on the sites of buildings it destroyed. Who's buying these properties? And what happened to the Ukrainians who used to lived here?",
+      "source": "DW",
+      "url": "https://www.dw.com/en/russians-snap-up-new-homes-built-on-ukraine-graveyard/a-78360176?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T11:50:00.000Z",
+      "category": "World",
+      "importance": 65,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
+    },
+    {
+      "id": "ea31662c",
+      "title": "Afghan allies still waiting for the safety Germany promised",
+      "description": "After the Taliban retook power on August 15, 2021, Berlin promised to bring Afghan staff to Germany. But people are still waiting to leave in Pakistan and Afghanistan.",
+      "source": "DW",
+      "url": "https://www.dw.com/en/afghan-allies-still-waiting-for-the-safety-germany-promised/a-78319745?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T11:44:00.000Z",
+      "category": "AI & Tech",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
     },
     {
       "id": "84631e38",
@@ -1486,6 +2305,22 @@
       "fetchedAt": "2026-08-15T19:31:55.434Z"
     },
     {
+      "id": "59c502f1",
+      "title": "Trump's Latin America allies open arms to Israel",
+      "description": "While ongoing military actions in Gaza and settler attacks on Palestinians in the occupied West Bank have largely isolated Israel globally, Latin America's authoritarian right sees an opening for a strategic alliance.",
+      "source": "DW",
+      "url": "https://www.dw.com/en/trump-s-latin-america-allies-open-arms-to-israel/a-78378930?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T11:35:00.000Z",
+      "category": "USA",
+      "importance": 75,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
+    },
+    {
       "id": "f850e06b",
       "title": "Is China seeking to copy Iran’s Strait of Hormuz blockade around Taiwan?",
       "description": "Taiwan has long prepared for a Chinese military invasion but wars in Iran and Ukraine expose new potential threats.",
@@ -1501,19 +2336,36 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "deeb7b53",
+      "title": "Is China seeking to copy Iran’s Strait of Hormuz blockade around Taiwan?",
+      "description": "Taiwan has long prepared for a Chinese military invasion but wars in Iran and Ukraine expose new potential threats.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/video/101-east/2026/8/15/is-china-seeking-to-copy-irans-strait-of-hormuz-blockade-around-taiwan?traffic_source=rss",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T11:30:00.000Z",
+      "category": "Middle East",
+      "importance": 75,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
+    },
+    {
       "id": "cb59388",
       "title": "Sellers puzzled by bulk orders suspect secondhand books being destroyed to train AI",
       "description": "Independent booksellers have seen scores of their novels being shipped to far-off warehouses.",
       "source": "BBC News",
       "url": "https://www.bbc.co.uk/news/articles/cp3rprx2wl4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "Sat, 15 Aug 2026 11:25:32 GMT",
-      "category": "AI & Tech",
-      "importance": 43,
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/feb2/live/91ecfb30-97e8-11f1-a76b-f1c27c51f3da.jpg",
+      "publishedAt": "2026-08-15T11:25:32.000Z",
+      "category": "World",
+      "importance": 60,
       "verified": true,
       "sources": [
         "BBC News"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.434Z"
+      "fetchedAt": "2026-08-15T20:19:20.111Z"
     },
     {
       "id": "94258421",
@@ -1531,6 +2383,22 @@
       "fetchedAt": "2026-08-15T19:31:55.433Z"
     },
     {
+      "id": "d853ee57",
+      "title": "US navy veterans and military health experts express concern over USS Abraham Lincoln sailors",
+      "description": "Prolonged deployment is coupled with reports of water shortages, plumbing issues and attempts to jump overboard",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/uss-abraham-lincoln-sailors-mental-health",
+      "imageUrl": "https://media.guim.co.uk/4481abefeb84092ce31ab52cf71a02aafa82b4e7/128_0_2739_2193/500.jpg",
+      "publishedAt": "2026-08-15T11:00:55.000Z",
+      "category": "AI & Tech",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "5cc90ec1",
       "title": "Double jeopardy could spell end of state case after Luigi Mangione’s guilty plea",
       "description": "Defense argues New York cannot try Mangione over same act or offense as federal case – the killing of Brian Thompson",
@@ -1544,6 +2412,22 @@
         "The Guardian"
       ],
       "fetchedAt": "2026-08-15T19:31:55.432Z"
+    },
+    {
+      "id": "2321283c",
+      "title": "UK’s biggest EV battery gigafactory shelves expansion as Jaguar Land Rover talks stall",
+      "description": "Chinese-owned AESC has pushed back plans in sign of slowing transition from petrol and diesel to electric cars",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/uk-ev-battery-gigafactory-aesc-jaguar-land-rover-nissan",
+      "imageUrl": "https://media.guim.co.uk/1ebc842f555e9a252aa9f08271d730845eed33e1/881_0_4800_3840/500.jpg",
+      "publishedAt": "2026-08-15T11:00:54.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
     },
     {
       "id": "8f986ef9",
@@ -1561,6 +2445,22 @@
       "fetchedAt": "2026-08-15T19:31:55.438Z"
     },
     {
+      "id": "b6271617",
+      "title": "Ukraine strikes rocket and space centre in Russia's Samara",
+      "description": "Additional strikes were carried out on Savasleyka air base - which Ukraine said housed aircraft used for missile attacks - and an oil facility in Ust-Luga, per Zelenskyy.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/my-europe/2026/08/15/ukraine-says-it-has-struck-russian-rocket-and-space-centre",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T10:39:04.000Z",
+      "category": "World",
+      "importance": 75,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
       "id": "3c1fee8a",
       "title": "Finlay Tarling's family heartbroken as riders pay tribute to British cyclist",
       "description": "Finlay Tarling's father says it has been \"heartbreaking and heartwarming\" to receive messages of support and happy photos of his son following the British cyclist's death.",
@@ -1574,6 +2474,22 @@
         "BBC News"
       ],
       "fetchedAt": "2026-08-15T19:31:55.434Z"
+    },
+    {
+      "id": "be360ecd",
+      "title": "ICE detained a Venezuelan soccer pro. His case shows the immigration backlog crisis",
+      "description": "Homero Calderón's detention by ICE spotlights the massive backlog in the U.S. immigration system.",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/08/15/nx-s1-5928322/ice-detained-a-venezuelan-soccer-pro-his-case-shows-the-immigration-backlog-crisis",
+      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1501x2000+0+0/resize/1501x2000!/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F5a%2Fa9%2Fa834a16140cda7e2ae35e9a70400%2Fwhatsapp-image-2026-08-10-at-10-51-53-1.jpg",
+      "publishedAt": "2026-08-15T10:10:00.000Z",
+      "category": "AI & Tech",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "NPR"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.122Z"
     },
     {
       "id": "8e3e911a",
@@ -1591,6 +2507,54 @@
       "fetchedAt": "2026-08-15T19:31:55.432Z"
     },
     {
+      "id": "b969ba98",
+      "title": "Donald Trump doesn’t just love billionaires, he loves multimillionaires too",
+      "description": "US tax policy deprives the government of revenue and overwhelmingly serves the interests of the rich",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/trump-big-beautiful-bill-millionaires",
+      "imageUrl": "https://media.guim.co.uk/9279099305e657622fd3938d007a475b177b2576/481_0_6507_5208/500.jpg",
+      "publishedAt": "2026-08-15T10:00:54.000Z",
+      "category": "USA",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "82b4edc6",
+      "title": "Where healthcare could sway voters, organizers ramp up an old tactic: talking to people",
+      "description": "In Wisconsin, voters weigh candidates who backed cuts to Medicaid, and those who want to expand it",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/wisconsin-healthcare-democrats-canvassers",
+      "imageUrl": "https://media.guim.co.uk/089c9ec5f740d0bbda50fba48b2da9d70250cd0b/231_0_2503_2002/500.jpg",
+      "publishedAt": "2026-08-15T10:00:54.000Z",
+      "category": "AI & Tech",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "b860d69",
+      "title": "Hundreds of sea turtles are stranded in Cape Cod each year. An ‘amazing network’ has mobilized to help",
+      "description": "Massachusetts beaches have become a ‘hotspot for mass stranding of sea turtles’, so an annual rescue effort has grown",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/cape-cod-stranded-sea-turtle-hospital",
+      "imageUrl": "https://media.guim.co.uk/c0bcb4b9d2efc8f8d1c57d897a5fcaf974d8e9e7/226_0_5602_4480/500.jpg",
+      "publishedAt": "2026-08-15T10:00:53.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "990d098d",
       "title": "Latest news bulletin | August 15th, 2026 – Midday",
       "description": "Catch up with the most important stories from around Europe and beyond this August 15th, 2026 - latest news, breaking news, World, Business, Entertainment, Politics, Culture, Travel.",
@@ -1604,6 +2568,22 @@
         "Euronews"
       ],
       "fetchedAt": "2026-08-15T19:31:55.438Z"
+    },
+    {
+      "id": "a30f5635",
+      "title": "Latest news bulletin | August 15th, 2026 – Midday",
+      "description": "Catch up with the most important stories from around Europe and beyond this August 15th, 2026 - latest news, breaking news, World, Business, Entertainment, Politics, Culture, Travel.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/video/2026/08/15/latest-news-bulletin-august-15th-2026-midday",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T10:00:16.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
     },
     {
       "id": "fa8e77e3",
@@ -1621,6 +2601,70 @@
       "fetchedAt": "2026-08-15T19:31:55.436Z"
     },
     {
+      "id": "e0ebbc45",
+      "title": "‘Let’s see what he can do’: will Burnham bring voters back in Labour heartlands?",
+      "description": "With questions over Farage’s finances and a new face in No 10, could Barnsley council be a bellwether for changing Labour fortunes?",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/politics/2026/aug/14/andy-burnham-barnsley-voters-labour-reform-uk-red-wall",
+      "imageUrl": "https://media.guim.co.uk/a83de216f2b51967f5ef5a3f6c7def98f3082832/407_0_6827_5464/500.jpg",
+      "publishedAt": "2026-08-15T09:55:26.000Z",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "3b66eeab",
+      "title": "Watch: Chaos as powerful earthquake hits Indonesia",
+      "description": "A powerful 7.7-magnitude earthquake struck off Indonesia, damaging buildings and sending people running for safety as the shaking was caught on camera in Maumere.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/video/2026/08/15/watch-chaos-as-powerful-earthquake-hits-indonesia",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T09:26:28.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
+      "id": "fab15b7e",
+      "title": "As ESPN cuts familiar faces, its retreat from serious NBA coverage is complete",
+      "description": "As ESPN cuts expert voices and rewards viral argument, fans who want to understand basketball are building a smarter conversation elsewhere",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/sport/2026/aug/15/espn-layoffs-nba-coverage-hot-takes",
+      "imageUrl": "https://media.guim.co.uk/342d5c3e40485952d11342d4229522735da6edbb/529_0_3576_2861/500.jpg",
+      "publishedAt": "2026-08-15T09:00:53.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
+      "id": "bf9cfa3e",
+      "title": "‘I don’t even drink whisky’: Scotland reels in visitors as much of Europe swelters",
+      "description": "More direct flights from North America and, say tourism chiefs, Highland warriors and Tartan Army have helped",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/15/scotland-visitors-tourists-europe-heat-north-america-tartan-army",
+      "imageUrl": "https://media.guim.co.uk/454d2b3d60e48ea05cddbd0f9f0f7ac13bdf5829/621_0_6211_4971/500.jpg",
+      "publishedAt": "2026-08-15T09:00:52.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.106Z"
+    },
+    {
       "id": "a53dea0c",
       "title": "US urges Netanyahu to condemn settlers besieging Palestinians in West Bank",
       "description": "The United States is urging Israeli Prime Minister Benjamin Netanyahu to publicly condemn Israeli settlers who have besieged Palestinian homes in Qusra, while France is calling for their arrest and prosecution. As residents remain cut off from food and other supplies, settler violence is putting further political pressure on Netanyahu ahead of Israel’s election.",
@@ -1634,6 +2678,39 @@
         "France 24"
       ],
       "fetchedAt": "2026-08-15T19:31:55.437Z"
+    },
+    {
+      "id": "c25a6776",
+      "title": "Magnitude 7.7 earthquake strikes off Indonesia's coast, killing at least 38",
+      "description": "A powerful magnitude 7.7 earthquake struck off the coast of Indonesia early Saturday, killing at least 38 people, collapsing buildings as well as causing panic in a region prone to deadly quakes.",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/08/15/nx-s1-5932405/earthquake-indonesia",
+      "imageUrl": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1600x1067+0+0/resize/1600x1067!/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd2%2F2f%2Facb9d38d4476942a27974b218729%2Fap26227063972379.jpg",
+      "publishedAt": "2026-08-15T08:29:20.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "NPR",
+        "NPR World"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.122Z"
+    },
+    {
+      "id": "d9b2c1b7",
+      "title": "Israeli diplomat hands out Tiranga to commuters at Mumbai’s CSMT station on Independence Day",
+      "description": "The Deputy Consul General of Israel in Mumbai, Avishag Hefer, was recorded giving out the flags at the Chhatrapati Shivaji Maharaj Terminus. | Trending",
+      "source": "Hindustan Times",
+      "url": "https://www.hindustantimes.com/trending/independence-day-israeli-diplomat-hands-out-tiranga-at-mumbai-s-chhatrapati-shivaji-maharaj-terminus-101786780471732.html",
+      "imageUrl": "https://www.hindustantimes.com/ht-img/img/2026/08/15/1600x900/logo/Israeli_Diplomat_CSMT_Tiranga_Mumbai_Avishag_Hefer_1786780520309_1786780530149_1c92aa4f-41b7-490f-96f4-78acef54bae1.jpg",
+      "publishedAt": "2026-08-15T08:18:00.000Z",
+      "category": "Middle East",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Hindustan Times"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.105Z"
     },
     {
       "id": "2c309ab4",
@@ -1651,6 +2728,22 @@
       "fetchedAt": "2026-08-15T19:31:55.435Z"
     },
     {
+      "id": "18981b58",
+      "title": "Germany: Berlin techno fans pause for Pride attack victims",
+      "description": "Rave the Planet is taking place under high security after last month's deadly Islamist attack. Also: Russia labels another German institute as \"undesirable.\" DW has more.",
+      "source": "DW",
+      "url": "https://www.dw.com/en/germany-berlin-techno-fans-pause-for-pride-attack-victims/live-78378773?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T07:58:00.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
+    },
+    {
       "id": "49f100ae",
       "title": "After Trump comment on declaring Strait of Hormuz US territory, Tehran says it 'will remain Iranian'",
       "description": "Speaking in New York on Friday, Trump, with a chuckle, said: \"Pretty soon I'll be declaring the Hormuz Strait a territory of the United States.\"",
@@ -1666,22 +2759,68 @@
       "fetchedAt": "2026-08-15T19:31:55.438Z"
     },
     {
+      "id": "dba8256c",
+      "title": "After Trump comment on declaring Strait of Hormuz US territory, Tehran says it 'will remain Iranian'",
+      "description": "Speaking in New York on Friday, Trump, with a chuckle, said: \"Pretty soon I'll be declaring the Hormuz Strait a territory of the United States.\"",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/2026/08/15/iran-says-strait-of-hormuz-will-remain-iranian-after-trump-warning",
+      "imageUrl": null,
+      "publishedAt": "2026-08-15T07:04:58.000Z",
+      "category": "USA",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
       "id": "5ee853c7",
       "title": "Ukraine war briefing: Zelenskyy warns Egypt of food supply threat caused by Russian strikes in Black Sea",
       "description": "Ukraine president says exports to Egypt under threat from Russian attacks; Russia dismisses idea of Black Sea ceasefire. What we know on day 1,635",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/world/2026/aug/15/ukraine-war-briefing-zelenskyy-warns-egypt-of-food-supply-threat-caused-by-russian-strikes-in-black-sea",
-      "imageUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/1000.jpg",
-      "imageSource": "The Guardian",
-      "imageAvailable": true,
-      "publishedAt": "2026-08-15T01:53:30Z",
+      "imageUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/500.jpg",
+      "publishedAt": "2026-08-15T01:53:30.000Z",
       "category": "World",
+      "importance": 80,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.107Z"
+    },
+    {
+      "id": "91878018",
+      "title": "Trump dismisses concerns about USS Abraham Lincoln, saying its record-breaking 250 days at sea ‘not nearly enough’ – as it happened",
+      "description": "This live blog is now closed.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/live/2026/aug/14/donald-trump-speech-crime-safety-new-york-republicans-midterms-us-politics-latest-news-updates",
+      "imageUrl": "https://media.guim.co.uk/dfdb2088fca801961af56d1dc574e5ef9cdb13c6/122_0_3727_2981/500.jpg",
+      "publishedAt": "2026-08-15T01:31:53.000Z",
+      "category": "USA",
       "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:45:30.659Z"
+      "fetchedAt": "2026-08-15T20:19:20.107Z"
+    },
+    {
+      "id": "f468b029",
+      "title": "Indonesia: Dozens dead after earthquake off Flores island",
+      "description": "At least 47 people have died and several buildings were damaged after the powerful magnitude 7.7 earthquake, which was followed by dozens of aftershocks. A tsunami warning has been lifted.",
+      "source": "DW",
+      "url": "https://www.dw.com/en/indonesia-dozens-dead-after-earthquake-off-flores-island/a-78377990?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-14T23:45:00.000Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
     },
     {
       "id": "776d4cc3",
@@ -1697,6 +2836,70 @@
         "DW"
       ],
       "fetchedAt": "2026-08-15T19:31:55.435Z"
+    },
+    {
+      "id": "b03b37",
+      "title": "Donald Trump to declare Hormuz US territory 'soon'",
+      "description": "Donald Trump said the strait would become part of the US after Iran is defeated. He also told Americans to accept higher gas prices, which have soared since Iran closed Hormuz in response to US and Israeli attacks.",
+      "source": "DW",
+      "url": "https://www.dw.com/en/donald-trump-to-declare-hormuz-us-territory-soon/a-78377755?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-14T22:14:00.000Z",
+      "category": "USA",
+      "importance": 70,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
+    },
+    {
+      "id": "546abc73",
+      "title": "Trump downplays concerns about sailors onboard USS Abraham Lincoln amid record deployment",
+      "description": "President said nine months at sea ‘not nearly long enough’ even as families call for attention to mental health crisis",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/14/trump-uss-abraham-lincoln-deployment",
+      "imageUrl": "https://media.guim.co.uk/bb189f5df21af2d08918529132fc52e6524508eb/335_0_1873_1500/500.jpg",
+      "publishedAt": "2026-08-14T22:12:55.000Z",
+      "category": "USA",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.107Z"
+    },
+    {
+      "id": "36bee921",
+      "title": "Trump asks Supreme Court to let White House ballroom construction continue",
+      "description": "Justice Department lawyers echoed the US president's claim that the $400 million White House ballroom ​project is a security necessity.",
+      "source": "DW",
+      "url": "https://www.dw.com/en/trump-asks-supreme-court-to-let-white-house-ballroom-construction-continue/a-78377695?maca=en-rss-en-all-1573-rdf",
+      "imageUrl": null,
+      "publishedAt": "2026-08-14T22:02:00.000Z",
+      "category": "USA",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "DW"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.115Z"
+    },
+    {
+      "id": "e3355361",
+      "title": "BBC seeks to subpoena Trump children and son-in-law over defamation lawsuit",
+      "description": "Network wants to serve Jared Kushner, Ivanka Trump and Donald Trump Jr after president sues over January 6 documentary",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/media/2026/aug/14/bbc-trump-children-subpoenas-lawsuit",
+      "imageUrl": "https://media.guim.co.uk/c519726d2d851d677c5334018aad733b64b7db60/1132_104_3152_2521/500.jpg",
+      "publishedAt": "2026-08-14T21:05:47.000Z",
+      "category": "USA",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:19:20.107Z"
     },
     {
       "id": "63d6bbcb",
