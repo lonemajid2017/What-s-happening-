@@ -1,15 +1,82 @@
-const USER_AGENT = "whats-Happening/2.0";
+const USER_AGENT = "whats-Happening/1.0";
 
-const TOPICS = [
-  "Trump", "United States", "White House", "US politics", "US Congress",
-  "Federal Reserve", "stock market", "stocks", "interest rates", "inflation",
-  "Bitcoin", "Ethereum", "crypto", "cryptocurrency", "blockchain",
-  "Israel", "Palestine", "Gaza", "Iran", "Lebanon", "Syria", "Middle East",
-  "India", "Indian government", "Modi", "RBI", "Indian economy", "New Delhi",
-  "Russia", "Ukraine", "China", "Europe", "Asia", "geopolitics", "United Nations",
-  "OpenAI", "Google AI", "Microsoft", "Nvidia", "Apple", "Meta",
-  "artificial intelligence", "AI", "technology"
-];
+const TOPICS = {
+  USA: [
+    "Trump",
+    "United States",
+    "White House",
+    "US politics",
+    "US Congress",
+    "Federal Reserve",
+    "US economy"
+  ],
+
+  Finance: [
+    "stock market",
+    "stocks",
+    "Federal Reserve",
+    "interest rates",
+    "inflation",
+    "banking",
+    "markets",
+    "economy"
+  ],
+
+  Crypto: [
+    "Bitcoin",
+    "Ethereum",
+    "crypto",
+    "cryptocurrency",
+    "SEC crypto",
+    "crypto ETF",
+    "blockchain"
+  ],
+
+  "Middle East": [
+    "Israel",
+    "Palestine",
+    "Gaza",
+    "Iran",
+    "Lebanon",
+    "Syria",
+    "Middle East",
+    "Saudi Arabia",
+    "UAE",
+    "Qatar"
+  ],
+
+  India: [
+    "India",
+    "Indian government",
+    "Modi",
+    "RBI",
+    "Indian economy",
+    "Indian markets",
+    "New Delhi"
+  ],
+
+  World: [
+    "Russia",
+    "Ukraine",
+    "China",
+    "Europe",
+    "Asia",
+    "geopolitics",
+    "United Nations"
+  ],
+
+  "AI & Tech": [
+    "OpenAI",
+    "Google AI",
+    "Microsoft",
+    "Nvidia",
+    "Apple",
+    "Meta",
+    "artificial intelligence",
+    "AI",
+    "technology"
+  ]
+};
 
 const TRUSTED_SOURCES = new Set([
   "Reuters",
@@ -20,6 +87,7 @@ const TRUSTED_SOURCES = new Set([
   "Al Jazeera English",
   "Al Jazeera",
   "The Telegraph",
+  "TNT World",
   "Bloomberg",
   "The Washington Post",
   "The New York Times",
@@ -33,7 +101,6 @@ const TRUSTED_SOURCES = new Set([
   "Agence France-Presse",
   "AFP",
   "DW",
-  "Deutsche Welle",
   "Euronews",
   "TASS",
   "The Hindu",
@@ -43,13 +110,11 @@ const TRUSTED_SOURCES = new Set([
   "CoinDesk",
   "The Block",
   "CoinGecko",
-  "NPR",
-  "France 24"
+  "NPR"
 ]);
 
 function cleanText(value = "") {
   return String(value)
-    .replace(/<!\[CDATA\[|\]\]>/g, "")
     .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -69,80 +134,12 @@ function createId(text) {
 function getCategory(text) {
   const lower = text.toLowerCase();
 
-  const groups = {
-    USA: [
-      "trump",
-      "united states",
-      "white house",
-      "us politics",
-      "us congress",
-      "federal reserve"
-    ],
+  for (const [category, keywords] of Object.entries(TOPICS)) {
+    const found = keywords.some(keyword =>
+      lower.includes(keyword.toLowerCase())
+    );
 
-    Finance: [
-      "stock",
-      "market",
-      "interest rate",
-      "inflation",
-      "banking",
-      "economy"
-    ],
-
-    Crypto: [
-      "bitcoin",
-      "ethereum",
-      "crypto",
-      "cryptocurrency",
-      "blockchain",
-      "crypto etf"
-    ],
-
-    "Middle East": [
-      "israel",
-      "palestine",
-      "gaza",
-      "iran",
-      "lebanon",
-      "syria",
-      "middle east",
-      "saudi",
-      "uae",
-      "qatar"
-    ],
-
-    India: [
-      "india",
-      "indian",
-      "modi",
-      "rbi",
-      "new delhi"
-    ],
-
-    World: [
-      "russia",
-      "ukraine",
-      "china",
-      "europe",
-      "asia",
-      "geopolitics",
-      "united nations"
-    ],
-
-    "AI & Tech": [
-      "openai",
-      "google ai",
-      "microsoft",
-      "nvidia",
-      "apple",
-      "meta",
-      "artificial intelligence",
-      " ai ",
-      "technology"
-    ]
-  };
-
-  for (const [category, words] of Object.entries(groups)) {
-    if (words.some(word => lower.includes(word))) {
+    if (found) {
       return category;
     }
   }
@@ -153,9 +150,13 @@ function getCategory(text) {
 function getImportance(title, description, source, publishedAt) {
   const text = `${title} ${description}`.toLowerCase();
 
-  let score = TRUSTED_SOURCES.has(source) ? 50 : 30;
+  let score = 30;
 
-  const keywords = [
+  if (TRUSTED_SOURCES.has(source)) {
+    score += 20;
+  }
+
+  const majorKeywords = [
     "breaking",
     "trump",
     "president",
@@ -181,7 +182,7 @@ function getImportance(title, description, source, publishedAt) {
     "rate hike"
   ];
 
-  for (const keyword of keywords) {
+  for (const keyword of majorKeywords) {
     if (text.includes(keyword)) {
       score += 5;
     }
@@ -196,34 +197,60 @@ function getImportance(title, description, source, publishedAt) {
 
   score -= Math.min(20, ageHours * 1.5);
 
-  return Math.max(
-    0,
-    Math.min(100, Math.round(score))
-  );
+  return Math.max(0, Math.min(100, Math.round(score)));
+}
+
+function normalizeImageUrl(url) {
+  if (!url) {
+    return null;
+  }
+
+  try {
+    const parsed = new URL(url);
+
+    if (
+      parsed.protocol !== "http:" &&
+      parsed.protocol !== "https:"
+    ) {
+      return null;
+    }
+
+    return parsed.toString();
+  } catch {
+    return null;
+  }
 }
 
 function normalizeArticle(article) {
+  if (!article) {
+    return null;
+  }
+
   const title = cleanText(article.title);
   const description = cleanText(article.description);
-  const source = cleanText(
-    article.source || "Unknown"
-  );
-
+  const source = cleanText(article.source || "Unknown");
   const url = article.url;
-
-  const publishedAt =
-    article.publishedAt ||
-    new Date().toISOString();
 
   if (!title || !url) {
     return null;
   }
 
-  const fingerprint =
-    `${title.toLowerCase()}|${source.toLowerCase()}`
-      .replace(/[^\w\s|]/g, " ")
-      .trim()
-      .slice(0, 220);
+  const publishedAt =
+    article.publishedAt ||
+    new Date().toISOString();
+
+  const imageUrl = normalizeImageUrl(
+    article.imageUrl ||
+      article.urlToImage ||
+      article.image ||
+      null
+  );
+
+  const fingerprint = `${title
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+    .slice(0, 200)}|${source.toLowerCase()}`;
 
   return {
     id: createId(fingerprint),
@@ -231,10 +258,11 @@ function normalizeArticle(article) {
     description,
     source,
     url,
+    imageUrl,
+    imageSource: imageUrl ? source : null,
+    imageAvailable: Boolean(imageUrl),
     publishedAt,
-    category: getCategory(
-      `${title} ${description}`
-    ),
+    category: getCategory(`${title} ${description}`),
     importance: getImportance(
       title,
       description,
@@ -248,74 +276,19 @@ function normalizeArticle(article) {
 }
 
 async function fetchJson(url, options = {}) {
-  const response = await fetch(url, {
-    ...options,
-    headers: {
-      "User-Agent": USER_AGENT,
-      ...(options.headers || {})
-    }
-  });
+  const controller = new AbortController();
 
-  if (!response.ok) {
-    throw new Error(
-      `${response.status} ${response.statusText}`
-    );
-  }
+  const timeout = setTimeout(() => {
+    controller.abort();
+  }, options.timeout || 15000);
 
-  return response.json();
-}
-
-function decodeXml(value = "") {
-  return cleanText(value)
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#x27;/g, "'");
-}
-
-function getXmlTag(block, tags) {
-  for (const tag of tags) {
-    const match = block.match(
-      new RegExp(
-        `<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`,
-        "i"
-      )
-    );
-
-    if (match) {
-      return decodeXml(match[1]);
-    }
-  }
-
-  return "";
-}
-
-function getXmlAttribute(
-  block,
-  tag,
-  attribute
-) {
-  const match = block.match(
-    new RegExp(
-      `<${tag}[^>]*${attribute}=["']([^"']+)["'][^>]*>`,
-      "i"
-    )
-  );
-
-  return match
-    ? decodeXml(match[1])
-    : "";
-}
-
-async function fetchRSS(url, source) {
   try {
     const response = await fetch(url, {
+      ...options,
+      signal: controller.signal,
       headers: {
         "User-Agent": USER_AGENT,
-        Accept:
-          "application/rss+xml, application/xml, text/xml"
+        ...(options.headers || {})
       }
     });
 
@@ -325,116 +298,131 @@ async function fetchRSS(url, source) {
       );
     }
 
-    const xml = await response.text();
-
-    const items = [
-      ...xml.matchAll(
-        /<item\b[^>]*>([\s\S]*?)<\/item>/gi
-      )
-    ].map(match => match[1]);
-
-    const entries = [
-      ...xml.matchAll(
-        /<entry\b[^>]*>([\s\S]*?)<\/entry>/gi
-      )
-    ].map(match => match[1]);
-
-    const blocks =
-      items.length > 0
-        ? items
-        : entries;
-
-    return blocks
-      .map(block => ({
-        title: getXmlTag(
-          block,
-          ["title"]
-        ),
-
-        description: getXmlTag(
-          block,
-          [
-            "description",
-            "summary",
-            "content"
-          ]
-        ),
-
-        source,
-
-        url:
-          getXmlTag(
-            block,
-            ["link"]
-          ) ||
-          getXmlAttribute(
-            block,
-            "link",
-            "href"
-          ),
-
-        publishedAt:
-          getXmlTag(
-            block,
-            [
-              "pubDate",
-              "published",
-              "updated",
-              "dc:date"
-            ]
-          ) ||
-          new Date().toISOString()
-      }))
-      .filter(
-        article =>
-          article.title &&
-          article.url
-      )
-      .slice(0, 50);
-
-  } catch (error) {
-    console.error(
-      `${source} RSS request failed:`,
-      error.message
-    );
-
-    return [];
+    return await response.json();
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
+async function fetchArticleImage(url) {
+  if (!url) {
+    return null;
+  }
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": USER_AGENT,
+        Accept: "text/html,application/xhtml+xml"
+      },
+      signal: AbortSignal.timeout(10000)
+    });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const html = await response.text();
+
+    const patterns = [
+      /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
+      /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
+      /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
+      /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i
+    ];
+
+    for (const pattern of patterns) {
+      const match = html.match(pattern);
+
+      if (match?.[1]) {
+        const image = normalizeImageUrl(match[1]);
+
+        if (image) {
+          return image;
+        }
+      }
+    }
+
+    return null;
+  } catch (error) {
+    return null;
+  }
+}
+
+async function addMissingImages(articles) {
+  const result = [...articles];
+
+  const candidates = result
+    .filter(article => !article.imageUrl)
+    .filter(article => article.url)
+    .slice(0, 50);
+
+  const batchSize = 5;
+
+  for (let i = 0; i < candidates.length; i += batchSize) {
+    const batch = candidates.slice(
+      i,
+      i + batchSize
+    );
+
+    const images = await Promise.all(
+      batch.map(article =>
+        fetchArticleImage(article.url)
+      )
+    );
+
+    for (let j = 0; j < batch.length; j++) {
+      const image = images[j];
+
+      if (!image) {
+        continue;
+      }
+
+      const original = result.find(
+        item => item.id === batch[j].id
+      );
+
+      if (original) {
+        original.imageUrl = image;
+        original.imageSource = original.source;
+        original.imageAvailable = true;
+      }
+    }
+  }
+
+  return result;
+}
+
 async function fetchNewsAPI() {
-  const apiKey =
-    process.env.NEWS_API_KEY;
+  const apiKey = process.env.NEWS_API_KEY;
 
   if (!apiKey) {
     return [];
   }
 
   const query = encodeURIComponent(
-    TOPICS.slice(0, 20).join(" OR ")
+    "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
   );
 
   const url =
-    `https://newsapi.org/v2/everything` +
+    "https://newsapi.org/v2/everything" +
     `?q=${query}` +
-    `&language=en` +
-    `&sortBy=publishedAt` +
-    `&pageSize=50` +
+    "&language=en" +
+    "&sortBy=publishedAt" +
+    "&pageSize=50" +
     `&apiKey=${encodeURIComponent(apiKey)}`;
 
   try {
-    const data =
-      await fetchJson(url);
+    const data = await fetchJson(url);
 
-    return (data.articles || [])
-      .map(article => ({
-        title: article.title,
-        description: article.description,
-        source: article.source?.name,
-        url: article.url,
-        publishedAt: article.publishedAt
-      }));
-
+    return (data.articles || []).map(article => ({
+      title: article.title,
+      description: article.description,
+      source: article.source?.name || "NewsAPI",
+      url: article.url,
+      imageUrl: article.urlToImage || null,
+      publishedAt: article.publishedAt
+    }));
   } catch (error) {
     console.error(
       "NewsAPI request failed:",
@@ -446,38 +434,35 @@ async function fetchNewsAPI() {
 }
 
 async function fetchGNews() {
-  const apiKey =
-    process.env.GNEWS_API_KEY;
+  const apiKey = process.env.GNEWS_API_KEY;
 
   if (!apiKey) {
     return [];
   }
 
   const query = encodeURIComponent(
-    TOPICS.slice(0, 20).join(" OR ")
+    "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
   );
 
   const url =
-    `https://gnews.io/api/v4/search` +
+    "https://gnews.io/api/v4/search" +
     `?q=${query}` +
-    `&lang=en` +
-    `&max=50` +
-    `&sortby=publishedAt` +
+    "&lang=en" +
+    "&max=50" +
+    "&sortby=publishedAt" +
     `&apikey=${encodeURIComponent(apiKey)}`;
 
   try {
-    const data =
-      await fetchJson(url);
+    const data = await fetchJson(url);
 
-    return (data.articles || [])
-      .map(article => ({
-        title: article.title,
-        description: article.description,
-        source: article.source?.name,
-        url: article.url,
-        publishedAt: article.publishedAt
-      }));
-
+    return (data.articles || []).map(article => ({
+      title: article.title,
+      description: article.description,
+      source: article.source?.name || "GNews",
+      url: article.url,
+      imageUrl: article.image || null,
+      publishedAt: article.publishedAt
+    }));
   } catch (error) {
     console.error(
       "GNews request failed:",
@@ -489,48 +474,58 @@ async function fetchGNews() {
 }
 
 async function fetchGuardian() {
-  const apiKey =
-    process.env.GUARDIAN_API_KEY;
+  const apiKey = process.env.GUARDIAN_API_KEY;
 
   if (!apiKey) {
     return [];
   }
 
   const query = encodeURIComponent(
-    TOPICS.slice(0, 20).join(" OR ")
+    "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
   );
 
   const url =
-    `https://content.guardianapis.com/search` +
+    "https://content.guardianapis.com/search" +
     `?q=${query}` +
-    `&order-by=newest` +
-    `&page-size=50` +
-    `&show-fields=trailText` +
+    "&order-by=newest" +
+    "&page-size=50" +
+    "&show-fields=trailText" +
+    "&show-elements=image" +
     `&api-key=${encodeURIComponent(apiKey)}`;
 
   try {
-    const data =
-      await fetchJson(url);
+    const data = await fetchJson(url);
 
-    return (
-      data.response?.results || []
-    ).map(article => ({
-      title: article.webTitle,
+    return (data.response?.results || []).map(article => {
+      let imageUrl = null;
 
-      description:
-        article.fields?.trailText ||
-        "",
+      const imageElement =
+        article.elements?.find(
+          element => element.type === "image"
+        );
 
-      source:
-        "The Guardian",
+      if (imageElement?.assets?.length) {
+        const assets = imageElement.assets;
 
-      url:
-        article.webUrl,
+        const preferred =
+          assets.find(asset =>
+            asset.type === "image"
+          ) || assets[assets.length - 1];
 
-      publishedAt:
-        article.webPublicationDate
-    }));
+        imageUrl = preferred?.file || null;
+      }
 
+      return {
+        title: article.webTitle,
+        description:
+          article.fields?.trailText || "",
+        source: "The Guardian",
+        url: article.webUrl,
+        imageUrl,
+        publishedAt:
+          article.webPublicationDate
+      };
+    });
   } catch (error) {
     console.error(
       "Guardian request failed:",
@@ -542,52 +537,45 @@ async function fetchGuardian() {
 }
 
 async function fetchCoinGecko() {
+  const apiKey =
+    process.env.COINGECKO_API_KEY;
+
+  const url =
+    "https://api.coingecko.com/api/v3/coins/markets" +
+    "?vs_currency=usd" +
+    "&order=market_cap_desc" +
+    "&per_page=20" +
+    "&page=1" +
+    "&sparkline=false";
+
+  const headers = {};
+
+  if (apiKey) {
+    headers["x-cg-demo-api-key"] = apiKey;
+  }
+
   try {
-    const headers = {};
-
-    if (
-      process.env.COINGECKO_API_KEY
-    ) {
-      headers[
-        "x-cg-demo-api-key"
-      ] =
-        process.env.COINGECKO_API_KEY;
-    }
-
-    const url =
-      "https://api.coingecko.com/api/v3/coins/markets" +
-      "?vs_currency=usd" +
-      "&order=market_cap_desc" +
-      "&per_page=20" +
-      "&page=1" +
-      "&sparkline=false";
-
-    const data =
-      await fetchJson(url, {
-        headers
-      });
+    const data = await fetchJson(url, {
+      headers
+    });
 
     return data
       .filter(
         coin =>
           Math.abs(
             Number(
-              coin.price_change_percentage_24h ||
-                0
+              coin.price_change_percentage_24h || 0
             )
           ) >= 3
       )
       .map(coin => ({
         title:
-          `${coin.name} ` +
-          `(${String(
-            coin.symbol
+          `${coin.name} (${String(
+            coin.symbol || ""
           ).toUpperCase()}) moved ` +
           `${Number(
-            coin.price_change_percentage_24h ||
-              0
+            coin.price_change_percentage_24h || 0
           ).toFixed(2)}% in 24 hours`,
-
         description:
           `Market cap: $${Number(
             coin.market_cap || 0
@@ -595,17 +583,13 @@ async function fetchCoinGecko() {
           `24h volume: $${Number(
             coin.total_volume || 0
           ).toLocaleString("en-US")}.`,
-
-        source:
-          "CoinGecko",
-
+        source: "CoinGecko",
         url:
           `https://www.coingecko.com/en/coins/${coin.id}`,
-
+        imageUrl: coin.image || null,
         publishedAt:
           new Date().toISOString()
       }));
-
   } catch (error) {
     console.error(
       "CoinGecko request failed:",
@@ -616,172 +600,109 @@ async function fetchCoinGecko() {
   }
 }
 
-function mergeDuplicateStories(
-  stories
-) {
+function mergeDuplicateStories(stories) {
   const groups = new Map();
 
   for (const story of stories) {
-    const key =
-      story.title
-        .toLowerCase()
-        .replace(
-          /[^\w\s]/g,
-          " "
-        )
-        .split(/\s+/)
-        .filter(Boolean)
-        .slice(0, 12)
-        .join(" ");
+    const key = story.title
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu, " ")
+      .split(" ")
+      .filter(Boolean)
+      .slice(0, 12)
+      .join(" ");
 
-    const existing =
-      groups.get(key);
+    const existing = groups.get(key);
 
     if (!existing) {
-      groups.set(
-        key,
-        {
-          ...story,
-          sources: [
-            ...(story.sources ||
-              [story.source])
-          ]
-        }
-      );
+      groups.set(key, {
+        ...story,
+        sources: [
+          ...(story.sources || [story.source])
+        ]
+      });
 
       continue;
     }
 
-    existing.sources = [
-      ...new Set([
-        ...(existing.sources || []),
-        ...(story.sources || [
-          story.source
-        ])
-      ])
-    ];
+    const sourceSet = new Set([
+      ...(existing.sources || []),
+      ...(story.sources || [story.source])
+    ]);
+
+    existing.sources = [...sourceSet];
 
     existing.verified =
-      existing.verified ||
-      story.verified;
+      existing.verified || story.verified;
+
+    if (story.importance > existing.importance) {
+      const sources = existing.sources;
+
+      Object.assign(existing, story);
+
+      existing.sources = sources;
+    }
 
     if (
-      story.importance >
-      existing.importance
+      !existing.imageUrl &&
+      story.imageUrl
     ) {
-      const sources =
-        existing.sources;
+      existing.imageUrl = story.imageUrl;
+      existing.imageSource =
+        story.imageSource || story.source;
+      existing.imageAvailable = true;
+    }
 
-      Object.assign(
-        existing,
-        story
-      );
-
-      existing.sources =
-        sources;
+    if (
+      existing.imageUrl &&
+      !existing.imageSource
+    ) {
+      existing.imageSource = existing.source;
     }
   }
 
-  return [
-    ...groups.values()
-  ];
+  return [...groups.values()];
 }
 
 export async function collectNews() {
   const results =
     await Promise.allSettled([
       fetchNewsAPI(),
-
       fetchGNews(),
-
       fetchGuardian(),
-
-      fetchRSS(
-        "https://www.aljazeera.com/xml/rss/all.xml",
-        "Al Jazeera"
-      ),
-
-      fetchRSS(
-        "https://feeds.bbci.co.uk/news/rss.xml",
-        "BBC News"
-      ),
-
-      fetchRSS(
-        "https://rss.dw.com/rdf/rss-en-all",
-        "DW"
-      ),
-
-      fetchRSS(
-        "https://www.france24.com/en/rss",
-        "France 24"
-      ),
-
-      fetchRSS(
-        "https://www.euronews.com/rss",
-        "Euronews"
-      ),
-
-      fetchRSS(
-        "https://indianexpress.com/section/india/feed/",
-        "The Indian Express"
-      ),
-
-      fetchRSS(
-        "https://indianexpress.com/section/world/feed/",
-        "The Indian Express"
-      ),
-
-      fetchRSS(
-        "https://feeds.npr.org/1001/rss.xml",
-        "NPR"
-      ),
-
       fetchCoinGecko()
     ]);
 
-  const rawArticles =
-    results.flatMap(
-      result =>
-        result.status ===
-        "fulfilled"
-          ? result.value
-          : []
-    );
+  const rawArticles = results.flatMap(
+    result =>
+      result.status === "fulfilled"
+        ? result.value
+        : []
+  );
 
-  const normalized =
-    rawArticles
-      .map(normalizeArticle)
-      .filter(Boolean);
+  const normalized = rawArticles
+    .map(normalizeArticle)
+    .filter(Boolean);
 
   const uniqueStories =
-    mergeDuplicateStories(
-      normalized
-    );
+    mergeDuplicateStories(normalized);
 
-  return uniqueStories
+  const withImages =
+    await addMissingImages(uniqueStories);
+
+  return withImages
     .filter(
-      story =>
-        story.importance >= 35
+      story => story.importance >= 45
     )
     .sort((a, b) => {
-      if (
-        b.importance !==
-        a.importance
-      ) {
-        return (
-          b.importance -
-          a.importance
-        );
+      if (b.importance !== a.importance) {
+        return b.importance - a.importance;
       }
 
       return (
-        new Date(
-          b.publishedAt
-        ).getTime() -
-        new Date(
-          a.publishedAt
-        ).getTime()
+        new Date(b.publishedAt).getTime() -
+        new Date(a.publishedAt).getTime()
       );
     })
-    .slice(0, 100);
-      }
+    .slice(0, 50);
+  }
