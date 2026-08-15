@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T22:38:46.581Z",
+  "updatedAt": "2026-08-15T22:44:24.669Z",
   "stories": [
     {
       "id": "eb1cb13c",
@@ -15,15 +15,15 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T22:02:49.000Z",
-      "age": "35 minutes ago",
-      "ageMinutes": 36,
+      "age": "41 minutes ago",
+      "ageMinutes": 42,
       "category": "USA",
       "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T22:38:44.621Z",
+      "fetchedAt": "2026-08-15T22:44:23.176Z",
       "finalScore": 114
     },
     {
