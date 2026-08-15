@@ -1,4 +1,17 @@
 {
-  "updatedAt": null,
-  "posts": []
+  "updatedAt": "2026-08-15T19:01:49.592Z",
+  "posts": [
+    {
+      "id": "1696221565b3d040e7cf7f83",
+      "storyId": "5ee853c7",
+      "post": "Ukrainian President Volodymyr Zelenskyy has warned Egypt that food exports are threatened by Russian strikes in the Black Sea. Meanwhile, Russia has dismissed the idea of a Black Sea ceasefire.\n\nSource: The Guardian",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/ukraine-war-briefing-zelenskyy-warns-egypt-of-food-supply-threat-caused-by-russian-strikes-in-black-sea",
+      "category": "World",
+      "importance": 60,
+      "publishedAt": "2026-08-15T01:53:30Z",
+      "createdAt": "2026-08-15T19:01:49.592Z",
+      "ready": true
+    }
+  ]
 }

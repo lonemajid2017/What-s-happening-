@@ -1,4 +1,140 @@
 {
-  "updatedAt": null,
-  "stories": []
+  "updatedAt": "2026-08-15T19:01:45.092Z",
+  "stories": [
+    {
+      "id": "ac08121f",
+      "title": "Monero (XMR) moved 3.10% in 24 hours",
+      "description": "Market cap: $7,707,801,165. 24h volume: $68,573,060.",
+      "source": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/monero",
+      "publishedAt": "2026-08-15T19:01:44.606Z",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "CoinGecko"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.089Z"
+    },
+    {
+      "id": "a79b120b",
+      "title": "Chainlink (LINK) moved 7.30% in 24 hours",
+      "description": "Market cap: $7,142,767,838. 24h volume: $511,544,355.",
+      "source": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/chainlink",
+      "publishedAt": "2026-08-15T19:01:44.606Z",
+      "category": "AI & Tech",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "CoinGecko"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.089Z"
+    },
+    {
+      "id": "81039381",
+      "title": "From laptops to sleep buds, 25 tech essentials for college students this year",
+      "description": "With fall semester due to begin, our tech reviewer lays out the best back-to-school laptops, headphones, writing tablets, smartphones and more to ease back into studies",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/thefilter-us/2026/aug/15/best-tech-essentials-college-students",
+      "publishedAt": "2026-08-15T17:15:02Z",
+      "category": "World",
+      "importance": 47,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.087Z"
+    },
+    {
+      "id": "ca66725b",
+      "title": "Middlesbrough 2-1 Lincoln, Bristol City 0-2 Millwall, Norwich 1-2 West Brom: football - as it happened",
+      "description": "The EFL is back, as Championship new boys Lincoln push promotion hopefuls Boro all the way",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/football/live/2026/aug/15/bolton-v-preston-middlesbrough-v-lincoln-bristol-city-v-millwall-and-more-football-live",
+      "publishedAt": "2026-08-15T16:18:08Z",
+      "category": "World",
+      "importance": 46,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.087Z"
+    },
+    {
+      "id": "77e340fa",
+      "title": "Massive egg recall in US south and south-west due to salmonella outbreak",
+      "description": "1.6m dozen eggs from Texas recalled amid one of the largest recorded foodborne illness outbreaks in US history",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/egg-recall-us-south-and-south-west-salmonella-outbreak",
+      "publishedAt": "2026-08-15T16:01:10Z",
+      "category": "World",
+      "importance": 45,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.087Z"
+    },
+    {
+      "id": "a1a8d8f",
+      "title": "Powerful earthquake kills dozens in eastern Indonesia",
+      "description": "Quake struck Flores region early on Saturday, prompting thousands to seek higher ground for fear of a tsunami",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/indonesia-earthquake",
+      "publishedAt": "2026-08-15T15:34:38Z",
+      "category": "World",
+      "importance": 45,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.087Z"
+    },
+    {
+      "id": "33e844c7",
+      "title": "Hundreds arrested on suspicion of arson in France as wildfires rage across Europe",
+      "description": "One person killed and hundreds evacuated in Croatia as blazes also hit Germany, Greece and Spain",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/14/arrested-suspicion-starting-wildfires-europe-france",
+      "publishedAt": "2026-08-15T15:32:38Z",
+      "category": "World",
+      "importance": 45,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.087Z"
+    },
+    {
+      "id": "5ee853c7",
+      "title": "Ukraine war briefing: Zelenskyy warns Egypt of food supply threat caused by Russian strikes in Black Sea",
+      "description": "Ukraine president says exports to Egypt under threat from Russian attacks; Russia dismisses idea of Black Sea ceasefire. What we know on day 1,635",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/ukraine-war-briefing-zelenskyy-warns-egypt-of-food-supply-threat-caused-by-russian-strikes-in-black-sea",
+      "publishedAt": "2026-08-15T01:53:30Z",
+      "category": "World",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.089Z"
+    },
+    {
+      "id": "63d6bbcb",
+      "title": "The Guardian view on Nigel Farage: Clacton cannot acquit him | Editorial",
+      "description": "Editorial: Reform won a contrived byelection, but scrutiny continues – while the party increasingly attacks the watchdogs and journalists asking awkward questions",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/14/the-guardian-view-on-nigel-farage-clacton-cannot-acquit-him",
+      "publishedAt": "2026-08-14T17:06:32Z",
+      "category": "World",
+      "importance": 45,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T19:01:45.089Z"
+    }
+  ]
 }
