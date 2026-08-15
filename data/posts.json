@@ -1,29 +1,29 @@
 {
-  "updatedAt": "2026-08-15T22:44:29.145Z",
+  "updatedAt": "2026-08-15T22:45:10.455Z",
   "posts": [
     {
-      "id": "8685770d24711b24a23c80d9",
-      "storyId": "71b68cfd",
-      "post": "On Independence Day, Prime Minister Narendra Modi outlined a vision for a developed India, emphasizing energy security, technology, semiconductor production, and self-reliance, according to The Indian Express.",
-      "source": "The Indian Express",
-      "url": "https://indianexpress.com/article/business/prime-minister-narendra-modi-independence-day-speech-energy-semiconductors-hormuz-viksit-bharat-10834782/",
-      "category": "India",
+      "id": "416c244ca3c4e59dfc2c1be4",
+      "storyId": "c13fb900",
+      "post": "Iran and Oman are nearing an agreement on managing traffic through the Strait of Hormuz. According to the Spokane Spokesman-Review, both countries agreed on specific shipping routes in an effort to address a key hurdle in resolving nearly six months of conflict between Iran and the U.S.",
+      "source": "Spokane Spokesman-Review",
+      "url": "https://www.spokesman.com/stories/2026/aug/15/iran-oman-home-in-on-hormuz-strait-deal-as-ship-at/",
+      "category": "USA",
       "importance": 55,
-      "verified": true,
-      "publishedAt": "2026-08-15T10:26:20.000Z",
+      "verified": false,
+      "publishedAt": "2026-08-15T10:43:00.000Z",
       "age": "12 hours ago",
-      "ageMinutes": 738,
+      "ageMinutes": 722,
       "imageAvailable": true,
-      "imageUrl": "https://images.indianexpress.com/2026/08/Independence-Day-Modi-6_cb851a_20260815102330.jpg",
-      "imageDownloadUrl": "https://images.indianexpress.com/2026/08/Independence-Day-Modi-6_cb851a_20260815102330.jpg",
-      "imageSource": "The Indian Express",
+      "imageUrl": "https://media.spokesman.com/graphics/2020/08/sr_placeholder.png",
+      "imageDownloadUrl": "https://media.spokesman.com/graphics/2020/08/sr_placeholder.png",
+      "imageSource": "Spokane Spokesman-Review",
       "videoAvailable": false,
       "videoUrl": null,
       "videoSource": null,
       "sources": [
-        "The Indian Express"
+        "Spokane Spokesman-Review"
       ],
-      "createdAt": "2026-08-15T22:44:29.145Z",
+      "createdAt": "2026-08-15T22:45:10.455Z",
       "ready": true
     }
   ]
