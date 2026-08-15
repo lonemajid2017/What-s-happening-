@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T23:11:15.058Z",
+  "updatedAt": "2026-08-15T23:39:49.050Z",
   "stories": [
     {
       "id": "663828b0",
@@ -8,9 +8,9 @@
       "source": "The Guardian",
       "url": "https://www.theguardian.com/australia-news/live/2026/aug/16/politics-reactions-nsw-gun-buyback-anthony-albanese-labor-angus-taylor-coalition-pauline-hanson-one-nation-bird-flu-ntwnfb",
       "category": "World",
-      "publishedAt": "2026-08-15T23:08:57.000Z",
-      "age": "1 minute ago",
-      "ageMinutes": 2,
+      "publishedAt": "2026-08-15T23:38:59.000Z",
+      "age": "just now",
+      "ageMinutes": 0,
       "imageUrl": "https://media.guim.co.uk/504362984ed2fef2b8e6384eb71d24c8415d6514/360_230_2363_1890/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -23,7 +23,7 @@
         "The Guardian"
       ],
       "importance": 91,
-      "fetchedAt": "2026-08-15T23:10:51.354Z"
+      "fetchedAt": "2026-08-15T23:39:25.019Z"
     },
     {
       "id": "88e71bf5",
@@ -33,8 +33,8 @@
       "url": "https://www.theguardian.com/sport/2026/aug/15/novak-djokovic-suffers-in-cincinnati-heat-as-thiago-agustin-tirante-inflicts-shock-defeat",
       "category": "Middle East",
       "publishedAt": "2026-08-15T22:35:21.000Z",
-      "age": "35 minutes ago",
-      "ageMinutes": 36,
+      "age": "1 hour ago",
+      "ageMinutes": 64,
       "imageUrl": "https://media.guim.co.uk/1e643d95823d07c6ae0fef3a5f49ea937963f33e/494_0_3120_2496/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -46,8 +46,8 @@
       "sources": [
         "The Guardian"
       ],
-      "importance": 93,
-      "fetchedAt": "2026-08-15T23:10:51.354Z"
+      "importance": 85,
+      "fetchedAt": "2026-08-15T23:39:25.019Z"
     },
     {
       "id": "a334bc3a",
@@ -58,7 +58,7 @@
       "category": "USA",
       "publishedAt": "2026-08-15T22:02:49.000Z",
       "age": "1 hour ago",
-      "ageMinutes": 68,
+      "ageMinutes": 97,
       "imageUrl": "https://media.guim.co.uk/b5ec570afc2dee43bb60935bd60f1a08bb21d097/688_0_6880_5504/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -71,7 +71,7 @@
         "The Guardian"
       ],
       "importance": 85,
-      "fetchedAt": "2026-08-15T23:10:51.354Z"
+      "fetchedAt": "2026-08-15T23:39:25.019Z"
     },
     {
       "id": "2e7852a1",
@@ -81,8 +81,8 @@
       "url": "https://www.theguardian.com/film/2026/aug/15/borges-and-me-review-alan-cumming-fionn-whitehead",
       "category": "World",
       "publishedAt": "2026-08-15T20:36:06.000Z",
-      "age": "2 hours ago",
-      "ageMinutes": 155,
+      "age": "3 hours ago",
+      "ageMinutes": 183,
       "imageUrl": "https://media.guim.co.uk/6174a3a68033ab35b9bd61bd8650cf20b9b38884/230_3331_3210_2568/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -94,8 +94,8 @@
       "sources": [
         "The Guardian"
       ],
-      "importance": 65,
-      "fetchedAt": "2026-08-15T23:10:51.354Z"
+      "importance": 60,
+      "fetchedAt": "2026-08-15T23:39:25.020Z"
     },
     {
       "id": "d8baeecc",
@@ -106,7 +106,7 @@
       "category": "World",
       "publishedAt": "2026-08-15T20:00:06.000Z",
       "age": "3 hours ago",
-      "ageMinutes": 191,
+      "ageMinutes": 219,
       "imageUrl": "https://media.guim.co.uk/aa9f5e1d4e0a5015a1ff846223cd2535290b3f03/569_0_5693_4555/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -119,7 +119,7 @@
         "The Guardian"
       ],
       "importance": 63,
-      "fetchedAt": "2026-08-15T23:10:51.354Z"
+      "fetchedAt": "2026-08-15T23:39:25.020Z"
     },
     {
       "id": "ce1f69e8",
@@ -130,7 +130,7 @@
       "category": "USA",
       "publishedAt": "2026-08-15T18:44:49.000Z",
       "age": "4 hours ago",
-      "ageMinutes": 266,
+      "ageMinutes": 295,
       "imageUrl": "https://media.guim.co.uk/2121b0163cb27f7b515baef179471bedb844bead/540_0_5375_4303/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -143,7 +143,7 @@
         "The Guardian"
       ],
       "importance": 77,
-      "fetchedAt": "2026-08-15T23:10:51.354Z"
+      "fetchedAt": "2026-08-15T23:39:25.020Z"
     },
     {
       "id": "a1a8d8f",
@@ -153,8 +153,8 @@
       "url": "https://www.theguardian.com/world/2026/aug/15/indonesia-earthquake",
       "category": "USA",
       "publishedAt": "2026-08-15T15:34:38.000Z",
-      "age": "7 hours ago",
-      "ageMinutes": 456,
+      "age": "8 hours ago",
+      "ageMinutes": 485,
       "imageUrl": "https://media.guim.co.uk/c1dfcbb24723c11ca26889b87c4ab19df23653f6/93_0_1333_1067/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -167,7 +167,7 @@
         "The Guardian"
       ],
       "importance": 70,
-      "fetchedAt": "2026-08-15T23:10:51.355Z"
+      "fetchedAt": "2026-08-15T23:39:25.020Z"
     },
     {
       "id": "3a79f925",
@@ -178,7 +178,7 @@
       "category": "China",
       "publishedAt": "2026-08-15T11:00:54.000Z",
       "age": "12 hours ago",
-      "ageMinutes": 730,
+      "ageMinutes": 759,
       "imageUrl": "https://media.guim.co.uk/1ebc842f555e9a252aa9f08271d730845eed33e1/881_0_4800_3840/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -191,7 +191,7 @@
         "The Guardian"
       ],
       "importance": 70,
-      "fetchedAt": "2026-08-15T23:10:51.356Z"
+      "fetchedAt": "2026-08-15T23:39:25.021Z"
     },
     {
       "id": "b7298898",
@@ -202,7 +202,7 @@
       "category": "USA",
       "publishedAt": "2026-08-15T09:00:52.000Z",
       "age": "14 hours ago",
-      "ageMinutes": 850,
+      "ageMinutes": 879,
       "imageUrl": "https://media.guim.co.uk/454d2b3d60e48ea05cddbd0f9f0f7ac13bdf5829/621_0_6211_4971/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -215,7 +215,7 @@
         "The Guardian"
       ],
       "importance": 73,
-      "fetchedAt": "2026-08-15T23:10:51.356Z"
+      "fetchedAt": "2026-08-15T23:39:25.021Z"
     },
     {
       "id": "4ed0d011",
@@ -226,7 +226,7 @@
       "category": "Russia-Ukraine",
       "publishedAt": "2026-08-15T01:53:30.000Z",
       "age": "21 hours ago",
-      "ageMinutes": 1277,
+      "ageMinutes": 1306,
       "imageUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/500.jpg",
       "imageSource": "The Guardian",
       "imageAvailable": true,
@@ -239,7 +239,7 @@
         "The Guardian"
       ],
       "importance": 85,
-      "fetchedAt": "2026-08-15T23:10:51.357Z"
+      "fetchedAt": "2026-08-15T23:39:25.023Z"
     }
   ]
 }
