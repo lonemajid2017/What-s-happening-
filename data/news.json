@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-08-15T19:31:55.442Z",
+  "updatedAt": "2026-08-15T19:45:31.287Z",
   "stories": [
+    {
+      "id": "ac08121f",
+      "title": "Monero (XMR) moved 3.10% in 24 hours",
+      "description": "Market cap: $7,722,065,304. 24h volume: $70,418,995.",
+      "source": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/monero",
+      "imageUrl": "https://coin-images.coingecko.com/coins/images/69/large/monero_logo.png?1696501460",
+      "imageSource": "CoinGecko",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T19:45:29.886Z",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "CoinGecko"
+      ],
+      "fetchedAt": "2026-08-15T19:45:30.660Z"
+    },
+    {
+      "id": "a79b120b",
+      "title": "Chainlink (LINK) moved 7.30% in 24 hours",
+      "description": "Market cap: $7,165,500,108. 24h volume: $507,854,024.",
+      "source": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/chainlink",
+      "imageUrl": "https://coin-images.coingecko.com/coins/images/877/large/Chainlink_Logo_500.png?1760023405",
+      "imageSource": "CoinGecko",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T19:45:29.886Z",
+      "category": "AI & Tech",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "CoinGecko"
+      ],
+      "fetchedAt": "2026-08-15T19:45:30.660Z"
+    },
     {
       "id": "366e9a27",
       "title": "Monero (XMR) moved 3.10% in 24 hours",
@@ -67,44 +103,17 @@
       "description": "In spite of a 2-1 loss to Bayer Leverkusen, the new head coach at St James’ Park showed signs he is on the right path, and is closing in on Benfica’s Amar Dedic",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/football/2026/aug/15/newcastle-matthias-jaissle-bayer-leverkusen-defeat-amar-dedic",
+      "imageUrl": "https://media.guim.co.uk/e0a55c087df35ce72d154c103d55e9251db4ac86/380_0_3798_3038/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
       "publishedAt": "2026-08-15T19:18:10Z",
-      "category": "World",
-      "importance": 50,
+      "category": "AI & Tech",
+      "importance": 49,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:31:55.431Z"
-    },
-    {
-      "id": "ac08121f",
-      "title": "Monero (XMR) moved 3.10% in 24 hours",
-      "description": "Market cap: $7,702,639,414. 24h volume: $68,967,259.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/monero",
-      "publishedAt": "2026-08-15T19:15:32.162Z",
-      "category": "World",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T19:15:32.560Z"
-    },
-    {
-      "id": "a79b120b",
-      "title": "Chainlink (LINK) moved 7.30% in 24 hours",
-      "description": "Market cap: $7,153,419,144. 24h volume: $509,033,196.",
-      "source": "CoinGecko",
-      "url": "https://www.coingecko.com/en/coins/chainlink",
-      "publishedAt": "2026-08-15T19:15:32.162Z",
-      "category": "AI & Tech",
-      "importance": 50,
-      "verified": true,
-      "sources": [
-        "CoinGecko"
-      ],
-      "fetchedAt": "2026-08-15T19:15:32.560Z"
+      "fetchedAt": "2026-08-15T19:45:30.658Z"
     },
     {
       "id": "f72a9b95",
@@ -352,14 +361,17 @@
       "description": "With fall semester due to begin, our tech reviewer lays out the best back-to-school laptops, headphones, writing tablets, smartphones and more to ease back into studies",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/thefilter-us/2026/aug/15/best-tech-essentials-college-students",
+      "imageUrl": "https://media.guim.co.uk/80b4d063e45506a9eb99bad137eafa2465e2dabe/99_131_2758_2205/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
       "publishedAt": "2026-08-15T17:15:02Z",
       "category": "World",
-      "importance": 47,
+      "importance": 46,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:15:32.558Z"
+      "fetchedAt": "2026-08-15T19:45:30.658Z"
     },
     {
       "id": "da51487d",
@@ -502,14 +514,17 @@
       "description": "The EFL is back, as Championship new boys Lincoln push promotion hopefuls Boro all the way",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/football/live/2026/aug/15/bolton-v-preston-middlesbrough-v-lincoln-bristol-city-v-millwall-and-more-football-live",
+      "imageUrl": "https://media.guim.co.uk/04d0346c28043e111ef8921dcd547782b435f5ba/478_0_5326_4262/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
       "publishedAt": "2026-08-15T16:18:08Z",
       "category": "World",
-      "importance": 46,
+      "importance": 45,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:15:32.558Z"
+      "fetchedAt": "2026-08-15T19:45:30.658Z"
     },
     {
       "id": "57c94413",
@@ -1447,6 +1462,9 @@
       "description": "Ukraine president says exports to Egypt under threat from Russian attacks; Russia dismisses idea of Black Sea ceasefire. What we know on day 1,635",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/world/2026/aug/15/ukraine-war-briefing-zelenskyy-warns-egypt-of-food-supply-threat-caused-by-russian-strikes-in-black-sea",
+      "imageUrl": "https://media.guim.co.uk/3fdcaef39e4c6a26ef87bca956dc33f5c3c8bca8/579_0_3320_2656/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
       "publishedAt": "2026-08-15T01:53:30Z",
       "category": "World",
       "importance": 60,
@@ -1454,7 +1472,7 @@
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:15:32.559Z"
+      "fetchedAt": "2026-08-15T19:45:30.659Z"
     },
     {
       "id": "776d4cc3",
@@ -1477,6 +1495,9 @@
       "description": "Editorial: Reform won a contrived byelection, but scrutiny continues – while the party increasingly attacks the watchdogs and journalists asking awkward questions",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/commentisfree/2026/aug/14/the-guardian-view-on-nigel-farage-clacton-cannot-acquit-him",
+      "imageUrl": "https://media.guim.co.uk/7febc7696c1b4fa3fe5a70ff8a7994248c6ac2f3/394_0_3924_3141/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
       "publishedAt": "2026-08-14T17:06:32Z",
       "category": "World",
       "importance": 45,
@@ -1484,7 +1505,7 @@
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T19:15:32.559Z"
+      "fetchedAt": "2026-08-15T19:45:30.660Z"
     },
     {
       "id": "76c9627",
