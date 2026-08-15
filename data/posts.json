@@ -1,6 +1,18 @@
 {
-  "updatedAt": "2026-08-15T19:32:03.266Z",
+  "updatedAt": "2026-08-15T20:09:19.258Z",
   "posts": [
+    {
+      "id": "f5f270b5539f2443be896abb",
+      "storyId": "b02974b9",
+      "post": "A powerful magnitude 7.7 earthquake has struck eastern Indonesia, killing at least 47 people. Search and rescue operations are currently underway to find survivors on the island of Flores.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
+      "category": "World",
+      "importance": 55,
+      "publishedAt": "2026-08-15T20:00:15.000Z",
+      "createdAt": "2026-08-15T20:09:19.257Z",
+      "ready": true
+    },
     {
       "id": "49b370a4edf4482904d6a480",
       "storyId": "e7b81489",

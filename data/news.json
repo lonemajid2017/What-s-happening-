@@ -1,6 +1,196 @@
 {
-  "updatedAt": "2026-08-15T19:45:31.287Z",
+  "updatedAt": "2026-08-15T20:09:14.283Z",
   "stories": [
+    {
+      "id": "49bf0697",
+      "title": "Monero (XMR) moved 3.70% in 24 hours",
+      "description": "Market cap: $7,742,759,877. 24h volume: $71,644,329.",
+      "source": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/monero",
+      "imageUrl": "https://coin-images.coingecko.com/coins/images/69/large/monero_logo.png?1696501460",
+      "imageSource": "CoinGecko",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:09:13.657Z",
+      "age": "0 seconds ago",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "CoinGecko"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "65038ef5",
+      "title": "Chainlink (LINK) moved 7.10% in 24 hours",
+      "description": "Market cap: $7,160,689,416. 24h volume: $504,974,989.",
+      "source": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/chainlink",
+      "imageUrl": "https://coin-images.coingecko.com/coins/images/877/large/Chainlink_Logo_500.png?1760023405",
+      "imageSource": "CoinGecko",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:09:13.657Z",
+      "age": "0 seconds ago",
+      "category": "AI & Tech",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "CoinGecko"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "8e334654",
+      "title": "Hyperliquid (HYPE) moved 3.10% in 24 hours",
+      "description": "Market cap: $12,719,010,283. 24h volume: $127,377,984.",
+      "source": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/hyperliquid",
+      "imageUrl": "https://coin-images.coingecko.com/coins/images/50882/large/hyperliquid.jpg?1729431300",
+      "imageSource": "CoinGecko",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:09:13.656Z",
+      "age": "0 seconds ago",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "CoinGecko"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "b02974b9",
+      "title": "Powerful magnitude 7.7 earthquake kills at least 47 in Indonesia",
+      "description": "A search and rescue operation is under way to find survivors in Flores, an island in eastern Indonesia.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbf0/live/97cf9550-9877-11f1-a7ab-8b30adf0800a.jpg",
+      "imageSource": "BBC News",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:00:15.000Z",
+      "age": "8 minutes ago",
+      "category": "World",
+      "importance": 55,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "52215939",
+      "title": "Labor is facing an insurgent One Nation. The path it takes on immigration will define its identity for years to come",
+      "description": "Labor has always had a divided soul over immigration. Now it faces a predicament as it looks to hold on to suburban and regional seats",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/commentisfree/2026/aug/16/labor-is-facing-an-insurgent-one-nation-the-path-it-takes-on-immigration-will-define-its-identity-for-years-to-come",
+      "imageUrl": "https://media.guim.co.uk/666c87c26256e4a3e975efe3abb27b46bd8164e6/539_0_4723_3778/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:00:08.000Z",
+      "age": "9 minutes ago",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "64e3ddfa",
+      "title": "Australia’s ‘pioneer’ colonists profited from slavery. That truth must be acknowledged | Paul Daley",
+      "description": "The veil is slowly being lifted on the forced or coerced migration – ‘blackbirding’ – of Pacific Islanders for labour",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/16/australia-pioneer-colonists-profited-slavery-blackbirding-ntwnfb",
+      "imageUrl": "https://media.guim.co.uk/bb76452283c44aa10effa33b985a96d613edcbae/188_0_5768_4617/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:00:07.000Z",
+      "age": "9 minutes ago",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "24c2a0d5",
+      "title": "Science or fiction? Shadowy ‘paper mills’ let you pay to be a published author – of fraudulent research",
+      "description": "Paper mill activity has exploded in recent years, polluting the scientific ecosystem with falsified data and compromising medical research",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/science/2026/aug/16/science-or-fiction-shadowy-paper-mills-let-you-pay-to-be-a-published-author-of-fraudulent-research",
+      "imageUrl": "https://media.guim.co.uk/c24b904cd92f04cf967365e94f8c56bb8eb039c0/0_0_5000_4000/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:00:07.000Z",
+      "age": "9 minutes ago",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "ca111cbd",
+      "title": "Delivery drivers will get a minimum wage in Australia’s ‘world-first’ deal. But is it fair – and will your Uber Eats cost more?",
+      "description": "A closer look at the new rules for gig workers – agreed to by Uber Eats and Doordash – shows ‘minimum wage’ looks a little different than usual",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/aug/16/delivery-drivers-will-get-a-minimum-wage-in-australias-world-first-deal-but-is-it-fair-and-will-your-uber-eats-cost-more",
+      "imageUrl": "https://media.guim.co.uk/2c4108a8cbb779f0bc7ba2fd1843d8be8093c5cc/406_0_2594_2076/500.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T20:00:05.000Z",
+      "age": "9 minutes ago",
+      "category": "AI & Tech",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "851456ea",
+      "title": "Europe’s tallest Virgin Mary statue unveiled in Polish village",
+      "description": "A 55.6-metre Virgin Mary statue has been inaugurated in a small Polish village, with hundreds attending a ceremony featuring a Mass, traditional music and helicopters scattering rose petals.",
+      "source": "Euronews",
+      "url": "http://www.euronews.com/video/2026/08/15/europes-tallest-virgin-mary-statue-unveiled-in-polish-village",
+      "imageUrl": "https://images.euronews.com/articles/stories/09/87/58/26/1200x675_cmsv2_7e78b3b9-82d4-54c2-a62f-a4de1869655a-9875826.jpg",
+      "imageSource": "Euronews",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T19:59:30.000Z",
+      "age": "9 minutes ago",
+      "category": "World",
+      "importance": 50,
+      "verified": true,
+      "sources": [
+        "Euronews"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
+    {
+      "id": "70345196",
+      "title": "Moroccan police arrest over 100 migrants trying to reach Spanish enclave",
+      "description": "A social media campaign encouraged people to flock to Ceuta just weeks after many died while making the crossing.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/8/15/moroccan-police-arrest-over-100-migrants-trying-to-reach-spanish-enclave?traffic_source=rss",
+      "imageUrl": "https://www.aljazeera.com/wp-content/uploads/2026/08/afp_6a80b1ace52b-1786818988.jpg?resize=1920%2C1440",
+      "imageSource": "Al Jazeera",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T19:46:20.000Z",
+      "age": "22 minutes ago",
+      "category": "AI & Tech",
+      "importance": 49,
+      "verified": true,
+      "sources": [
+        "Al Jazeera"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
+    },
     {
       "id": "ac08121f",
       "title": "Monero (XMR) moved 3.10% in 24 hours",
@@ -36,6 +226,25 @@
         "CoinGecko"
       ],
       "fetchedAt": "2026-08-15T19:45:30.660Z"
+    },
+    {
+      "id": "db8e9ff6",
+      "title": "Liechtenstein changes succession rule to allow women to ascend the throne",
+      "description": "The declaration was made on the national day of the central European country, which has a population of just 44,000.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cn9nnxrxg4qo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b3eb/live/39b85200-98cb-11f1-9687-fb984065014d.jpg",
+      "imageSource": "BBC News",
+      "imageAvailable": true,
+      "publishedAt": "2026-08-15T19:41:57.000Z",
+      "age": "27 minutes ago",
+      "category": "World",
+      "importance": 49,
+      "verified": true,
+      "sources": [
+        "BBC News"
+      ],
+      "fetchedAt": "2026-08-15T20:09:14.281Z"
     },
     {
       "id": "366e9a27",
