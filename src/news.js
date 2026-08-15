@@ -1,4 +1,4 @@
-const USER_AGENT = "Whats-Happening/1.0";
+const USER_AGENT = "whats-Happening/2.0";
 
 const TOPICS = {
   USA: [
@@ -87,7 +87,7 @@ const TRUSTED_SOURCES = new Set([
   "Al Jazeera English",
   "Al Jazeera",
   "The Telegraph",
-  "TRT World",
+  "TPI World",
   "Bloomberg",
   "The Washington Post",
   "The New York Times",
@@ -101,6 +101,7 @@ const TRUSTED_SOURCES = new Set([
   "Agence France-Presse",
   "AFP",
   "DW",
+  "Deutsche Welle",
   "Euronews",
   "TASS",
   "The Hindu",
@@ -109,11 +110,14 @@ const TRUSTED_SOURCES = new Set([
   "ANI",
   "CoinDesk",
   "The Block",
-  "CoinGecko"
+  "CoinGecko",
+  "NPR",
+  "France 24"
 ]);
 
 function cleanText(value = "") {
   return String(value)
+    .replace(/<!\[CDATA\[|\]\]>/g, "")
     .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -210,11 +214,11 @@ function normalizeArticle(article) {
     return null;
   }
 
-  const fingerprint = `${title
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, " ")
-    .trim()
-    .slice(0, 200)}|${source.toLowerCase()}`;
+  const fingerprint =
+    `${title.toLowerCase()}|${source.toLowerCase()}`
+      .replace(/[^\w\s|]/g, " ")
+      .trim()
+      .slice(0, 220);
 
   return {
     id: createId(fingerprint),
@@ -254,6 +258,121 @@ async function fetchJson(url, options = {}) {
   return response.json();
 }
 
+function decodeXml(value = "") {
+  return cleanText(value)
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#x27;/g, "'")
+    .replace(/&#x2F;/g, "/");
+}
+
+function getXmlTag(block, tagNames) {
+  for (const tag of tagNames) {
+    const regex = new RegExp(
+      `<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`,
+      "i"
+    );
+
+    const match = block.match(regex);
+
+    if (match) {
+      return decodeXml(match[1]);
+    }
+  }
+
+  return "";
+}
+
+function getXmlAttribute(block, tag, attribute) {
+  const regex = new RegExp(
+    `<${tag}[^>]*${attribute}=["']([^"']+)["'][^>]*>`,
+    "i"
+  );
+
+  const match = block.match(regex);
+
+  return match ? decodeXml(match[1]) : "";
+}
+
+async function fetchRSS(url, source) {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": USER_AGENT,
+        Accept:
+          "application/rss+xml, application/atom+xml, application/xml, text/xml"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `${response.status} ${response.statusText}`
+      );
+    }
+
+    const xml = await response.text();
+
+    const items = [
+      ...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)
+    ].map((match) => match[1]);
+
+    const entries = [
+      ...xml.matchAll(/<entry\b[^>]*>([\s\S]*?)<\/entry>/gi)
+    ].map((match) => match[1]);
+
+    const blocks = items.length > 0 ? items : entries;
+
+    return blocks
+      .map((block) => {
+        const title = getXmlTag(block, ["title"]);
+
+        const description = getXmlTag(block, [
+          "description",
+          "summary",
+          "content"
+        ]);
+
+        let articleUrl = getXmlTag(block, ["link"]);
+
+        if (!articleUrl) {
+          articleUrl = getXmlAttribute(
+            block,
+            "link",
+            "href"
+          );
+        }
+
+        const publishedAt =
+          getXmlTag(block, [
+            "pubDate",
+            "published",
+            "updated",
+            "dc:date"
+          ]) || new Date().toISOString();
+
+        return {
+          title,
+          description,
+          source,
+          url: articleUrl,
+          publishedAt
+        };
+      })
+      .filter((article) => article.title && article.url)
+      .slice(0, 50);
+  } catch (error) {
+    console.error(
+      `${source} RSS request failed:`,
+      error.message
+    );
+
+    return [];
+  }
+}
+
 async function fetchNewsAPI() {
   const apiKey = process.env.NEWS_API_KEY;
 
@@ -266,22 +385,31 @@ async function fetchNewsAPI() {
   );
 
   const url =
-    `https://newsapi.org/v2/everything` +
+    "https://newsapi.org/v2/everything" +
     `?q=${query}` +
-    `&language=en` +
-    `&sortBy=publishedAt` +
-    `&pageSize=50` +
+    "&language=en" +
+    "&sortBy=publishedAt" +
+    "&pageSize=50" +
     `&apiKey=${encodeURIComponent(apiKey)}`;
 
-  const data = await fetchJson(url);
+  try {
+    const data = await fetchJson(url);
 
-  return (data.articles || []).map((article) => ({
-    title: article.title,
-    description: article.description,
-    source: article.source?.name,
-    url: article.url,
-    publishedAt: article.publishedAt
-  }));
+    return (data.articles || []).map((article) => ({
+      title: article.title,
+      description: article.description,
+      source: article.source?.name,
+      url: article.url,
+      publishedAt: article.publishedAt
+    }));
+  } catch (error) {
+    console.error(
+      "NewsAPI request failed:",
+      error.message
+    );
+
+    return [];
+  }
 }
 
 async function fetchGNews() {
@@ -296,22 +424,31 @@ async function fetchGNews() {
   );
 
   const url =
-    `https://gnews.io/api/v4/search` +
+    "https://gnews.io/api/v4/search" +
     `?q=${query}` +
-    `&lang=en` +
-    `&max=50` +
-    `&sortby=publishedAt` +
+    "&lang=en" +
+    "&max=50" +
+    "&sortby=publishedAt" +
     `&apikey=${encodeURIComponent(apiKey)}`;
 
-  const data = await fetchJson(url);
+  try {
+    const data = await fetchJson(url);
 
-  return (data.articles || []).map((article) => ({
-    title: article.title,
-    description: article.description,
-    source: article.source?.name,
-    url: article.url,
-    publishedAt: article.publishedAt
-  }));
+    return (data.articles || []).map((article) => ({
+      title: article.title,
+      description: article.description,
+      source: article.source?.name,
+      url: article.url,
+      publishedAt: article.publishedAt
+    }));
+  } catch (error) {
+    console.error(
+      "GNews request failed:",
+      error.message
+    );
+
+    return [];
+  }
 }
 
 async function fetchGuardian() {
@@ -326,28 +463,93 @@ async function fetchGuardian() {
   );
 
   const url =
-    `https://content.guardianapis.com/search` +
+    "https://content.guardianapis.com/search" +
     `?q=${query}` +
-    `&order-by=newest` +
-    `&page-size=50` +
-    `&show-fields=trailText` +
+    "&order-by=newest" +
+    "&page-size=50" +
+    "&show-fields=trailText" +
     `&api-key=${encodeURIComponent(apiKey)}`;
 
-  const data = await fetchJson(url);
+  try {
+    const data = await fetchJson(url);
 
-  return (data.response?.results || []).map((article) => ({
-    title: article.webTitle,
-    description: article.fields?.trailText || "",
-    source: "The Guardian",
-    url: article.webUrl,
-    publishedAt: article.webPublicationDate
-  }));
+    return (data.response?.results || []).map((article) => ({
+      title: article.webTitle,
+      description: article.fields?.trailText || "",
+      source: "The Guardian",
+      url: article.webUrl,
+      publishedAt: article.webPublicationDate
+    }));
+  } catch (error) {
+    console.error(
+      "Guardian request failed:",
+      error.message
+    );
+
+    return [];
+  }
+}
+
+async function fetchAlJazeera() {
+  return fetchRSS(
+    "https://www.aljazeera.com/xml/rss/all.xml",
+    "Al Jazeera"
+  );
+}
+
+async function fetchBBC() {
+  return fetchRSS(
+    "https://feeds.bbci.co.uk/news/rss.xml",
+    "BBC News"
+  );
+}
+
+async function fetchDW() {
+  return fetchRSS(
+    "https://rss.dw.com/rdf/rss-en-all",
+    "DW"
+  );
+}
+
+async function fetchFrance24() {
+  return fetchRSS(
+    "https://www.france24.com/en/rss",
+    "France 24"
+  );
+}
+
+async function fetchEuronews() {
+  return fetchRSS(
+    "https://www.euronews.com/rss",
+    "Euronews"
+  );
+}
+
+async function fetchIndianExpress() {
+  return fetchRSS(
+    "https://indianexpress.com/section/india/feed/",
+    "The Indian Express"
+  );
+}
+
+async function fetchIndianExpressWorld() {
+  return fetchRSS(
+    "https://indianexpress.com/section/world/feed/",
+    "The Indian Express"
+  );
+}
+
+async function fetchNPR() {
+  return fetchRSS(
+    "https://feeds.npr.org/1001/rss.xml",
+    "NPR"
+  );
 }
 
 async function fetchCoinGecko() {
-  const apiKey = process.env.COINGECKO_API_KEY;
-
   const headers = {};
+
+  const apiKey = process.env.COINGECKO_API_KEY;
 
   if (apiKey) {
     headers["x-cg-demo-api-key"] = apiKey;
@@ -362,7 +564,9 @@ async function fetchCoinGecko() {
     "&sparkline=false";
 
   try {
-    const data = await fetchJson(url, { headers });
+    const data = await fetchJson(url, {
+      headers
+    });
 
     return data
       .filter(
@@ -373,8 +577,10 @@ async function fetchCoinGecko() {
       )
       .map((coin) => ({
         title:
-          `${coin.name} (${String(coin.symbol).toUpperCase()}) ` +
-          `moved ${Number(
+          `${coin.name} (${String(
+            coin.symbol
+          ).toUpperCase()}) moved ` +
+          `${Number(
             coin.price_change_percentage_24h || 0
           ).toFixed(2)}% in 24 hours`,
         description:
@@ -405,8 +611,8 @@ function mergeDuplicateStories(stories) {
   for (const story of stories) {
     const key = story.title
       .toLowerCase()
-      .replace(/[^\p{L}\p{N}]+/gu, " ")
-      .split(" ")
+      .replace(/[^\w\s]/g, " ")
+      .split(/\s+/)
       .filter(Boolean)
       .slice(0, 12)
       .join(" ");
@@ -414,12 +620,16 @@ function mergeDuplicateStories(stories) {
     const existing = groups.get(key);
 
     if (!existing) {
-      groups.set(key, story);
+      groups.set(key, {
+        ...story,
+        sources: [...(story.sources || [story.source])]
+      });
+
       continue;
     }
 
     const sourceSet = new Set([
-      ...(existing.sources || [existing.source]),
+      ...(existing.sources || []),
       ...(story.sources || [story.source])
     ]);
 
@@ -445,57 +655,14 @@ export async function collectNews() {
     fetchNewsAPI(),
     fetchGNews(),
     fetchGuardian(),
-    async function fetchAlJazeera() {
-  const url = "https://www.aljazeera.com/xml/rss/all.xml";
-
-  try {
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent": USER_AGENT
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error(
-        `Al Jazeera RSS ${response.status} ${response.statusText}`
-      );
-    }
-
-    const xml = await response.text();
-
-    const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)];
-
-    return items.map((match) => {
-      const item = match[1];
-
-      const getTag = (tag) => {
-        const regex = new RegExp(
-          `<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`,
-          "i"
-        );
-
-        const result = item.match(regex);
-
-        return result
-          ? result[1]
-              .replace(/<!\[CDATA\[|\]\]>/g, "")
-              .trim()
-          : "";
-      };
-
-      return {
-        title: getTag("title"),
-        description: getTag("description"),
-        source: "Al Jazeera",
-        url: getTag("link"),
-        publishedAt: getTag("pubDate")
-      };
-    });
-  } catch (error) {
-    console.error("Al Jazeera request failed:", error.message);
-    return [];
-  }
-    }
+    fetchAlJazeera(),
+    fetchBBC(),
+    fetchDW(),
+    fetchFrance24(),
+    fetchEuronews(),
+    fetchIndianExpress(),
+    fetchIndianExpressWorld(),
+    fetchNPR(),
     fetchCoinGecko()
   ]);
 
@@ -513,7 +680,7 @@ export async function collectNews() {
     mergeDuplicateStories(normalized);
 
   return uniqueStories
-    .filter((story) => story.importance >= 45)
+    .filter((story) => story.importance >= 35)
     .sort((a, b) => {
       if (b.importance !== a.importance) {
         return b.importance - a.importance;
@@ -524,5 +691,6 @@ export async function collectNews() {
         new Date(a.publishedAt).getTime()
       );
     })
-    .slice(0, 50);
+    .slice(0, 100);
 }
+```0
