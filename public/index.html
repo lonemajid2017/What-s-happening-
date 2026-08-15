@@ -19,7 +19,7 @@
     :root {
       --bg: #0b0f14;
       --card: #121821;
-      --card-2: #18212c;
+      --card2: #18212c;
       --border: #263241;
       --text: #f5f7fa;
       --muted: #9aa7b5;
@@ -56,12 +56,12 @@
     }
 
     a {
-      color: var(--blue);
+      color: inherit;
       text-decoration: none;
     }
 
     .container {
-      width: min(1120px, 100%);
+      width: min(1150px, 100%);
       margin: auto;
       padding: 18px;
     }
@@ -70,14 +70,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
     .brand h1 {
       margin: 0;
       font-size: 28px;
-      letter-spacing: -0.5px;
     }
 
     .brand p {
@@ -95,20 +94,16 @@
     .btn {
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 10px 14px;
-      background: var(--card-2);
+      padding: 9px 13px;
+      background: var(--card2);
       color: var(--text);
       font-weight: 700;
     }
 
     .btn.primary {
       background: var(--green);
-      color: #06140f;
       border-color: var(--green);
-    }
-
-    .btn:hover {
-      opacity: 0.9;
+      color: #06140f;
     }
 
     .status {
@@ -174,7 +169,7 @@
     .grid {
       display: grid;
       grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
+        repeat(auto-fit, minmax(310px, 1fr));
       gap: 12px;
     }
 
@@ -182,11 +177,34 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .card-content {
       padding: 15px;
     }
 
     .card.ready {
       border-color: rgba(56, 211, 159, 0.55);
+    }
+
+    .news-image {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: var(--card2);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--card2);
+      color: var(--muted);
+      font-size: 13px;
     }
 
     .meta {
@@ -234,6 +252,12 @@
       font-weight: 700;
     }
 
+    .image-credit {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
     .card-actions {
       display: flex;
       flex-wrap: wrap;
@@ -276,11 +300,6 @@
       border-radius: 15px;
     }
 
-    .loader {
-      color: var(--muted);
-      padding: 20px 0;
-    }
-
     .danger {
       color: var(--red);
     }
@@ -298,10 +317,6 @@
         grid-template-columns: 1fr;
       }
 
-      .header {
-        align-items: flex-start;
-      }
-
       .actions {
         width: 100%;
       }
@@ -309,790 +324,819 @@
       .actions .btn {
         flex: 1;
       }
+
+      .news-image,
+      .image-placeholder {
+        height: 190px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <main class="container">
+<main class="container">
 
-    <header class="header">
+  <header class="header">
 
-      <div class="brand">
-        <h1>What's Happening</h1>
+    <div class="brand">
+      <h1>What's Happening</h1>
 
-        <p>
-          High-impact global news for X
-        </p>
-      </div>
-
-      <div class="actions">
-
-        <button
-          class="btn"
-          id="notificationButton"
-        >
-          Enable Notifications
-        </button>
-
-        <button
-          class="btn primary"
-          id="refreshButton"
-        >
-          Refresh
-        </button>
-
-      </div>
-
-    </header>
-
-    <div
-      class="status"
-      id="status"
-    >
-      Loading news...
+      <p>
+        High-impact global news for X
+      </p>
     </div>
 
-    <nav
-      class="tabs"
-      id="categoryTabs"
-    ></nav>
+    <div class="actions">
 
-    <section class="section">
+      <button
+        class="btn"
+        id="notificationButton"
+      >
+        Enable Notifications
+      </button>
 
-      <div class="section-header">
+      <button
+        class="btn primary"
+        id="refreshButton"
+      >
+        Refresh
+      </button>
 
-        <h2>
-          Tweet Ready
-        </h2>
+    </div>
 
-        <span id="postCount">
-          0 posts
-        </span>
+  </header>
 
-      </div>
+  <div
+    class="status"
+    id="status"
+  >
+    Loading news...
+  </div>
 
-      <div
-        class="grid"
-        id="posts"
-      ></div>
+  <nav
+    class="tabs"
+    id="categoryTabs"
+  ></nav>
 
-    </section>
+  <section class="section">
 
-    <section class="section">
+    <div class="section-header">
+      <h2>Tweet Ready</h2>
 
-      <div class="section-header">
+      <span id="postCount">
+        0 posts
+      </span>
+    </div>
 
-        <h2>
-          Top Stories
-        </h2>
+    <div
+      class="grid"
+      id="posts"
+    ></div>
 
-        <span id="storyCount">
-          0 stories
-        </span>
+  </section>
 
-      </div>
+  <section class="section">
 
-      <div
-        class="grid"
-        id="stories"
-      ></div>
+    <div class="section-header">
+      <h2>Top Stories</h2>
 
-    </section>
+      <span id="storyCount">
+        0 stories
+      </span>
+    </div>
 
-    <section class="section">
+    <div
+      class="grid"
+      id="stories"
+    ></div>
 
-      <div class="section-header">
+  </section>
 
-        <h2>
-          Reply Generator
-        </h2>
+  <section class="section">
 
-      </div>
+    <div class="section-header">
+      <h2>Reply Generator</h2>
+    </div>
 
-      <textarea
-        id="replyInput"
-        placeholder="Paste an X post here..."
-      ></textarea>
+    <textarea
+      id="replyInput"
+      placeholder="Paste an X post here..."
+    ></textarea>
 
-      <div class="card-actions">
+    <div class="card-actions">
 
-        <button
-          class="btn primary"
-          id="generateReplies"
-        >
-          Generate Replies
-        </button>
+      <button
+        class="btn primary"
+        id="generateReplies"
+      >
+        Generate Replies
+      </button>
 
-      </div>
+    </div>
 
-      <div
-        class="grid reply-grid"
-        id="replies"
-      ></div>
+    <div
+      class="grid reply-grid"
+      id="replies"
+    ></div>
 
-    </section>
+  </section>
 
-  </main>
+</main>
 
-  <script>
+<script>
 
-    const categories = [
-      "All",
-      "USA",
-      "Finance",
-      "Crypto",
-      "Middle East",
-      "India",
-      "World",
-      "AI & Tech"
-    ];
+const categories = [
+  "All",
+  "USA",
+  "Finance",
+  "Crypto",
+  "Middle East",
+  "India",
+  "World",
+  "AI & Tech"
+];
 
-    let activeCategory = "All";
+let activeCategory = "All";
 
-    let newsData = [];
-    let postsData = [];
+let newsData = [];
+let postsData = [];
 
-    let previousPostCount = 0;
+let previousPostIds = new Set();
 
-    const statusElement =
-      document.getElementById("status");
+const statusElement =
+  document.getElementById("status");
 
-    const storiesElement =
-      document.getElementById("stories");
+const storiesElement =
+  document.getElementById("stories");
 
-    const postsElement =
-      document.getElementById("posts");
+const postsElement =
+  document.getElementById("posts");
 
-    const repliesElement =
-      document.getElementById("replies");
+const repliesElement =
+  document.getElementById("replies");
 
-    function escapeHtml(value) {
+function escapeHtml(value) {
 
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function safeUrl(url) {
+
+  if (!url) {
+    return "";
+  }
+
+  try {
+
+    const parsed =
+      new URL(url);
+
+    if (
+      parsed.protocol !== "http:" &&
+      parsed.protocol !== "https:"
+    ) {
+      return "";
     }
 
-    function formatDate(date) {
+    return parsed.toString();
 
-      if (!date) {
-        return "Unknown time";
-      }
+  } catch {
 
-      const parsed =
-        new Date(date);
+    return "";
+  }
+}
 
-      if (Number.isNaN(parsed.getTime())) {
-        return "Unknown time";
-      }
+function formatDate(date) {
 
-      return parsed.toLocaleString();
-    }
+  if (!date) {
+    return "Unknown time";
+  }
 
-    function copyText(text) {
+  const parsed =
+    new Date(date);
 
-      navigator.clipboard
-        .writeText(text)
-        .then(() => {
-          alert("Copied to clipboard.");
-        })
-        .catch(() => {
-          alert(
-            "Copy failed. Please copy manually."
-          );
-        });
-    }
+  if (
+    Number.isNaN(
+      parsed.getTime()
+    )
+  ) {
+    return "Unknown time";
+  }
 
-    window.copyText = copyText;
+  return parsed.toLocaleString();
+}
 
-    function renderCategories() {
+async function copyText(text) {
 
-      const container =
-        document.getElementById(
-          "categoryTabs"
-        );
+  try {
 
-      container.innerHTML =
-        categories
-          .map((category) => {
+    await navigator.clipboard.writeText(
+      text
+    );
 
-            const active =
-              category === activeCategory
-                ? "active"
-                : "";
+    alert("Copied to clipboard.");
 
-            return `
-              <button
-                class="tab ${active}"
-                data-category="${escapeHtml(
-                  category
-                )}"
+  } catch {
+
+    alert(
+      "Copy failed. Please copy manually."
+    );
+  }
+}
+
+window.copyText = copyText;
+
+function renderCategories() {
+
+  const container =
+    document.getElementById(
+      "categoryTabs"
+    );
+
+  container.innerHTML =
+    categories
+      .map(category => {
+
+        const active =
+          category === activeCategory
+            ? "active"
+            : "";
+
+        return `
+          <button
+            class="tab ${active}"
+            data-category="${escapeHtml(
+              category
+            )}"
+          >
+            ${escapeHtml(category)}
+          </button>
+        `;
+
+      })
+      .join("");
+
+  container
+    .querySelectorAll(".tab")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          activeCategory =
+            button.dataset.category;
+
+          render();
+
+        }
+      );
+
+    });
+}
+
+function matchesCategory(item) {
+
+  return (
+    activeCategory === "All" ||
+    item.category === activeCategory
+  );
+}
+
+function imageBlock(item) {
+
+  const imageUrl =
+    safeUrl(item.imageUrl);
+
+  if (!imageUrl) {
+
+    return `
+      <div class="image-placeholder">
+        No source image available
+      </div>
+    `;
+  }
+
+  return `
+    <a
+      href="${escapeHtml(imageUrl)}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        class="news-image"
+        src="${escapeHtml(imageUrl)}"
+        alt="${escapeHtml(
+          item.title || "News image"
+        )}"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div
+        class="image-placeholder"
+        style="display:none"
+      >
+        Image unavailable
+      </div>
+    </a>
+  `;
+}
+
+function renderPosts() {
+
+  const filtered =
+    postsData
+      .filter(matchesCategory)
+      .slice(0, 50);
+
+  document.getElementById(
+    "postCount"
+  ).textContent =
+    `${filtered.length} posts`;
+
+  if (!filtered.length) {
+
+    postsElement.innerHTML = `
+      <div class="empty">
+        No Tweet Ready posts yet.
+      </div>
+    `;
+
+    return;
+  }
+
+  postsElement.innerHTML =
+    filtered
+      .map(post => {
+
+        const articleUrl =
+          safeUrl(post.url);
+
+        const imageUrl =
+          safeUrl(post.imageUrl);
+
+        return `
+          <article class="card ready">
+
+            ${imageBlock({
+              imageUrl,
+              title: post.post
+            })}
+
+            <div class="card-content">
+
+              <div class="meta">
+
+                <span>
+                  ${escapeHtml(
+                    post.category
+                  )}
+                </span>
+
+                <span>
+                  ${formatDate(
+                    post.createdAt
+                  )}
+                </span>
+
+              </div>
+
+              <div
+                class="post-text"
+                style="margin-top:12px"
               >
-                ${escapeHtml(category)}
-              </button>
+                ${escapeHtml(
+                  post.post
+                )}
+              </div>
+
+              <div class="source">
+                Source:
+                ${escapeHtml(
+                  post.source
+                )}
+              </div>
+
+              ${
+                post.imageSource
+                  ? `
+                    <div class="image-credit">
+                      Image source:
+                      ${escapeHtml(
+                        post.imageSource
+                      )}
+                    </div>
+                  `
+                  : ""
+              }
+
+              <div class="card-actions">
+
+                <button
+                  class="btn primary"
+                  onclick='copyText(${JSON.stringify(
+                    post.post
+                  )})'
+                >
+                  Copy Tweet
+                </button>
+
+                ${
+                  imageUrl
+                    ? `
+                      <a
+                        class="btn"
+                        href="${escapeHtml(
+                          imageUrl
+                        )}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Image
+                      </a>
+                    `
+                    : ""
+                }
+
+                ${
+                  articleUrl
+                    ? `
+                      <a
+                        class="btn"
+                        href="${escapeHtml(
+                          articleUrl
+                        )}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Source
+                      </a>
+                    `
+                    : ""
+                }
+
+              </div>
+
+            </div>
+
+          </article>
+        `;
+
+      })
+      .join("");
+}
+
+function renderStories() {
+
+  const filtered =
+    newsData
+      .filter(matchesCategory)
+      .slice(0, 50);
+
+  document.getElementById(
+    "storyCount"
+  ).textContent =
+    `${filtered.length} stories`;
+
+  if (!filtered.length) {
+
+    storiesElement.innerHTML = `
+      <div class="empty">
+        No important stories found.
+      </div>
+    `;
+
+    return;
+  }
+
+  storiesElement.innerHTML =
+    filtered
+      .map(story => {
+
+        const articleUrl =
+          safeUrl(story.url);
+
+        const imageUrl =
+          safeUrl(story.imageUrl);
+
+        const sourceNames =
+          story.sources?.length
+            ? story.sources.join(", ")
+            : story.source;
+
+        const badge =
+          story.verified
+            ? `
+              <span class="badge">
+                ✓ Verified source
+              </span>
+            `
+            : `
+              <span class="badge single">
+                Single source report
+              </span>
             `;
 
-          })
-          .join("");
+        return `
+          <article class="card">
 
-      container
-        .querySelectorAll(".tab")
-        .forEach((button) => {
+            ${imageBlock({
+              imageUrl,
+              title: story.title
+            })}
 
-          button.addEventListener(
-            "click",
-            () => {
+            <div class="card-content">
 
-              activeCategory =
-                button.dataset.category;
+              <div class="meta">
 
-              render();
-            }
-          );
+                <span>
+                  ${escapeHtml(
+                    story.category
+                  )}
+                </span>
 
-        });
-    }
+                <span>
+                  Importance:
+                  ${escapeHtml(
+                    story.importance
+                  )}
+                </span>
 
-    function matchesCategory(item) {
+              </div>
 
-      return (
-        activeCategory === "All" ||
-        item.category === activeCategory
+              ${badge}
+
+              <div class="headline">
+                ${escapeHtml(
+                  story.title
+                )}
+              </div>
+
+              <div class="description">
+                ${escapeHtml(
+                  story.description || ""
+                )}
+              </div>
+
+              <div class="source">
+                Source:
+                ${escapeHtml(
+                  sourceNames
+                )}
+              </div>
+
+              ${
+                story.imageSource
+                  ? `
+                    <div class="image-credit">
+                      Image source:
+                      ${escapeHtml(
+                        story.imageSource
+                      )}
+                    </div>
+                  `
+                  : ""
+              }
+
+              <div class="card-actions">
+
+                ${
+                  imageUrl
+                    ? `
+                      <a
+                        class="btn"
+                        href="${escapeHtml(
+                          imageUrl
+                        )}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Image
+                      </a>
+                    `
+                    : ""
+                }
+
+                ${
+                  articleUrl
+                    ? `
+                      <a
+                        class="btn"
+                        href="${escapeHtml(
+                          articleUrl
+                        )}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Original Article
+                      </a>
+                    `
+                    : ""
+                }
+
+              </div>
+
+            </div>
+
+          </article>
+        `;
+
+      })
+      .join("");
+}
+
+function render() {
+
+  renderCategories();
+  renderPosts();
+  renderStories();
+}
+
+async function loadData() {
+
+  try {
+
+    const [
+      newsResponse,
+      postsResponse
+    ] = await Promise.all([
+      fetch("/api/news"),
+      fetch("/api/posts")
+    ]);
+
+    if (
+      !newsResponse.ok ||
+      !postsResponse.ok
+    ) {
+      throw new Error(
+        "Unable to load dashboard data."
       );
     }
 
-    function renderPosts() {
+    const news =
+      await newsResponse.json();
 
-      const filtered =
-        postsData
-          .filter(matchesCategory)
-          .slice(0, 50);
+    const posts =
+      await postsResponse.json();
 
-      document.getElementById(
-        "postCount"
-      ).textContent =
-        `${filtered.length} posts`;
+    newsData =
+      Array.isArray(news.stories)
+        ? news.stories
+        : [];
 
-      if (!filtered.length) {
+    postsData =
+      Array.isArray(posts.posts)
+        ? posts.posts
+        : [];
 
-        postsElement.innerHTML = `
-          <div class="empty">
-            No Tweet Ready posts yet.
-          </div>
-        `;
+    previousPostIds =
+      new Set(
+        postsData.map(
+          post => post.id
+        )
+      );
 
-        return;
-      }
+    statusElement.textContent =
+      news.updatedAt
+        ? `Last updated: ${formatDate(
+            news.updatedAt
+          )}`
+        : "Waiting for first news update.";
 
-      postsElement.innerHTML =
-        filtered
-          .map((post) => {
+    render();
 
-            return `
-              <article class="card ready">
+  } catch (error) {
 
-                <div class="meta">
+    console.error(error);
 
-                  <span>
-                    ${escapeHtml(
-                      post.category
-                    )}
-                  </span>
+    statusElement.innerHTML =
+      `<span class="danger">
+        Dashboard data could not be loaded.
+      </span>`;
+  }
+}
 
-                  <span>
-                    ${formatDate(
-                      post.createdAt
-                    )}
-                  </span>
+async function refreshNews() {
 
-                </div>
+  const button =
+    document.getElementById(
+      "refreshButton"
+    );
 
-                <div
-                  class="post-text"
-                  style="margin-top:12px"
-                >
-                  ${escapeHtml(
-                    post.post
-                  )}
-                </div>
+  button.disabled = true;
+  button.textContent =
+    "Refreshing...";
 
-                <div class="source">
-                  Source:
-                  ${escapeHtml(
-                    post.source
-                  )}
-                </div>
+  statusElement.textContent =
+    "Fetching latest news and generating posts...";
 
-                <div class="card-actions">
+  try {
 
-                  <button
-                    class="btn primary"
-                    onclick='copyText(${JSON.stringify(
-                      post.post
-                    )})'
-                  >
-                    Copy Tweet
-                  </button>
+    const response =
+      await fetch(
+        "/api/refresh",
+        {
+          method: "POST"
+        }
+      );
 
-                  <a
-                    class="btn"
-                    href="${escapeHtml(
-                      post.url
-                    )}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Source
-                  </a>
+    const result =
+      await response.json();
 
-                </div>
-
-              </article>
-            `;
-
-          })
-          .join("");
+    if (!response.ok) {
+      throw new Error(
+        result.error ||
+        "Refresh failed."
+      );
     }
 
-    function renderStories() {
+    await loadData();
 
-      const filtered =
-        newsData
-          .filter(matchesCategory)
-          .slice(0, 50);
+    statusElement.textContent =
+      `Refresh complete. ${
+        result.posts?.length || 0
+      } Tweet Ready posts generated.`;
 
-      document.getElementById(
-        "storyCount"
-      ).textContent =
-        `${filtered.length} stories`;
+  } catch (error) {
 
-      if (!filtered.length) {
+    console.error(error);
 
-        storiesElement.innerHTML = `
-          <div class="empty">
-            No important stories found.
-          </div>
-        `;
+    statusElement.innerHTML =
+      `<span class="danger">
+        ${escapeHtml(
+          error.message
+        )}
+      </span>`;
 
-        return;
+  } finally {
+
+    button.disabled = false;
+    button.textContent =
+      "Refresh";
+  }
+}
+
+async function enableNotifications() {
+
+  if (
+    !("Notification" in window)
+  ) {
+
+    alert(
+      "This browser does not support notifications."
+    );
+
+    return;
+  }
+
+  const permission =
+    await Notification.requestPermission();
+
+  if (permission === "granted") {
+
+    new Notification(
+      "What's Happening",
+      {
+        body:
+          "Tweet Ready notifications are enabled."
       }
+    );
 
-      storiesElement.innerHTML =
-        filtered
-          .map((story) => {
+  } else {
 
-            const sourceNames =
-              story.sources?.length
-                ? story.sources.join(", ")
-                : story.source;
+    alert(
+      "Notification permission was not granted."
+    );
+  }
+}
 
-            const badge =
-              story.verified
-                ? `
-                  <span class="badge">
-                    ✓ Verified source
-                  </span>
-                `
-                : `
-                  <span class="badge single">
-                    Single source report
-                  </span>
-                `;
+async function checkForNewPosts() {
 
-            return `
-              <article class="card">
+  try {
 
-                <div class="meta">
+    const response =
+      await fetch("/api/posts");
 
-                  <span>
-                    ${escapeHtml(
-                      story.category
-                    )}
-                  </span>
-
-                  <span>
-                    Importance:
-                    ${escapeHtml(
-                      story.importance
-                    )}
-                  </span>
-
-                </div>
-
-                ${badge}
-
-                <div class="headline">
-                  ${escapeHtml(
-                    story.title
-                  )}
-                </div>
-
-                <div class="description">
-                  ${escapeHtml(
-                    story.description ||
-                    ""
-                  )}
-                </div>
-
-                <div class="source">
-                  Source:
-                  ${escapeHtml(
-                    sourceNames
-                  )}
-                </div>
-
-                <div class="card-actions">
-
-                  <a
-                    class="btn"
-                    href="${escapeHtml(
-                      story.url
-                    )}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Original Article
-                  </a>
-
-                </div>
-
-              </article>
-            `;
-
-          })
-          .join("");
+    if (!response.ok) {
+      return;
     }
 
-    function render() {
-
-      renderCategories();
-      renderPosts();
-      renderStories();
-    }
-
-    async function loadData() {
-
-      try {
-
-        const [
-          newsResponse,
-          postsResponse
-        ] = await Promise.all([
-          fetch("/api/news"),
-          fetch("/api/posts")
-        ]);
-
-        if (
-          !newsResponse.ok ||
-          !postsResponse.ok
-        ) {
-          throw new Error(
-            "Unable to load dashboard data."
-          );
-        }
-
-        const news =
-          await newsResponse.json();
-
-        const posts =
-          await postsResponse.json();
-
-        newsData =
-          Array.isArray(news.stories)
-            ? news.stories
-            : [];
-
-        postsData =
-          Array.isArray(posts.posts)
-            ? posts.posts
-            : [];
-
-        statusElement.textContent =
-          news.updatedAt
-            ? `Last updated: ${formatDate(
-                news.updatedAt
-              )}`
-            : "Waiting for first news update.";
-
-        render();
-
-      } catch (error) {
-
-        console.error(error);
-
-        statusElement.innerHTML =
-          `<span class="danger">
-            Dashboard data could not be loaded.
-            Run the news monitor first.
-          </span>`;
-
-      }
-
-    }
-
-    async function refreshNews() {
-
-      const button =
-        document.getElementById(
-          "refreshButton"
-        );
-
-      button.disabled = true;
-      button.textContent =
-        "Refreshing...";
-
-      statusElement.textContent =
-        "Fetching and analyzing latest news...";
-
-      try {
-
-        const response =
-          await fetch(
-            "/api/refresh",
-            {
-              method: "POST"
-            }
-          );
-
-        const result =
-          await response.json();
-
-        if (!response.ok) {
-          throw new Error(
-            result.error ||
-            "Refresh failed."
-          );
-        }
-
-        await loadData();
-
-        statusElement.textContent =
-          `Refresh complete. ${
-            result.posts?.length || 0
-          } Tweet Ready posts generated.`;
-
-      } catch (error) {
-
-        console.error(error);
-
-        statusElement.innerHTML =
-          `<span class="danger">
-            ${escapeHtml(
-              error.message
-            )}
-          </span>`;
-
-      } finally {
-
-        button.disabled = false;
-        button.textContent =
-          "Refresh";
-
-      }
-
-    }
-
-    async function enableNotifications() {
-
-      if (
-        !("Notification" in window)
-      ) {
-
-        alert(
-          "This browser does not support notifications."
-        );
-
-        return;
-      }
-
-      const permission =
-        await Notification.requestPermission();
-
-      if (permission === "granted") {
-
-        new Notification(
-          "What's Happening",
-          {
-            body:
-              "Tweet Ready notifications are enabled."
-          }
-        );
-
-      } else {
-
-        alert(
-          "Notification permission was not granted."
-        );
-
-      }
-
-    }
-
-    async function checkForNewPosts() {
-
-      try {
-
-        const response =
-          await fetch("/api/posts");
-
-        if (!response.ok) {
-          return;
-        }
-
-        const data =
-          await response.json();
-
-        const posts =
-          Array.isArray(data.posts)
-            ? data.posts
-            : [];
-
-        if (
-          previousPostCount > 0 &&
-          posts.length >
-            previousPostCount &&
-          Notification.permission ===
-            "granted"
-        ) {
-
-          const latest =
-            posts[0];
-
-          new Notification(
-            "Tweet Ready",
-            {
-              body:
-                `${latest.post}\nSource: ${
-                  latest.source
-                }`
-            }
-          );
-
-        }
-
-        previousPostCount =
-          posts.length;
-
-        if (
-          posts.length !==
-          postsData.length
-        ) {
-
-          postsData =
-            posts;
-
-          renderPosts();
-
-        }
-
-      } catch (error) {
-
-        console.error(
-          "Notification check failed:",
-          error
-        );
-
-      }
-
-    }
-
-    async function generateReplies() {
-
-      const input =
-        document.getElementById(
-          "replyInput"
-        );
-
-      const button =
-        document.getElementById(
-          "generateReplies"
-        );
-
-      const text =
-        input.value.trim();
-
-      if (!text) {
-
-        alert(
-          "Paste an X post first."
-        );
-
-        return;
-      }
-
-      button.disabled = true;
-      button.textContent =
-        "Generating...";
-
-      repliesElement.innerHTML =
-        `
-          <div class="empty">
-            Gemini is generating replies...
-          </div>
-        `;
-
-      try {
-
-        const response =
-          await fetch(
-            "/api/replies",
-            {
-              method: "POST",
-
-              headers: {
-                "Content-Type":
-                  "application/json"
-              },
-
-              body: JSON.stringify({
-                text
-              })
-            }
-          );
-
-        const result =
-          await response.json();
-
-        if (!response.ok) {
-
-          throw new Error(
-            result.error ||
-            "Reply generation failed."
-          );
-
-        }
-
-        const replies =
-          Array.isArray(
-            result.replies
-          )
-            ? result.replies
-            : [];
-
-        if (!replies.length) {
-
-          repliesElement.innerHTML =
-            `
-              <div class="empty">
-                No replies generated.
-              </div>
-            `;
-
-          return;
-        }
-
-        repliesElement.innerHTML =
-          replies
-            .map((item) => {
-
-              return `
-                <article class="card">
-
-                  <div class="meta">
-                    ${escapeHtml(
-                      item.style 
+    const data =
+      await response.json();
+
+    const posts =
+      Array.isArray(data.posts)
+        ? data.posts
+        : [];
+
+    const newPosts =
+      posts.filter(
+    
