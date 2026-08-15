@@ -29,7 +29,7 @@ async function callGemini(prompt) {
       generationConfig: {
   maxOutputTokens: 2048
       }
-      }
+      })
     })
   });
 
