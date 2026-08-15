@@ -1,0 +1,14 @@
+{
+  "name": "whats-happening",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "fetch-news": "node src/monitor.js",
+    "check": "node --check src/server.js && node --check src/news.js && node --check src/gemini.js && node --check src/storage.js && node --check src/monitor.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
