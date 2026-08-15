@@ -35,7 +35,7 @@ async function main() {
   const freshStories = stories
     .filter((story) => !seenIds.has(story.id))
     .filter((story) => story.importance >= 55)
-    .slice(0, 12);
+    .slice(0, 10);
 
   console.log(
     `Found ${freshStories.length} new high-priority stories.`
@@ -43,7 +43,6 @@ async function main() {
 
   if (freshStories.length === 0) {
     console.log("No new high-priority stories.");
-
     return;
   }
 
@@ -112,9 +111,53 @@ async function main() {
 
       importance: story.importance,
 
+      verified: Boolean(story.verified),
+
       publishedAt: story.publishedAt,
 
-      createdAt: new Date().toISOString(),
+      age: story.age || null,
+
+      ageMinutes:
+        Number.isFinite(story.ageMinutes)
+          ? story.ageMinutes
+          : null,
+
+      imageAvailable:
+        Boolean(story.imageUrl),
+
+      imageUrl:
+        story.imageUrl || null,
+
+      imageDownloadUrl:
+        story.imageDownloadUrl ||
+        story.imageUrl ||
+        null,
+
+      imageSource:
+        story.imageSource ||
+        (story.imageUrl
+          ? story.source
+          : null),
+
+      videoAvailable:
+        Boolean(story.videoUrl),
+
+      videoUrl:
+        story.videoUrl || null,
+
+      videoSource:
+        story.videoSource ||
+        (story.videoUrl
+          ? story.source
+          : null),
+
+      sources:
+        Array.isArray(story.sources)
+          ? story.sources
+          : [story.source],
+
+      createdAt:
+        new Date().toISOString(),
 
       ready: true
     };
@@ -142,7 +185,14 @@ async function main() {
         fetched: stories.length,
         fresh: freshStories.length,
         generated: posts.length,
-        updatedAt: new Date().toISOString()
+        withImages: posts.filter(
+          (post) => post.imageAvailable
+        ).length,
+        withVideos: posts.filter(
+          (post) => post.videoAvailable
+        ).length,
+        updatedAt:
+          new Date().toISOString()
       },
       null,
       2
