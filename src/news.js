@@ -1155,4 +1155,264 @@ ${JSON.stringify(storyData)}
             ),
 
           ageMinutes:
-            M
+                        Math.round(
+              ageMinutes(
+                story.publishedAt
+              )
+            ),
+
+          imageAvailable:
+            Boolean(
+              story.imageUrl
+            ),
+
+          imageUrl:
+            story.imageUrl ||
+            null,
+
+          imageDownloadUrl:
+            story.imageUrl ||
+            null,
+
+          imageSource:
+            story.imageUrl
+              ? story.imageSource ||
+                story.source
+              : null,
+
+          videoAvailable:
+            Boolean(
+              story.videoUrl
+            ),
+
+          videoUrl:
+            story.videoUrl ||
+            null,
+
+          videoSource:
+            story.videoUrl
+              ? story.videoSource ||
+                story.source
+              : null,
+
+          sources:
+            story.sources,
+
+          createdAt:
+            new Date().toISOString(),
+
+          ready: true
+        };
+      })
+      .filter(Boolean);
+  } catch (error) {
+    console.error(
+      "Gemini generation failed:",
+      error.message
+    );
+
+    return [];
+  }
+}
+
+async function saveJson(
+  path,
+  data
+) {
+  const lastSlash =
+    path.lastIndexOf("/");
+
+  if (lastSlash > 0) {
+    await fs.mkdir(
+      path.substring(
+        0,
+        lastSlash
+      ),
+      {
+        recursive: true
+      }
+    );
+  }
+
+  await fs.writeFile(
+    path,
+    JSON.stringify(
+      data,
+      null,
+      2
+    ),
+    "utf8"
+  );
+}
+
+export async function collectNews() {
+  console.log(
+    "Starting What's Happening news monitor..."
+  );
+
+  console.log(
+    "Fetching latest major international news..."
+  );
+
+  console.log(
+    "No 30-minute cutoff. Newest available stories are prioritized."
+  );
+
+  const results =
+    await Promise.allSettled([
+      fetchNewsAPI(),
+      fetchGuardian()
+    ]);
+
+  const rawArticles =
+    results.flatMap(
+      result =>
+        result.status ===
+        "fulfilled"
+          ? result.value
+          : []
+    );
+
+  console.log(
+    `Fetched ${rawArticles.length} raw articles.`
+  );
+
+  const normalized =
+    rawArticles
+      .map(normalizeArticle)
+      .filter(Boolean);
+
+  console.log(
+    `${normalized.length} valid articles after normalization.`
+  );
+
+  const unique =
+    mergeDuplicates(
+      normalized
+    );
+
+  console.log(
+    `${unique.length} unique stories after deduplication.`
+  );
+
+  const ranked =
+    rankStories(unique);
+
+  console.log(
+    `${ranked.length} major international stories passed filtering.`
+  );
+
+  const selected =
+    selectStories(ranked);
+
+  console.log(
+    `Selected ${selected.length} final stories.`
+  );
+
+  const storiesWithImages =
+    await enrichImages(
+      selected
+    );
+
+  const finalStories =
+    storiesWithImages.map(
+      story => ({
+        ...story,
+
+        age:
+          ageLabel(
+            story.publishedAt
+          ),
+
+        ageMinutes:
+          Math.round(
+            ageMinutes(
+              story.publishedAt
+            )
+          ),
+
+        imageAvailable:
+          Boolean(
+            story.imageUrl
+          ),
+
+        imageDownloadUrl:
+          story.imageUrl ||
+          null,
+
+        imageSource:
+          story.imageUrl
+            ? story.imageSource ||
+              story.source
+            : null
+      })
+    );
+
+  await saveJson(
+    "data/news.json",
+    {
+      updatedAt:
+        new Date().toISOString(),
+
+      stories:
+        finalStories
+    }
+  );
+
+  console.log(
+    `Saved ${finalStories.length} stories to data/news.json.`
+  );
+
+  const posts =
+    await generateTweetPosts(
+      finalStories
+    );
+
+  await saveJson(
+    "data/posts.json",
+    {
+      updatedAt:
+        new Date().toISOString(),
+
+      posts
+    }
+  );
+
+  console.log(
+    `Generated ${posts.length} Tweet Ready posts.`
+  );
+
+  console.log(
+    "Final selected stories:"
+  );
+
+  for (const story of finalStories) {
+    console.log(
+      `[${story.age}] ${story.category} | ${story.title} | image=${story.imageAvailable}`
+    );
+  }
+
+  return finalStories;
+}
+
+if (
+  process.argv[1] &&
+  process.argv[1].endsWith(
+    "monitor.js"
+  )
+) {
+  collectNews()
+    .then(() => {
+      console.log(
+        "News monitor completed successfully."
+      );
+    })
+    .catch(error => {
+      console.error(
+        "News monitor failed:",
+        error
+      );
+
+      process.exit(1);
+    });
+      }
