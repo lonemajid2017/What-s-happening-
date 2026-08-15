@@ -1,4 +1,4 @@
-const USER_AGENT = "whats-Happening/1.0";
+const USER_AGENT = "whats-happening/1.0";
 
 const TOPICS = {
   USA: [
@@ -84,33 +84,26 @@ const TRUSTED_SOURCES = new Set([
   "AP",
   "BBC News",
   "BBC",
-  "Al Jazeera English",
   "Al Jazeera",
-  "The Telegraph",
+  "Al Jazeera English",
+  "NPR",
+  "DW",
+  "France 24",
+  "Euronews",
+  "The Guardian",
   "Bloomberg",
-  "The Washington Post",
-  "The New York Times",
   "CNN",
   "CNBC",
   "Financial Times",
-  "The Wall Street Journal",
-  "Politico",
-  "The Hill",
-  "The Guardian",
-  "Agence France-Presse",
-  "AFP",
-  "DW",
-  "Euronews",
-  "TASS",
+  "The New York Times",
+  "The Washington Post",
+  "The Telegraph",
   "The Hindu",
   "The Indian Express",
   "Hindustan Times",
   "ANI",
   "CoinDesk",
-  "The Block",
-  "CoinGecko",
-  "NPR",
-  "France 24"
+  "CoinGecko"
 ]);
 
 const RSS_SOURCES = [
@@ -142,15 +135,15 @@ const RSS_SOURCES = [
 
 function cleanText(value = "") {
   return String(value)
-    .replace(/<!\[CDATA\[|\]\]>/g, "")
+    .replace(/<!\[CDATA\[|\]\]>/gi, "")
     .replace(/<[^>]*>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
-    .replace(/&#39;/g, "'")
-    .replace(/&apos;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#039;/gi, "'")
+    .replace(/&#39;/gi, "'")
+    .replace(/&apos;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -166,16 +159,74 @@ function createId(text) {
   return (hash >>> 0).toString(16);
 }
 
+function validDate(value) {
+  if (!value) {
+    return null;
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+
+  return date.toISOString();
+}
+
+function isWithin24Hours(dateValue) {
+  const time = new Date(dateValue).getTime();
+
+  if (Number.isNaN(time)) {
+    return false;
+  }
+
+  const age = Date.now() - time;
+
+  return age >= 0 && age <= 24 * 60 * 60 * 1000;
+}
+
+function getAgeText(dateValue) {
+  const time = new Date(dateValue).getTime();
+
+  if (Number.isNaN(time)) {
+    return "Unknown time";
+  }
+
+  let seconds = Math.floor((Date.now() - time) / 1000);
+
+  if (seconds < 0) {
+    seconds = 0;
+  }
+
+  if (seconds < 60) {
+    return `${seconds} second${seconds === 1 ? "" : "s"} ago`;
+  }
+
+  const minutes = Math.floor(seconds / 60);
+
+  if (minutes < 60) {
+    return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+  }
+
+  const hours = Math.floor(minutes / 60);
+
+  if (hours < 24) {
+    return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+  }
+
+  const days = Math.floor(hours / 24);
+
+  return `${days} day${days === 1 ? "" : "s"} ago`;
+}
+
 function getCategory(text) {
   const lower = text.toLowerCase();
 
   for (const [category, keywords] of Object.entries(TOPICS)) {
-    const found = keywords.some(keyword =>
-      lower.includes(keyword.toLowerCase())
-    );
-
-    if (found) {
-      return category;
+    for (const keyword of keywords) {
+      if (lower.includes(keyword.toLowerCase())) {
+        return category;
+      }
     }
   }
 
@@ -191,12 +242,11 @@ function getImportance(title, description, source, publishedAt) {
     score += 20;
   }
 
-  const majorKeywords = [
+  const keywords = [
     "breaking",
     "trump",
     "president",
     "federal reserve",
-    "fed",
     "interest rate",
     "war",
     "attack",
@@ -218,381 +268,106 @@ function getImportance(title, description, source, publishedAt) {
     "earthquake",
     "wildfire",
     "explosion",
-    "terror",
     "nuclear"
   ];
 
-  for (const keyword of majorKeywords) {
+  for (const keyword of keywords) {
     if (text.includes(keyword)) {
       score += 5;
     }
   }
 
-  const publishedTime =
-    new Date(publishedAt || Date.now()).getTime();
-
-  const ageHours = Math.max(
-    0,
-    (Date.now() - publishedTime) / 3600000
-  );
+  const ageHours =
+    Math.max(
+      0,
+      (Date.now() - new Date(publishedAt).getTime()) / 3600000
+    );
 
   score -= Math.min(20, ageHours * 1.5);
 
-  return Math.max(
-    0,
-    Math.min(100, Math.round(score))
-  );
+  return Math.max(0, Math.min(100, Math.round(score)));
 }
 
-function normalizeImageUrl(url) {
-  if (!url) {
+function normalizeUrl(value) {
+  if (!value) {
     return null;
   }
 
   try {
-    const parsed = new URL(url);
+    const url = new URL(value);
 
     if (
-      parsed.protocol !== "http:" &&
-      parsed.protocol !== "https:"
+      url.protocol !== "http:" &&
+      url.protocol !== "https:"
     ) {
       return null;
     }
 
-    return parsed.toString();
+    return url.toString();
   } catch {
     return null;
   }
 }
 
-function parsePublishedAt(value) {
-  if (!value) {
-    return null;
-  }
-
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return null;
-  }
-
-  return date.toISOString();
-}
-
-function getAgeText(publishedAt) {
-  const publishedTime =
-    new Date(publishedAt).getTime();
-
-  if (Number.isNaN(publishedTime)) {
-    return "Unknown time";
-  }
-
-  let seconds =
-    Math.floor(
-      (Date.now() - publishedTime) / 1000
-    );
-
-  if (seconds < 0) {
-    seconds = 0;
-  }
-
-  if (seconds < 60) {
-    return `${seconds} second${seconds === 1 ? "" : "s"} ago`;
-  }
-
-  const minutes =
-    Math.floor(seconds / 60);
-
-  if (minutes < 60) {
-    return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
-  }
-
-  const hours =
-    Math.floor(minutes / 60);
-
-  if (hours < 24) {
-    return `${hours} hour${hours === 1 ? "" : "s"} ago`;
-  }
-
-  const days =
-    Math.floor(hours / 24);
-
-  return `${days} day${days === 1 ? "" : "s"} ago`;
-}
-
-function isWithinHours(
-  publishedAt,
-  hours
-) {
-  const time =
-    new Date(publishedAt).getTime();
-
-  if (Number.isNaN(time)) {
-    return false;
-  }
-
-  const age =
-    Date.now() - time;
-
-  return (
-    age >= 0 &&
-    age <= hours * 60 * 60 * 1000
-  );
-}
-
-function normalizeArticle(article) {
-  if (!article) {
-    return null;
-  }
-
-  const title =
-    cleanText(article.title);
-
-  const description =
-    cleanText(article.description);
-
-  const source =
-    cleanText(
-      article.source || "Unknown"
-    );
-
-  const url =
-    article.url;
-
-  if (!title || !url) {
-    return null;
-  }
-
-  const publishedAt =
-    parsePublishedAt(
-      article.publishedAt
-    );
-
-  if (!publishedAt) {
-    return null;
-  }
-
-  const imageUrl =
-    normalizeImageUrl(
-      article.imageUrl ||
-      article.urlToImage ||
-      article.image ||
-      null
-    );
-
-  const fingerprint =
-    `${title
-      .toLowerCase()
-      .replace(/[^\p{L}\p{N}]+/gu, " ")
-      .trim()
-      .slice(0, 200)}|${source.toLowerCase()}`;
-
-  return {
-    id: createId(fingerprint),
-
-    title,
-
-    description,
-
-    source,
-
-    url,
-
-    imageUrl,
-
-    imageSource:
-      imageUrl ? source : null,
-
-    imageAvailable:
-      Boolean(imageUrl),
-
-    publishedAt,
-
-    age:
-      getAgeText(publishedAt),
-
-    category:
-      getCategory(
-        `${title} ${description}`
-      ),
-
-    importance:
-      getImportance(
-        title,
-        description,
-        source,
-        publishedAt
-      ),
-
-    verified:
-      TRUSTED_SOURCES.has(source),
-
-    sources: [
-      source
-    ],
-
-    fetchedAt:
-      new Date().toISOString()
-  };
-}
-
-async function fetchJson(
-  url,
-  options = {}
-) {
-  const controller =
-    new AbortController();
-
-  const timeout =
-    setTimeout(
-      () => controller.abort(),
-      options.timeout || 15000
-    );
-
-  try {
-    const response =
-      await fetch(
-        url,
-        {
-          ...options,
-
-          signal:
-            controller.signal,
-
-          headers: {
-            "User-Agent":
-              USER_AGENT,
-
-            ...(options.headers || {})
-          }
-        }
-      );
-
-    if (!response.ok) {
-      throw new Error(
-        `${response.status} ${response.statusText}`
-      );
+async function fetchText(url, options = {}) {
+  const response = await fetch(url, {
+    ...options,
+    headers: {
+      "User-Agent": USER_AGENT,
+      ...(options.headers || {})
     }
+  });
 
-    return await response.json();
-
-  } finally {
-    clearTimeout(timeout);
+  if (!response.ok) {
+    throw new Error(
+      `${response.status} ${response.statusText}`
+    );
   }
+
+  return response.text();
 }
 
-async function fetchText(
-  url,
-  options = {}
-) {
-  const controller =
-    new AbortController();
-
-  const timeout =
-    setTimeout(
-      () => controller.abort(),
-      options.timeout || 15000
-    );
-
-  try {
-    const response =
-      await fetch(
-        url,
-        {
-          ...options,
-
-          signal:
-            controller.signal,
-
-          headers: {
-            "User-Agent":
-              USER_AGENT,
-
-            Accept:
-              "application/rss+xml, application/xml, text/xml, text/html",
-
-            ...(options.headers || {})
-          }
-        }
-      );
-
-    if (!response.ok) {
-      throw new Error(
-        `${response.status} ${response.statusText}`
-      );
+async function fetchJson(url, options = {}) {
+  const response = await fetch(url, {
+    ...options,
+    headers: {
+      "User-Agent": USER_AGENT,
+      ...(options.headers || {})
     }
+  });
 
-    return await response.text();
-
-  } finally {
-    clearTimeout(timeout);
-  }
-}
-
-function extractXmlTag(
-  block,
-  tag
-) {
-  const regex =
-    new RegExp(
-      `<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`,
-      "i"
+  if (!response.ok) {
+    throw new Error(
+      `${response.status} ${response.statusText}`
     );
-
-  const match =
-    block.match(regex);
-
-  return match
-    ? cleanText(match[1])
-    : "";
-}
-
-function extractXmlUrl(
-  block,
-  tag
-) {
-  const regex =
-    new RegExp(
-      `<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`,
-      "i"
-    );
-
-  const match =
-    block.match(regex);
-
-  if (!match) {
-    return null;
   }
 
-  return normalizeImageUrl(
-    cleanText(match[1])
+  return response.json();
+}
+
+function xmlValue(block, tag) {
+  const regex = new RegExp(
+    `<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`,
+    "i"
   );
+
+  const match = block.match(regex);
+
+  return match ? cleanText(match[1]) : "";
 }
 
-function extractRssImage(
-  block
-) {
+function getRssImage(block) {
   const patterns = [
-
     /<media:content[^>]+url=["']([^"']+)["']/i,
-
     /<media:thumbnail[^>]+url=["']([^"']+)["']/i,
-
-    /<enclosure[^>]+url=["']([^"']+)["'][^>]*type=["']image\//i,
-
-    /<image[^>]*>[\s\S]*?<url[^>]*>([^<]+)<\/url>[\s\S]*?<\/image>/i
-
+    /<enclosure[^>]+url=["']([^"']+)["'][^>]*>/i
   ];
 
   for (const pattern of patterns) {
-    const match =
-      block.match(pattern);
+    const match = block.match(pattern);
 
-    if (match?.[1]) {
-      const image =
-        normalizeImageUrl(
-          match[1]
-        );
+    if (match && match[1]) {
+      const image = normalizeUrl(match[1]);
 
       if (image) {
         return image;
@@ -603,114 +378,42 @@ function extractRssImage(
   return null;
 }
 
-function parseRssFeed(
-  xml,
-  source
-) {
-  if (!xml) {
-    return [];
-  }
-
+function parseRss(xml, source) {
   const items =
-    xml.match(
-      /<item\b[\s\S]*?<\/item>/gi
-    ) || [];
+    xml.match(/<item\b[\s\S]*?<\/item>/gi) || [];
 
-  return items.map(item => {
-
-    const title =
-      extractXmlTag(
-        item,
-        "title"
-      );
-
-    const description =
-      extractXmlTag(
-        item,
-        "description"
-      );
-
-    let url =
-      extractXmlTag(
-        item,
-        "link"
-      );
-
-    if (!url) {
-      const guid =
-        extractXmlTag(
-          item,
-          "guid"
-        );
-
-      if (
-        guid &&
-        /^https?:\/\//i.test(guid)
-      ) {
-        url = guid;
-      }
-    }
-
-    const publishedAt =
-      extractXmlTag(
-        item,
-        "pubDate"
-      ) ||
-      extractXmlTag(
-        item,
-        "dc:date"
-      ) ||
-      extractXmlTag(
-        item,
-        "published"
-      ) ||
-      extractXmlTag(
-        item,
-        "updated"
-      );
-
-    const imageUrl =
-      extractRssImage(item);
-
-    return {
-      title,
-      description,
+  return items
+    .map(item => ({
+      title: xmlValue(item, "title"),
+      description: xmlValue(item, "description"),
       source,
-      url,
-      imageUrl,
-      publishedAt
-    };
-
-  }).filter(
-    article =>
-      article.title &&
-      article.url &&
-      article.publishedAt
-  );
+      url:
+        xmlValue(item, "link") ||
+        xmlValue(item, "guid"),
+      imageUrl: getRssImage(item),
+      publishedAt:
+        xmlValue(item, "pubDate") ||
+        xmlValue(item, "dc:date") ||
+        xmlValue(item, "published") ||
+        xmlValue(item, "updated")
+    }))
+    .filter(item => {
+      return (
+        item.title &&
+        item.url &&
+        item.publishedAt
+      );
+    });
 }
 
-async function fetchRssSource(
-  source
-) {
+async function fetchRSS(source) {
   try {
+    const xml = await fetchText(source.url);
 
-    const xml =
-      await fetchText(
-        source.url,
-        {
-          timeout: 12000
-        }
-      );
-
-    return parseRssFeed(
-      xml,
-      source.name
-    );
-
+    return parseRss(xml, source.name);
   } catch (error) {
-
     console.error(
-      `${source.name} RSS request failed:`,
+      `${source.name} RSS failed:`,
       error.message
     );
 
@@ -719,84 +422,40 @@ async function fetchRssSource(
 }
 
 async function fetchAllRSS() {
-
-  const results =
-    await Promise.allSettled(
-      RSS_SOURCES.map(
-        fetchRssSource
-      )
-    );
-
-  return results.flatMap(
-    result =>
-      result.status === "fulfilled"
-        ? result.value
-        : []
+  const results = await Promise.allSettled(
+    RSS_SOURCES.map(fetchRSS)
   );
-}
 
-async function fetchArticleImage(
-  url
-) {
-  if (!url) {
-    return null;
-  }
-
-  try {
-
-    const response =
-      await fetch(
-        url,
-        {
-          headers: {
-            "User-Agent":
-              USER_AGENT,
-
-            Accept:
-              "text/html,application/xhtml+xml"
-          },
-
-          signal:
-            AbortSignal.timeout(
-              10000
-            )
-        }
-      );
-
-    if (!response.ok) {
-      return null;
+  return results.flatMap(result => {
+    if (result.status === "fulfilled") {
+      return result.value;
     }
 
-    const html =
-      await response.text();
+    return [];
+  });
+}
+
+async function fetchArticleImage(url) {
+  try {
+    const html = await fetchText(url, {
+      headers: {
+        Accept:
+          "text/html,application/xhtml+xml"
+      }
+    });
 
     const patterns = [
-
       /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
-
       /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
-
       /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
-
-      /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
-
-      /<meta[^>]+property=["']og:image:url["'][^>]+content=["']([^"']+)["']/i,
-
-      /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image:url["']/i
-
+      /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i
     ];
 
     for (const pattern of patterns) {
+      const match = html.match(pattern);
 
-      const match =
-        html.match(pattern);
-
-      if (match?.[1]) {
-
-        const image =
-          normalizeImageUrl(
-            match[1]
-          );
+      if (match && match[1]) {
+        const image = normalizeUrl(match[1]);
 
         if (image) {
           return image;
@@ -805,109 +464,48 @@ async function fetchArticleImage(
     }
 
     return null;
-
   } catch {
     return null;
   }
 }
 
-async function addMissingImages(
-  articles
-) {
-  const result =
-    [...articles];
+async function addMissingImages(stories) {
+  const missing = stories
+    .filter(story => !story.imageUrl)
+    .slice(0, 30);
 
-  const candidates =
-    result
-      .filter(
-        article =>
-          !article.imageUrl
-      )
-      .filter(
-        article =>
-          article.url
-      )
-      .sort(
-        (a, b) =>
-          new Date(b.publishedAt).getTime() -
-          new Date(a.publishedAt).getTime()
-      )
-      .slice(0, 40);
+  const results = await Promise.allSettled(
+    missing.map(story =>
+      fetchArticleImage(story.url)
+    )
+  );
 
-  const batchSize = 5;
+  for (let i = 0; i < missing.length; i++) {
+    const result = results[i];
 
-  for (
-    let i = 0;
-    i < candidates.length;
-    i += batchSize
-  ) {
-
-    const batch =
-      candidates.slice(
-        i,
-        i + batchSize
-      );
-
-    const images =
-      await Promise.all(
-        batch.map(
-          article =>
-            fetchArticleImage(
-              article.url
-            )
-        )
-      );
-
-    for (
-      let j = 0;
-      j < batch.length;
-      j++
+    if (
+      result.status === "fulfilled" &&
+      result.value
     ) {
-
-      const image =
-        images[j];
-
-      if (!image) {
-        continue;
-      }
-
-      const original =
-        result.find(
-          item =>
-            item.id ===
-            batch[j].id
-        );
-
-      if (original) {
-
-        original.imageUrl =
-          image;
-
-        original.imageSource =
-          original.source;
-
-        original.imageAvailable =
-          true;
-      }
+      missing[i].imageUrl = result.value;
+      missing[i].imageSource = missing[i].source;
+      missing[i].imageAvailable = true;
     }
   }
 
-  return result;
+  return stories;
 }
 
 async function fetchNewsAPI() {
-
-  const apiKey =
-    process.env.NEWS_API_KEY;
+  const apiKey = process.env.NEWS_API_KEY;
 
   if (!apiKey) {
     return [];
   }
 
-  const query =
-    encodeURIComponent(
-      "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
-    );
+  const query = encodeURIComponent(
+    "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
+  );
 
   const url =
     "https://newsapi.org/v2/everything" +
@@ -918,40 +516,19 @@ async function fetchNewsAPI() {
     `&apiKey=${encodeURIComponent(apiKey)}`;
 
   try {
+    const data = await fetchJson(url);
 
-    const data =
-      await fetchJson(url);
-
-    return (
-      data.articles || []
-    ).map(
-      article => ({
-        title:
-          article.title,
-
-        description:
-          article.description,
-
-        source:
-          article.source?.name ||
-          "NewsAPI",
-
-        url:
-          article.url,
-
-        imageUrl:
-          article.urlToImage ||
-          null,
-
-        publishedAt:
-          article.publishedAt
-      })
-    );
-
+    return (data.articles || []).map(article => ({
+      title: article.title,
+      description: article.description,
+      source: article.source?.name || "NewsAPI",
+      url: article.url,
+      imageUrl: article.urlToImage || null,
+      publishedAt: article.publishedAt
+    }));
   } catch (error) {
-
     console.error(
-      "NewsAPI request failed:",
+      "NewsAPI failed:",
       error.message
     );
 
@@ -960,18 +537,15 @@ async function fetchNewsAPI() {
 }
 
 async function fetchGNews() {
-
-  const apiKey =
-    process.env.GNEWS_API_KEY;
+  const apiKey = process.env.GNEWS_API_KEY;
 
   if (!apiKey) {
     return [];
   }
 
-  const query =
-    encodeURIComponent(
-      "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
-    );
+  const query = encodeURIComponent(
+    "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
+  );
 
   const url =
     "https://gnews.io/api/v4/search" +
@@ -982,40 +556,19 @@ async function fetchGNews() {
     `&apikey=${encodeURIComponent(apiKey)}`;
 
   try {
+    const data = await fetchJson(url);
 
-    const data =
-      await fetchJson(url);
-
-    return (
-      data.articles || []
-    ).map(
-      article => ({
-        title:
-          article.title,
-
-        description:
-          article.description,
-
-        source:
-          article.source?.name ||
-          "GNews",
-
-        url:
-          article.url,
-
-        imageUrl:
-          article.image ||
-          null,
-
-        publishedAt:
-          article.publishedAt
-      })
-    );
-
+    return (data.articles || []).map(article => ({
+      title: article.title,
+      description: article.description,
+      source: article.source?.name || "GNews",
+      url: article.url,
+      imageUrl: article.image || null,
+      publishedAt: article.publishedAt
+    }));
   } catch (error) {
-
     console.error(
-      "GNews request failed:",
+      "GNews failed:",
       error.message
     );
 
@@ -1024,98 +577,41 @@ async function fetchGNews() {
 }
 
 async function fetchGuardian() {
-
-  const apiKey =
-    process.env.GUARDIAN_API_KEY;
+  const apiKey = process.env.GUARDIAN_API_KEY;
 
   if (!apiKey) {
     return [];
   }
 
-  const query =
-    encodeURIComponent(
-      "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
-    );
+  const query = encodeURIComponent(
+    "Trump OR finance OR Bitcoin OR crypto OR Middle East OR India OR geopolitics OR AI"
+  );
 
   const url =
     "https://content.guardianapis.com/search" +
     `?q=${query}` +
     "&order-by=newest" +
     "&page-size=50" +
-    "&show-fields=trailText" +
-    "&show-elements=image" +
+    "&show-fields=trailText,thumbnail" +
     `&api-key=${encodeURIComponent(apiKey)}`;
 
   try {
+    const data = await fetchJson(url);
 
-    const data =
-      await fetchJson(url);
-
-    return (
-      data.response?.results || []
-    ).map(
-      article => {
-
-        let imageUrl =
-          null;
-
-        const imageElement =
-          article.elements?.find(
-            element =>
-              element.type ===
-              "image"
-          );
-
-        if (
-          imageElement?.assets?.length
-        ) {
-
-          const assets =
-            imageElement.assets;
-
-          const preferred =
-            assets.find(
-              asset =>
-                asset.type ===
-                "image"
-            ) ||
-            assets[
-              assets.length - 1
-            ];
-
-          imageUrl =
-            preferred?.file ||
-            null;
-        }
-
-        return {
-
-          title:
-            article.webTitle,
-
-          description:
-            article.fields
-              ?.trailText ||
-            "",
-
-          source:
-            "The Guardian",
-
-          url:
-            article.webUrl,
-
-          imageUrl,
-
-          publishedAt:
-            article.webPublicationDate
-        };
-      }
-    );
-
+    return (data.response?.results || []).map(article => ({
+      title: article.webTitle,
+      description:
+        article.fields?.trailText || "",
+      source: "The Guardian",
+      url: article.webUrl,
+      imageUrl:
+        article.fields?.thumbnail || null,
+      publishedAt:
+        article.webPublicationDate
+    }));
   } catch (error) {
-
     console.error(
-      "Guardian request failed:",
+      "Guardian failed:",
       error.message
     );
 
@@ -1124,9 +620,14 @@ async function fetchGuardian() {
 }
 
 async function fetchCoinGecko() {
-
   const apiKey =
     process.env.COINGECKO_API_KEY;
+
+  const headers = {};
+
+  if (apiKey) {
+    headers["x-cg-demo-api-key"] = apiKey;
+  }
 
   const url =
     "https://api.coingecko.com/api/v3/coins/markets" +
@@ -1136,79 +637,50 @@ async function fetchCoinGecko() {
     "&page=1" +
     "&sparkline=false";
 
-  const headers = {};
-
-  if (apiKey) {
-    headers[
-      "x-cg-demo-api-key"
-    ] = apiKey;
-  }
-
   try {
-
-    const data =
-      await fetchJson(
-        url,
-        {
-          headers
-        }
-      );
+    const data = await fetchJson(url, {
+      headers
+    });
 
     return data
-      .filter(
-        coin =>
-          Math.abs(
-            Number(
-              coin.price_change_percentage_24h ||
-              0
-            )
-          ) >= 3
-      )
-      .map(
-        coin => ({
+      .filter(coin => {
+        return Math.abs(
+          Number(
+            coin.price_change_percentage_24h || 0
+          )
+        ) >= 3;
+      })
+      .map(coin => ({
+        title:
+          `${coin.name} (${String(
+            coin.symbol || ""
+          ).toUpperCase()}) moved ` +
+          `${Number(
+            coin.price_change_percentage_24h || 0
+          ).toFixed(2)}% in 24 hours`,
 
-          title:
-            `${coin.name} (${String(
-              coin.symbol || ""
-            ).toUpperCase()}) moved ` +
-            `${Number(
-              coin.price_change_percentage_24h ||
-              0
-            ).toFixed(2)}% in 24 hours`,
+        description:
+          `Market cap: $${Number(
+            coin.market_cap || 0
+          ).toLocaleString("en-US")}. ` +
+          `24h volume: $${Number(
+            coin.total_volume || 0
+          ).toLocaleString("en-US")}.`,
 
-          description:
-            `Market cap: $${Number(
-              coin.market_cap ||
-              0
-            ).toLocaleString(
-              "en-US"
-            )}. ` +
-            `24h volume: $${Number(
-              coin.total_volume ||
-              0
-            ).toLocaleString(
-              "en-US"
-            )}.`,
+        source: "CoinGecko",
 
-          source:
-            "CoinGecko",
+        url:
+          `https://www.coingecko.com/en/coins/${coin.id}`,
 
-          url:
-            `https://www.coingecko.com/en/coins/${coin.id}`,
+        imageUrl:
+          coin.image || null,
 
-          imageUrl:
-            coin.image ||
-            null,
-
-          publishedAt:
-            new Date().toISOString()
-        })
-      );
-
+        publishedAt:
+          new Date().toISOString()
+      }));
   } catch (error) {
-
     console.error(
-      "CoinGecko request failed:",
+      "CoinGecko failed:",
       error.message
     );
 
@@ -1216,47 +688,261 @@ async function fetchCoinGecko() {
   }
 }
 
-function mergeDuplicateStories(
-  stories
-) {
+function normalizeArticle(article) {
+  if (!article) {
+    return null;
+  }
 
-  const groups =
-    new Map();
+  const title = cleanText(article.title);
+  const description =
+    cleanText(article.description);
+  const source =
+    cleanText(article.source || "Unknown");
+  const url = normalizeUrl(article.url);
+  const publishedAt =
+    validDate(article.publishedAt);
+
+  if (
+    !title ||
+    !url ||
+    !publishedAt
+  ) {
+    return null;
+  }
+
+  if (!isWithin24Hours(publishedAt)) {
+    return null;
+  }
+
+  const fingerprint =
+    `${title.toLowerCase()}|${source.toLowerCase()}`;
+
+  const imageUrl =
+    normalizeUrl(article.imageUrl);
+
+  return {
+    id: createId(fingerprint),
+    title,
+    description,
+    source,
+    url,
+    imageUrl,
+    imageSource:
+      imageUrl ? source : null,
+    imageAvailable:
+      Boolean(imageUrl),
+    publishedAt,
+    age:
+      getAgeText(publishedAt),
+    category:
+      getCategory(
+        `${title} ${description}`
+      ),
+    importance:
+      getImportance(
+        title,
+        description,
+        source,
+        publishedAt
+      ),
+    verified:
+      TRUSTED_SOURCES.has(source),
+    sources: [source],
+    fetchedAt:
+      new Date().toISOString()
+  };
+}
+
+function mergeDuplicates(stories) {
+  const groups = new Map();
 
   for (const story of stories) {
+    const key = story.title
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu, " ")
+      .split(" ")
+      .filter(Boolean)
+      .slice(0, 12)
+      .join(" ");
 
-    const key =
-      story.title
-        .toLowerCase()
-        .replace(
-          /[^\p{L}\p{N}]+/gu,
-          " "
-        )
-        .split(" ")
-        .filter(Boolean)
-        .slice(0, 12)
-        .join(" ");
-
-    const existing =
-      groups.get(key);
+    const existing = groups.get(key);
 
     if (!existing) {
-
-      groups.set(
-        key,
-        {
-          ...story,
-
-          sources: [
-            ...(story.sources ||
-              [story.source])
-          ]
-        }
-      );
+      groups.set(key, {
+        ...story,
+        sources: [...story.sources]
+      });
 
       continue;
     }
 
-    const sourceSet =
-      new Set([
-        .
+    const sourceSet = new Set([
+      ...existing.sources,
+      ...story.sources
+    ]);
+
+    existing.sources = [...sourceSet];
+
+    existing.verified =
+      existing.verified ||
+      story.verified;
+
+    if (
+      !existing.imageUrl &&
+      story.imageUrl
+    ) {
+      existing.imageUrl =
+        story.imageUrl;
+
+      existing.imageSource =
+        story.imageSource ||
+        story.source;
+
+      existing.imageAvailable = true;
+    }
+
+    const oldTime =
+      new Date(
+        existing.publishedAt
+      ).getTime();
+
+    const newTime =
+      new Date(
+        story.publishedAt
+      ).getTime();
+
+    if (newTime > oldTime) {
+      const sources =
+        existing.sources;
+
+      const image =
+        existing.imageUrl;
+
+      const imageSource =
+        existing.imageSource;
+
+      Object.assign(
+        existing,
+        story
+      );
+
+      existing.sources =
+        sources;
+
+      if (!existing.imageUrl && image) {
+        existing.imageUrl = image;
+        existing.imageSource =
+          imageSource;
+        existing.imageAvailable = true;
+      }
+    }
+  }
+
+  return [...groups.values()];
+}
+
+export async function collectNews() {
+  const results =
+    await Promise.allSettled([
+      fetchNewsAPI(),
+      fetchGNews(),
+      fetchGuardian(),
+      fetchCoinGecko(),
+      fetchAllRSS()
+    ]);
+
+  const rawArticles = results.flatMap(
+    result => {
+      if (
+        result.status === "fulfilled" &&
+        Array.isArray(result.value)
+      ) {
+        return result.value;
+      }
+
+      return [];
+    }
+  );
+
+  const normalized =
+    rawArticles
+      .map(normalizeArticle)
+      .filter(Boolean);
+
+  const uniqueStories =
+    mergeDuplicates(normalized);
+
+  uniqueStories.sort((a, b) => {
+    const timeDifference =
+      new Date(b.publishedAt).getTime() -
+      new Date(a.publishedAt).getTime();
+
+    if (timeDifference !== 0) {
+      return timeDifference;
+    }
+
+    return b.importance - a.importance;
+  });
+
+  const last30Minutes =
+    uniqueStories.filter(story => {
+      return isWithinRecentMinutes(
+        story.publishedAt,
+        30
+      );
+    });
+
+  let selectedStories;
+
+  if (last30Minutes.length >= 5) {
+    selectedStories =
+      last30Minutes;
+  } else {
+    selectedStories =
+      uniqueStories;
+  }
+
+  selectedStories =
+    selectedStories.slice(0, 50);
+
+  await addMissingImages(
+    selectedStories
+  );
+
+  return selectedStories
+    .sort((a, b) => {
+      return (
+        new Date(b.publishedAt).getTime() -
+        new Date(a.publishedAt).getTime()
+      );
+    })
+    .map(story => ({
+      ...story,
+      age:
+        getAgeText(
+          story.publishedAt
+        ),
+      fetchedAt:
+        new Date().toISOString()
+    }));
+}
+
+function isWithinRecentMinutes(
+  dateValue,
+  minutes
+) {
+  const time =
+    new Date(dateValue).getTime();
+
+  if (Number.isNaN(time)) {
+    return false;
+  }
+
+  const age =
+    Date.now() - time;
+
+  return (
+    age >= 0 &&
+    age <= minutes * 60 * 1000
+  );
+    }
