@@ -445,6 +445,57 @@ export async function collectNews() {
     fetchNewsAPI(),
     fetchGNews(),
     fetchGuardian(),
+    async function fetchAlJazeera() {
+  const url = "https://www.aljazeera.com/xml/rss/all.xml";
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": USER_AGENT
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Al Jazeera RSS ${response.status} ${response.statusText}`
+      );
+    }
+
+    const xml = await response.text();
+
+    const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)];
+
+    return items.map((match) => {
+      const item = match[1];
+
+      const getTag = (tag) => {
+        const regex = new RegExp(
+          `<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`,
+          "i"
+        );
+
+        const result = item.match(regex);
+
+        return result
+          ? result[1]
+              .replace(/<!\[CDATA\[|\]\]>/g, "")
+              .trim()
+          : "";
+      };
+
+      return {
+        title: getTag("title"),
+        description: getTag("description"),
+        source: "Al Jazeera",
+        url: getTag("link"),
+        publishedAt: getTag("pubDate")
+      };
+    });
+  } catch (error) {
+    console.error("Al Jazeera request failed:", error.message);
+    return [];
+  }
+    }
     fetchCoinGecko()
   ]);
 
