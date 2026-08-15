@@ -12,6 +12,7 @@ import {
 const MAX_POSTS = 10;
 const MAX_AGE_HOURS = 24;
 const MIN_IMPORTANCE = 55;
+const SEEN_RETENTION_HOURS = 6;
 
 function createId(text) {
   return crypto
@@ -26,23 +27,15 @@ function getPublishedTime(story) {
     story?.publishedAt || 0
   ).getTime();
 
-  return Number.isFinite(time)
-    ? time
-    : 0;
+  return Number.isFinite(time) ? time : 0;
 }
 
 function getAgeMinutes(story) {
-  if (
-    Number.isFinite(story?.ageMinutes)
-  ) {
-    return Math.max(
-      0,
-      story.ageMinutes
-    );
+  if (Number.isFinite(story?.ageMinutes)) {
+    return Math.max(0, story.ageMinutes);
   }
 
-  const published =
-    getPublishedTime(story);
+  const published = getPublishedTime(story);
 
   if (!published) {
     return Infinity;
@@ -55,23 +48,18 @@ function getAgeMinutes(story) {
 }
 
 function isFreshStory(story) {
-  const ageMinutes =
-    getAgeMinutes(story);
+  const ageMinutes = getAgeMinutes(story);
 
   return (
     Number.isFinite(ageMinutes) &&
     ageMinutes >= 0 &&
-    ageMinutes <=
-      MAX_AGE_HOURS * 60
+    ageMinutes <= MAX_AGE_HOURS * 60
   );
 }
 
 function sortLatestFirst(a, b) {
-  const ageA =
-    getAgeMinutes(a);
-
-  const ageB =
-    getAgeMinutes(b);
+  const ageA = getAgeMinutes(a);
+  const ageB = getAgeMinutes(b);
 
   if (ageA !== ageB) {
     return ageA - ageB;
@@ -83,13 +71,64 @@ function sortLatestFirst(a, b) {
   );
 }
 
+function cleanSeenEntries(items) {
+  const cutoff =
+    Date.now() -
+    SEEN_RETENTION_HOURS * 60 * 60 * 1000;
+
+  return items.filter(item => {
+    if (!item || !item.id) {
+      return false;
+    }
+
+    const createdAt = new Date(
+      item.createdAt || 0
+    ).getTime();
+
+    if (!createdAt) {
+      return false;
+    }
+
+    return createdAt >= cutoff;
+  });
+}
+
+function isRecentlySeen(story, seenEntries) {
+  const now = Date.now();
+
+  return seenEntries.some(entry => {
+    if (entry.id !== story.id) {
+      return false;
+    }
+
+    const createdAt = new Date(
+      entry.createdAt || 0
+    ).getTime();
+
+    if (!createdAt) {
+      return false;
+    }
+
+    return (
+      now - createdAt <
+      SEEN_RETENTION_HOURS * 60 * 60 * 1000
+    );
+  });
+}
+
+function makeSeenEntry(story) {
+  return {
+    id: story.id,
+    createdAt: new Date().toISOString()
+  };
+}
+
 async function main() {
   console.log(
     "Starting What's Happening news monitor..."
   );
 
-  const stories =
-    await collectNews();
+  const stories = await collectNews();
 
   console.log(
     `Collected ${stories.length} important stories.`
@@ -97,59 +136,89 @@ async function main() {
 
   await addStories(stories);
 
-  const seen =
-    await readJson("seen.json", {
+  const seenData = await readJson(
+    "seen.json",
+    {
       items: []
-    });
+    }
+  );
 
-  const seenIds =
-    new Set(
-      Array.isArray(seen.items)
-        ? seen.items
-        : []
-    );
+  const existingSeen =
+    Array.isArray(seenData.items)
+      ? seenData.items
+      : [];
 
-  const eligibleStories =
-    stories
-      .filter(isFreshStory)
-      .filter(
-        story =>
-          story.importance >=
-          MIN_IMPORTANCE
-      )
-      .sort(sortLatestFirst);
+  const seenEntries =
+    cleanSeenEntries(existingSeen);
+
+  console.log(
+    `${seenEntries.length} recently seen stories retained.`
+  );
+
+  const eligibleStories = stories
+    .filter(isFreshStory)
+    .filter(
+      story =>
+        story.importance >= MIN_IMPORTANCE
+    )
+    .sort(sortLatestFirst);
 
   console.log(
     `Found ${eligibleStories.length} fresh important stories within 24 hours.`
   );
 
-  const freshStories =
-    eligibleStories
-      .filter(
-        story =>
-          !seenIds.has(story.id)
+  const unseenStories = eligibleStories.filter(
+    story =>
+      !isRecentlySeen(
+        story,
+        seenEntries
       )
-      .slice(0, MAX_POSTS);
-
-  console.log(
-    `Selected ${freshStories.length} new latest stories.`
   );
 
-  if (
-    freshStories.length === 0
-  ) {
+  let selectedStories =
+    unseenStories.slice(0, MAX_POSTS);
+
+  /*
+   * If all current stories were recently seen,
+   * use the latest important stories instead of
+   * returning an empty queue.
+   *
+   * This prevents posts.json from becoming empty
+   * simply because the monitor ran again.
+   */
+  if (selectedStories.length === 0) {
+    selectedStories =
+      eligibleStories.slice(0, MAX_POSTS);
+
     console.log(
-      "No new latest stories available."
+      "No unseen stories found. Using latest important stories instead."
+    );
+  }
+
+  console.log(
+    `Selected ${selectedStories.length} latest stories.`
+  );
+
+  if (selectedStories.length === 0) {
+    console.log(
+      "No suitable stories available."
     );
 
     await addPosts([]);
+
+    await writeJson(
+      "seen.json",
+      {
+        items: seenEntries
+      }
+    );
 
     return;
   }
 
   if (!process.env.GEMINI_API_KEY) {
     console.log(
-      "GEMINI_API_KEY is not configured. Stories were saved, but posts were not generated."
+      "GEMINI_API_KEY is not configured."
     );
 
     return;
@@ -160,7 +229,7 @@ async function main() {
   try {
     generatedPosts =
       await generatePosts(
-        freshStories
+        selectedStories
       );
   } catch (error) {
     console.error(
@@ -173,15 +242,13 @@ async function main() {
   }
 
   const posts = [];
+  const newSeenEntries = [...seenEntries];
 
-  for (
-    const generated of generatedPosts
-  ) {
+  for (const generated of generatedPosts) {
     const story =
-      freshStories.find(
+      selectedStories.find(
         item =>
-          item.id ===
-          generated.storyId
+          item.id === generated.storyId
       );
 
     if (!story) {
@@ -189,17 +256,11 @@ async function main() {
     }
 
     if (!isFreshStory(story)) {
-      console.log(
-        `Skipped expired story: ${story.title}`
-      );
-
       continue;
     }
 
     const sourceNames =
-      Array.isArray(
-        story.sources
-      ) &&
+      Array.isArray(story.sources) &&
       story.sources.length > 0
         ? story.sources.join(", ")
         : story.source;
@@ -245,9 +306,7 @@ async function main() {
         )
           ? story.ageMinutes
           : Math.round(
-              getAgeMinutes(
-                story
-              )
+              getAgeMinutes(story)
             ),
 
       imageAvailable:
@@ -290,9 +349,7 @@ async function main() {
         ),
 
       sources:
-        Array.isArray(
-          story.sources
-        )
+        Array.isArray(story.sources)
           ? story.sources
           : [story.source],
 
@@ -305,40 +362,32 @@ async function main() {
 
     posts.push(post);
 
-    seenIds.add(
-      story.id
+    newSeenEntries.push(
+      makeSeenEntry(story)
     );
   }
 
-  posts.sort(
-    (a, b) =>
-      new Date(
-        a.publishedAt || 0
-      ) -
-      new Date(
-        b.publishedAt || 0
-      )
-  );
-
-  posts.reverse();
-
   const finalPosts =
-    posts.slice(
-      0,
-      MAX_POSTS
-    );
+    posts
+      .sort(
+        (a, b) =>
+          new Date(
+            b.publishedAt || 0
+          ).getTime() -
+          new Date(
+            a.publishedAt || 0
+          ).getTime()
+      )
+      .slice(0, MAX_POSTS);
 
-  await addPosts(
-    finalPosts
-  );
+  await addPosts(finalPosts);
 
   await writeJson(
     "seen.json",
     {
-      items:
-        [...seenIds].slice(
-          -1000
-        )
+      items: cleanSeenEntries(
+        newSeenEntries
+      )
     }
   );
 
@@ -355,8 +404,8 @@ async function main() {
         eligible:
           eligibleStories.length,
 
-        fresh:
-          freshStories.length,
+        selected:
+          selectedStories.length,
 
         generated:
           finalPosts.length,
