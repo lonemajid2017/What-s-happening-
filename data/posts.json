@@ -1,30 +1,4 @@
 {
-  "updatedAt": "2026-08-15T22:45:10.455Z",
-  "posts": [
-    {
-      "id": "416c244ca3c4e59dfc2c1be4",
-      "storyId": "c13fb900",
-      "post": "Iran and Oman are nearing an agreement on managing traffic through the Strait of Hormuz. According to the Spokane Spokesman-Review, both countries agreed on specific shipping routes in an effort to address a key hurdle in resolving nearly six months of conflict between Iran and the U.S.",
-      "source": "Spokane Spokesman-Review",
-      "url": "https://www.spokesman.com/stories/2026/aug/15/iran-oman-home-in-on-hormuz-strait-deal-as-ship-at/",
-      "category": "USA",
-      "importance": 55,
-      "verified": false,
-      "publishedAt": "2026-08-15T10:43:00.000Z",
-      "age": "12 hours ago",
-      "ageMinutes": 722,
-      "imageAvailable": true,
-      "imageUrl": "https://media.spokesman.com/graphics/2020/08/sr_placeholder.png",
-      "imageDownloadUrl": "https://media.spokesman.com/graphics/2020/08/sr_placeholder.png",
-      "imageSource": "Spokane Spokesman-Review",
-      "videoAvailable": false,
-      "videoUrl": null,
-      "videoSource": null,
-      "sources": [
-        "Spokane Spokesman-Review"
-      ],
-      "createdAt": "2026-08-15T22:45:10.455Z",
-      "ready": true
-    }
-  ]
+  "updatedAt": "2026-08-15T22:48:39.273Z",
+  "posts": []
 }
