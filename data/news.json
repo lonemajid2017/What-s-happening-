@@ -1,6 +1,31 @@
 {
-  "updatedAt": "2026-08-15T21:40:32.676Z",
+  "updatedAt": "2026-08-15T22:22:40.115Z",
   "stories": [
+    {
+      "id": "eb1cb13c",
+      "title": "Trump shows off article on lower drug prices that says Biden deserves credit, not him",
+      "description": "US president credits himself with lowest drug prices in 60 years, when article says drop is more likely due to Biden",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/trump-washington-post-drug-prices",
+      "imageUrl": "https://media.guim.co.uk/b5ec570afc2dee43bb60935bd60f1a08bb21d097/688_0_6880_5504/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/b5ec570afc2dee43bb60935bd60f1a08bb21d097/688_0_6880_5504/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T22:02:49.000Z",
+      "age": "19 minutes ago",
+      "ageMinutes": 20,
+      "category": "USA",
+      "importance": 60,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T22:22:39.228Z",
+      "finalScore": 119
+    },
     {
       "id": "2402178a",
       "title": "Borges and Me review – a sweetly imagined literary odyssey through the Highlands",
@@ -2013,6 +2038,31 @@
       "fetchedAt": "2026-08-15T19:31:55.432Z"
     },
     {
+      "id": "f29f6e1c",
+      "title": "‘He had magnetism’: Lula returns to site of political origins to launch fourth-term campaign",
+      "description": "Brazil’s president was union chief who led metalworkers’ strikes of 1979-80 that paved the way for return of democracy",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/brazil-president-lula-strikes-launch-fourth-term-campaign",
+      "imageUrl": "https://media.guim.co.uk/b589890736d1b706dfd534b6989211db12b21658/689_355_2698_2158/1000.jpg",
+      "imageSource": "The Guardian",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://media.guim.co.uk/b589890736d1b706dfd534b6989211db12b21658/689_355_2698_2158/1000.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T13:00:56.000Z",
+      "age": "9 hours ago",
+      "ageMinutes": 562,
+      "category": "World",
+      "importance": 58,
+      "verified": true,
+      "sources": [
+        "The Guardian"
+      ],
+      "fetchedAt": "2026-08-15T22:22:39.254Z",
+      "finalScore": 85
+    },
+    {
       "id": "1563d308",
       "title": "Chad bans sand extraction along Chari River, sparking controversy",
       "description": "In Chad, the Chari River has been badly affected by years of intensive sand extraction along its banks, particularly around the capital, N’Djamena. The Ministry of Mines recently banned the practice to protect the environment and wildlife, but the decision has sparked controversy as thousands of people in the capital depend on sand mining for their livelihoods.",
@@ -2556,15 +2606,16 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T11:00:54.000Z",
-      "age": "10 hours ago",
-      "ageMinutes": 640,
+      "age": "11 hours ago",
+      "ageMinutes": 682,
       "category": "China",
-      "importance": 71,
+      "importance": 60,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T21:40:31.647Z"
+      "fetchedAt": "2026-08-15T22:22:39.229Z",
+      "finalScore": 87
     },
     {
       "id": "8f986ef9",
@@ -2596,6 +2647,81 @@
         "Euronews"
       ],
       "fetchedAt": "2026-08-15T20:19:20.120Z"
+    },
+    {
+      "id": "4d5ac0fb",
+      "title": "Defiant Iran Spits Fire. Middle East Peace Hopes Flounder Amid Rage",
+      "description": "A defiant Iran has said the United States and should accept defeat and President Donald Trump termed Iran as evil as the war of words and the Middle East conflict continues unabated. Iran's defiance",
+      "source": "International Business Times",
+      "url": "https://www.ibtimes.com/defiant-iran-spits-fire-middle-east-peace-hopes-flounder-amid-rage-3806445",
+      "imageUrl": "https://d.ibtimes.com/en/full/4652118/picture-us-president-donald-trump.jpg",
+      "imageSource": "International Business Times",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://d.ibtimes.com/en/full/4652118/picture-us-president-donald-trump.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T10:18:35.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 724,
+      "category": "USA",
+      "importance": 50,
+      "verified": false,
+      "sources": [
+        "International Business Times"
+      ],
+      "fetchedAt": "2026-08-15T22:22:39.223Z",
+      "finalScore": 61
+    },
+    {
+      "id": "32fbc7b1",
+      "title": "Trump Says He’ll ‘Soon’ Declare Strait of Hormuz US Territory",
+      "description": "Trump has repeatedly said that the key energy waterway, which Tehran effectively closed at the start of the Middle East war, is under US control -- an assertion the Islamic republic denies.",
+      "source": "Deccan Chronicle",
+      "url": "https://www.deccanchronicle.com/world/trump-says-hell-soon-declare-strait-of-hormuz-us-territory-1979386",
+      "imageUrl": "https://www.deccanchronicle.com/h-upload/2026/08/15/2076555-aa-7950188.jpg",
+      "imageSource": "Deccan Chronicle",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://www.deccanchronicle.com/h-upload/2026/08/15/2076555-aa-7950188.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T10:16:32.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 726,
+      "category": "Middle East",
+      "importance": 45,
+      "verified": false,
+      "sources": [
+        "Deccan Chronicle"
+      ],
+      "fetchedAt": "2026-08-15T22:22:39.224Z",
+      "finalScore": 56
+    },
+    {
+      "id": "f371dca3",
+      "title": "America’s murder rate hits a 70-year low, and Trump is taking credit",
+      "description": "A sharp fall in killings and violent crime gives the US president a new political talking point ahead of the November elections.",
+      "source": "Moneycontrol",
+      "url": "https://www.moneycontrol.com/world/america-s-murder-rate-hits-a-70-year-low-and-trump-is-taking-credit-article-14006410.html",
+      "imageUrl": "https://images.moneycontrol.com/static-mcnews/2026/08/20260808071723_Trump-tout.jpg",
+      "imageSource": "Moneycontrol",
+      "imageAvailable": true,
+      "imageDownloadUrl": "https://images.moneycontrol.com/static-mcnews/2026/08/20260808071723_Trump-tout.jpg",
+      "videoUrl": null,
+      "videoSource": null,
+      "videoAvailable": false,
+      "publishedAt": "2026-08-15T10:15:48.000Z",
+      "age": "12 hours ago",
+      "ageMinutes": 727,
+      "category": "USA",
+      "importance": 50,
+      "verified": false,
+      "sources": [
+        "Moneycontrol"
+      ],
+      "fetchedAt": "2026-08-15T22:22:39.225Z",
+      "finalScore": 61
     },
     {
       "id": "3c1fee8a",
@@ -2973,15 +3099,16 @@
       "videoSource": null,
       "videoAvailable": false,
       "publishedAt": "2026-08-15T01:53:30.000Z",
-      "age": "19 hours ago",
-      "ageMinutes": 1187,
+      "age": "20 hours ago",
+      "ageMinutes": 1229,
       "category": "Russia-Ukraine",
-      "importance": 89,
+      "importance": 85,
       "verified": true,
       "sources": [
         "The Guardian"
       ],
-      "fetchedAt": "2026-08-15T21:40:31.648Z"
+      "fetchedAt": "2026-08-15T22:22:39.235Z",
+      "finalScore": 104
     },
     {
       "id": "91878018",

@@ -1,6 +1,30 @@
 {
-  "updatedAt": "2026-08-15T20:38:39.843Z",
+  "updatedAt": "2026-08-15T22:22:45.381Z",
   "posts": [
+    {
+      "id": "bd6d18de97b2b4e5676234f5",
+      "storyId": "eb1cb13c",
+      "post": "The Guardian reports that Donald Trump took credit for the lowest US drug prices in 60 years by highlighting an article, despite the piece actually attributing the price decrease to Joe Biden.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/15/trump-washington-post-drug-prices",
+      "category": "USA",
+      "importance": 60,
+      "publishedAt": "2026-08-15T22:02:49.000Z",
+      "createdAt": "2026-08-15T22:22:45.381Z",
+      "ready": true
+    },
+    {
+      "id": "1f6134bc75452e622229c444",
+      "storyId": "f29f6e1c",
+      "post": "Brazilian President Lula has launched his fourth-term campaign by returning to the site of his political origins, where he led historic metalworkers' strikes in 1979 and 1980, according to The Guardian.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/15/brazil-president-lula-strikes-launch-fourth-term-campaign",
+      "category": "World",
+      "importance": 58,
+      "publishedAt": "2026-08-15T13:00:56.000Z",
+      "createdAt": "2026-08-15T22:22:45.381Z",
+      "ready": true
+    },
     {
       "id": "747343bb7fab10ffa30b563d",
       "storyId": "2402178a",
