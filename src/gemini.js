@@ -2,10 +2,11 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 const MODEL = "gemini-3.6-flash";
 
+const API_URL =
+  `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
+
 function cleanJsonText(text) {
-  if (!text) {
-    return "";
-  }
+  if (!text) return "";
 
   let value = String(text).trim();
 
@@ -23,10 +24,7 @@ function cleanJsonText(text) {
     lastArray !== -1 &&
     lastArray > firstArray
   ) {
-    value = value.slice(
-      firstArray,
-      lastArray + 1
-    );
+    value = value.slice(firstArray, lastArray + 1);
   }
 
   return value.trim();
@@ -36,8 +34,7 @@ function getResponseText(data) {
   return (
     data?.candidates?.[0]?.content?.parts
       ?.map(part => part?.text || "")
-      .join("") ||
-    ""
+      .join("") || ""
   );
 }
 
@@ -52,12 +49,8 @@ function validatePosts(posts, stories) {
 
   return posts
     .map(item => ({
-      storyId: String(
-        item?.storyId || ""
-      ),
-      post: String(
-        item?.post || ""
-      ).trim()
+      storyId: String(item?.storyId || ""),
+      post: String(item?.post || "").trim()
     }))
     .filter(item => {
       if (!item.storyId) {
@@ -99,7 +92,7 @@ export async function generatePosts(stories) {
   const compactStories =
     selectedStories.map(story => ({
       storyId: String(story.id),
-      title: story.title,
+      title: story.title || "",
       description:
         story.description || "",
       source:
@@ -109,9 +102,7 @@ export async function generatePosts(stories) {
       category:
         story.category || "World",
       importance:
-        story.importance || 0,
-      url:
-        story.url || ""
+        story.importance || 0
     }));
 
   const prompt = `
@@ -150,10 +141,6 @@ ${JSON.stringify(
 )}
 `;
 
-  const url =
-    "https://generativelanguage.googleapis.com/v1beta/" +
-    `models/${MODEL}:generateContent`;
-
   const body = {
     contents: [
       {
@@ -167,7 +154,6 @@ ${JSON.stringify(
     ],
 
     generationConfig: {
-      temperature: 0.4,
       responseMimeType:
         "application/json",
 
@@ -199,27 +185,37 @@ ${JSON.stringify(
   let response;
 
   try {
-    response = await fetch(url, {
-      method: "POST",
+    response = await fetch(
+      API_URL,
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type":
-          "application/json",
+        headers: {
+          "Content-Type":
+            "application/json",
 
-        "x-goog-api-key":
-          GEMINI_API_KEY
-      },
+          "x-goog-api-key":
+            GEMINI_API_KEY
+        },
 
-      body: JSON.stringify(body)
-    });
+        body: JSON.stringify(body)
+      }
+    );
   } catch (error) {
     throw new Error(
       `Gemini network request failed: ${error.message}`
     );
   }
 
-  const data =
-    await response.json();
+  let data;
+
+  try {
+    data = await response.json();
+  } catch {
+    throw new Error(
+      `Gemini returned a non-JSON response with HTTP ${response.status}.`
+    );
+  }
 
   if (!response.ok) {
     const message =
@@ -248,10 +244,11 @@ ${JSON.stringify(
   let parsed;
 
   try {
-    parsed = JSON.parse(
-      cleanJsonText(text)
-    );
-  } catch (error) {
+    parsed =
+      JSON.parse(
+        cleanJsonText(text)
+      );
+  } catch {
     console.error(
       "Gemini raw response:",
       text
@@ -270,9 +267,13 @@ ${JSON.stringify(
 
   if (posts.length === 0) {
     throw new Error(
-      "Gemini returned JSON, but no valid posts were found."
+      "Gemini returned JSON, but no valid Tweet posts were found."
     );
   }
 
   return posts;
 }
+
+// Keeps compatibility with existing monitor code.
+export const generateTweetPosts =
+  generatePosts;
