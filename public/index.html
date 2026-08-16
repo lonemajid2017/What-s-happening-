@@ -13,6 +13,11 @@
     content="#0b0f14"
   >
 
+  <meta
+    name="description"
+    content="Latest important global news and X-ready posts."
+  >
+
   <title>What's Happening</title>
 
   <style>
@@ -31,6 +36,10 @@
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -55,6 +64,11 @@
       cursor: pointer;
     }
 
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -77,6 +91,7 @@
     .brand h1 {
       margin: 0;
       font-size: 28px;
+      letter-spacing: -0.5px;
     }
 
     .brand p {
@@ -98,6 +113,12 @@
       background: var(--card2);
       color: var(--text);
       font-weight: 700;
+      transition: 0.15s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--blue);
+      transform: translateY(-1px);
     }
 
     .btn.primary {
@@ -106,9 +127,13 @@
       color: #06140f;
     }
 
+    .btn.primary:hover {
+      filter: brightness(1.05);
+    }
+
     .status {
       margin-top: 16px;
-      padding: 10px 12px;
+      padding: 11px 13px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -153,6 +178,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 10px;
       margin-bottom: 12px;
     }
 
@@ -180,12 +206,12 @@
       overflow: hidden;
     }
 
-    .card-content {
-      padding: 15px;
-    }
-
     .card.ready {
       border-color: rgba(56, 211, 159, 0.55);
+    }
+
+    .card-content {
+      padding: 15px;
     }
 
     .news-image {
@@ -258,17 +284,17 @@
       font-size: 11px;
     }
 
+    .post-text {
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
     .card-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 13px;
-    }
-
-    .post-text {
-      white-space: pre-wrap;
-      font-size: 16px;
-      line-height: 1.5;
     }
 
     textarea {
@@ -298,10 +324,25 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 15px;
+      grid-column: 1 / -1;
     }
 
     .danger {
       color: var(--red);
+    }
+
+    .success {
+      color: var(--green);
+    }
+
+    .loading {
+      padding: 25px;
+      text-align: center;
+      color: var(--muted);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      grid-column: 1 / -1;
     }
 
     @media (max-width: 600px) {
@@ -352,6 +393,7 @@
       <button
         class="btn"
         id="notificationButton"
+        type="button"
       >
         Enable Notifications
       </button>
@@ -359,6 +401,7 @@
       <button
         class="btn primary"
         id="refreshButton"
+        type="button"
       >
         Refresh
       </button>
@@ -371,7 +414,7 @@
     class="status"
     id="status"
   >
-    Loading news...
+    Loading latest news...
   </div>
 
   <nav
@@ -382,41 +425,61 @@
   <section class="section">
 
     <div class="section-header">
-      <h2>Tweet Ready</h2>
+
+      <h2>
+        Tweet Ready
+      </h2>
 
       <span id="postCount">
         0 posts
       </span>
+
     </div>
 
     <div
       class="grid"
       id="posts"
-    ></div>
+    >
+      <div class="loading">
+        Loading Tweet Ready posts...
+      </div>
+    </div>
 
   </section>
 
   <section class="section">
 
     <div class="section-header">
-      <h2>Top Stories</h2>
+
+      <h2>
+        Top Stories
+      </h2>
 
       <span id="storyCount">
         0 stories
       </span>
+
     </div>
 
     <div
       class="grid"
       id="stories"
-    ></div>
+    >
+      <div class="loading">
+        Loading stories...
+      </div>
+    </div>
 
   </section>
 
   <section class="section">
 
     <div class="section-header">
-      <h2>Reply Generator</h2>
+
+      <h2>
+        Reply Generator
+      </h2>
+
     </div>
 
     <textarea
@@ -429,6 +492,7 @@
       <button
         class="btn primary"
         id="generateReplies"
+        type="button"
       >
         Generate Replies
       </button>
@@ -449,12 +513,13 @@
 const categories = [
   "All",
   "USA",
-  "Finance",
-  "Crypto",
   "Middle East",
+  "China",
+  "Russia-Ukraine",
   "India",
   "World",
-  "AI & Tech"
+  "AI & Tech",
+  "Finance"
 ];
 
 let activeCategory = "All";
@@ -462,19 +527,28 @@ let activeCategory = "All";
 let newsData = [];
 let postsData = [];
 
-let previousPostIds = new Set();
+let previousPostIds =
+  new Set();
 
 const statusElement =
-  document.getElementById("status");
+  document.getElementById(
+    "status"
+  );
 
 const storiesElement =
-  document.getElementById("stories");
+  document.getElementById(
+    "stories"
+  );
 
 const postsElement =
-  document.getElementById("posts");
+  document.getElementById(
+    "posts"
+  );
 
 const repliesElement =
-  document.getElementById("replies");
+  document.getElementById(
+    "replies"
+  );
 
 function escapeHtml(value) {
 
@@ -532,25 +606,170 @@ function formatDate(date) {
   return parsed.toLocaleString();
 }
 
+function getAgeLabel(item) {
+
+  if (
+    typeof item.age ===
+    "string" &&
+    item.age.trim()
+  ) {
+    return item.age;
+  }
+
+  if (
+    typeof item.ageMinutes ===
+    "number"
+  ) {
+
+    const minutes =
+      Math.max(
+        0,
+        Math.round(
+          item.ageMinutes
+        )
+      );
+
+    if (minutes < 1) {
+      return "just now";
+    }
+
+    if (minutes < 60) {
+      return `${minutes} minute${
+        minutes === 1 ? "" : "s"
+      } ago`;
+    }
+
+    const hours =
+      Math.floor(
+        minutes / 60
+      );
+
+    if (hours < 24) {
+      return `${hours} hour${
+        hours === 1 ? "" : "s"
+      } ago`;
+    }
+  }
+
+  if (item.publishedAt) {
+
+    const date =
+      new Date(
+        item.publishedAt
+      );
+
+    if (
+      !Number.isNaN(
+        date.getTime()
+      )
+    ) {
+
+      const minutes =
+        Math.max(
+          0,
+          Math.floor(
+            (
+              Date.now() -
+              date.getTime()
+            ) / 60000
+          )
+        );
+
+      if (minutes < 1) {
+        return "just now";
+      }
+
+      if (minutes < 60) {
+        return `${minutes} minute${
+          minutes === 1 ? "" : "s"
+        } ago`;
+      }
+
+      const hours =
+        Math.floor(
+          minutes / 60
+        );
+
+      if (hours < 24) {
+        return `${hours} hour${
+          hours === 1 ? "" : "s"
+        } ago`;
+      }
+    }
+  }
+
+  return "Unknown time";
+}
+
 async function copyText(text) {
 
   try {
 
-    await navigator.clipboard.writeText(
-      text
-    );
+    if (
+      navigator.clipboard &&
+      window.isSecureContext
+    ) {
 
-    alert("Copied to clipboard.");
+      await navigator.clipboard.writeText(
+        text
+      );
+
+    } else {
+
+      const textarea =
+        document.createElement(
+          "textarea"
+        );
+
+      textarea.value = text;
+
+      textarea.style.position =
+        "fixed";
+
+      textarea.style.opacity =
+        "0";
+
+      document.body.appendChild(
+        textarea
+      );
+
+      textarea.select();
+
+      document.execCommand(
+        "copy"
+      );
+
+      textarea.remove();
+    }
+
+    showStatus(
+      "Tweet copied to clipboard.",
+      "success"
+    );
 
   } catch {
 
-    alert(
-      "Copy failed. Please copy manually."
+    showStatus(
+      "Copy failed. Please copy the tweet manually.",
+      "danger"
     );
   }
 }
 
-window.copyText = copyText;
+window.copyText =
+  copyText;
+
+function showStatus(
+  message,
+  type = ""
+) {
+
+  statusElement.className =
+    `status ${type}`;
+
+  statusElement.textContent =
+    message;
+}
 
 function renderCategories() {
 
@@ -564,18 +783,22 @@ function renderCategories() {
       .map(category => {
 
         const active =
-          category === activeCategory
+          category ===
+          activeCategory
             ? "active"
             : "";
 
         return `
           <button
             class="tab ${active}"
+            type="button"
             data-category="${escapeHtml(
               category
             )}"
           >
-            ${escapeHtml(category)}
+            ${escapeHtml(
+              category
+            )}
           </button>
         `;
 
@@ -583,7 +806,9 @@ function renderCategories() {
       .join("");
 
   container
-    .querySelectorAll(".tab")
+    .querySelectorAll(
+      ".tab"
+    )
     .forEach(button => {
 
       button.addEventListener(
@@ -603,50 +828,56 @@ function renderCategories() {
 
 function matchesCategory(item) {
 
+  if (
+    activeCategory ===
+    "All"
+  ) {
+    return true;
+  }
+
   return (
-    activeCategory === "All" ||
-    item.category === activeCategory
+    item.category ===
+    activeCategory
   );
 }
 
-function imageBlock(item) {
+function imageBlock(
+  imageUrl,
+  title
+) {
 
-  const imageUrl =
-    safeUrl(item.imageUrl);
+  const safeImage =
+    safeUrl(imageUrl);
 
-  if (!imageUrl) {
+  if (!safeImage) {
 
     return `
       <div class="image-placeholder">
-        No source image available
+        Image unavailable
       </div>
     `;
   }
 
   return `
-    <a
-      href="${escapeHtml(imageUrl)}"
-      target="_blank"
-      rel="noopener noreferrer"
+    <img
+      class="news-image"
+      src="${escapeHtml(
+        safeImage
+      )}"
+      alt="${escapeHtml(
+        title || "News image"
+      )}"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
     >
-      <img
-        class="news-image"
-        src="${escapeHtml(imageUrl)}"
-        alt="${escapeHtml(
-          item.title || "News image"
-        )}"
-        loading="lazy"
-        referrerpolicy="no-referrer"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      >
 
-      <div
-        class="image-placeholder"
-        style="display:none"
-      >
-        Image unavailable
-      </div>
-    </a>
+    <div
+      class="image-placeholder"
+      style="display:none"
+    >
+      Image unavailable
+    </div>
   `;
 }
 
@@ -654,8 +885,10 @@ function renderPosts() {
 
   const filtered =
     postsData
-      .filter(matchesCategory)
-      .slice(0, 50);
+      .filter(
+        matchesCategory
+      )
+      .slice(0, 10);
 
   document.getElementById(
     "postCount"
@@ -666,7 +899,7 @@ function renderPosts() {
 
     postsElement.innerHTML = `
       <div class="empty">
-        No Tweet Ready posts yet.
+        No Tweet Ready posts available.
       </div>
     `;
 
@@ -678,35 +911,56 @@ function renderPosts() {
       .map(post => {
 
         const articleUrl =
-          safeUrl(post.url);
+          safeUrl(
+            post.url
+          );
 
         const imageUrl =
-          safeUrl(post.imageUrl);
+          safeUrl(
+            post.imageUrl ||
+            post.imageDownloadUrl
+          );
+
+        const age =
+          getAgeLabel(
+            post
+          );
 
         return `
-          <article class="card ready">
+          <article
+            class="card ready"
+          >
 
-            ${imageBlock({
+            ${imageBlock(
               imageUrl,
-              title: post.post
-            })}
+              post.post
+            )}
 
-            <div class="card-content">
+            <div
+              class="card-content"
+            >
 
               <div class="meta">
 
                 <span>
                   ${escapeHtml(
-                    post.category
+                    post.category ||
+                    "World"
                   )}
                 </span>
 
                 <span>
-                  ${formatDate(
-                    post.createdAt
+                  ${escapeHtml(
+                    age
                   )}
                 </span>
 
+              </div>
+
+              <div
+                class="badge"
+              >
+                Tweet Ready
               </div>
 
               <div
@@ -721,7 +975,8 @@ function renderPosts() {
               <div class="source">
                 Source:
                 ${escapeHtml(
-                  post.source
+                  post.source ||
+                  "Unknown"
                 )}
               </div>
 
@@ -742,171 +997,14 @@ function renderPosts() {
 
                 <button
                   class="btn primary"
-                  onclick='copyText(${JSON.stringify(
-                    post.post
-                  )})'
+                  type="button"
+                  data-copy-post="${escapeHtml(
+                    post.id ||
+                    ""
+                  )}"
                 >
                   Copy Tweet
                 </button>
-
-                ${
-                  imageUrl
-                    ? `
-                      <a
-                        class="btn"
-                        href="${escapeHtml(
-                          imageUrl
-                        )}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View Image
-                      </a>
-                    `
-                    : ""
-                }
-
-                ${
-                  articleUrl
-                    ? `
-                      <a
-                        class="btn"
-                        href="${escapeHtml(
-                          articleUrl
-                        )}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Source
-                      </a>
-                    `
-                    : ""
-                }
-
-              </div>
-
-            </div>
-
-          </article>
-        `;
-
-      })
-      .join("");
-}
-
-function renderStories() {
-
-  const filtered =
-    newsData
-      .filter(matchesCategory)
-      .slice(0, 50);
-
-  document.getElementById(
-    "storyCount"
-  ).textContent =
-    `${filtered.length} stories`;
-
-  if (!filtered.length) {
-
-    storiesElement.innerHTML = `
-      <div class="empty">
-        No important stories found.
-      </div>
-    `;
-
-    return;
-  }
-
-  storiesElement.innerHTML =
-    filtered
-      .map(story => {
-
-        const articleUrl =
-          safeUrl(story.url);
-
-        const imageUrl =
-          safeUrl(story.imageUrl);
-
-        const sourceNames =
-          story.sources?.length
-            ? story.sources.join(", ")
-            : story.source;
-
-        const badge =
-          story.verified
-            ? `
-              <span class="badge">
-                ✓ Verified source
-              </span>
-            `
-            : `
-              <span class="badge single">
-                Single source report
-              </span>
-            `;
-
-        return `
-          <article class="card">
-
-            ${imageBlock({
-              imageUrl,
-              title: story.title
-            })}
-
-            <div class="card-content">
-
-              <div class="meta">
-
-                <span>
-                  ${escapeHtml(
-                    story.category
-                  )}
-                </span>
-
-                <span>
-                  Importance:
-                  ${escapeHtml(
-                    story.importance
-                  )}
-                </span>
-
-              </div>
-
-              ${badge}
-
-              <div class="headline">
-                ${escapeHtml(
-                  story.title
-                )}
-              </div>
-
-              <div class="description">
-                ${escapeHtml(
-                  story.description || ""
-                )}
-              </div>
-
-              <div class="source">
-                Source:
-                ${escapeHtml(
-                  sourceNames
-                )}
-              </div>
-
-              ${
-                story.imageSource
-                  ? `
-                    <div class="image-credit">
-                      Image source:
-                      ${escapeHtml(
-                        story.imageSource
-                      )}
-                    </div>
-                  `
-                  : ""
-              }
-
-              <div class="card-actions">
 
                 ${
                   imageUrl
@@ -951,192 +1049,152 @@ function renderStories() {
 
       })
       .join("");
-}
 
-function render() {
+  postsElement
+    .querySelectorAll(
+      "[data-copy-post]"
+    )
+    .forEach(button => {
 
-  renderCategories();
-  renderPosts();
-  renderStories();
-}
+      button.addEventListener(
+        "click",
+        () => {
 
-async function loadData() {
+          const post =
+            postsData.find(
+              item =>
+                String(
+                  item.id
+                ) ===
+                String(
+                  button.dataset.copyPost
+                )
+            );
 
-  try {
-
-    const [
-      newsResponse,
-      postsResponse
-    ] = await Promise.all([
-      fetch("/api/news"),
-      fetch("/api/posts")
-    ]);
-
-    if (
-      !newsResponse.ok ||
-      !postsResponse.ok
-    ) {
-      throw new Error(
-        "Unable to load dashboard data."
-      );
-    }
-
-    const news =
-      await newsResponse.json();
-
-    const posts =
-      await postsResponse.json();
-
-    newsData =
-      Array.isArray(news.stories)
-        ? news.stories
-        : [];
-
-    postsData =
-      Array.isArray(posts.posts)
-        ? posts.posts
-        : [];
-
-    previousPostIds =
-      new Set(
-        postsData.map(
-          post => post.id
-        )
-      );
-
-    statusElement.textContent =
-      news.updatedAt
-        ? `Last updated: ${formatDate(
-            news.updatedAt
-          )}`
-        : "Waiting for first news update.";
-
-    render();
-
-  } catch (error) {
-
-    console.error(error);
-
-    statusElement.innerHTML =
-      `<span class="danger">
-        Dashboard data could not be loaded.
-      </span>`;
-  }
-}
-
-async function refreshNews() {
-
-  const button =
-    document.getElementById(
-      "refreshButton"
-    );
-
-  button.disabled = true;
-  button.textContent =
-    "Refreshing...";
-
-  statusElement.textContent =
-    "Fetching latest news and generating posts...";
-
-  try {
-
-    const response =
-      await fetch(
-        "/api/refresh",
-        {
-          method: "POST"
+          if (post) {
+            copyText(
+              post.post
+            );
+          }
         }
       );
 
-    const result =
-      await response.json();
-
-    if (!response.ok) {
-      throw new Error(
-        result.error ||
-        "Refresh failed."
-      );
-    }
-
-    await loadData();
-
-    statusElement.textContent =
-      `Refresh complete. ${
-        result.posts?.length || 0
-      } Tweet Ready posts generated.`;
-
-  } catch (error) {
-
-    console.error(error);
-
-    statusElement.innerHTML =
-      `<span class="danger">
-        ${escapeHtml(
-          error.message
-        )}
-      </span>`;
-
-  } finally {
-
-    button.disabled = false;
-    button.textContent =
-      "Refresh";
-  }
+    });
 }
 
-async function enableNotifications() {
+function renderStories() {
 
-  if (
-    !("Notification" in window)
-  ) {
+  const filtered =
+    newsData
+      .filter(
+        matchesCategory
+      )
+      .slice(0, 10);
 
-    alert(
-      "This browser does not support notifications."
-    );
+  document.getElementById(
+    "storyCount"
+  ).textContent =
+    `${filtered.length} stories`;
+
+  if (!filtered.length) {
+
+    storiesElement.innerHTML = `
+      <div class="empty">
+        No important stories found.
+      </div>
+    `;
 
     return;
   }
 
-  const permission =
-    await Notification.requestPermission();
+  storiesElement.innerHTML =
+    filtered
+      .map(story => {
 
-  if (permission === "granted") {
+        const articleUrl =
+          safeUrl(
+            story.url
+          );
 
-    new Notification(
-      "What's Happening",
-      {
-        body:
-          "Tweet Ready notifications are enabled."
-      }
-    );
+        const imageUrl =
+          safeUrl(
+            story.imageUrl ||
+            story.imageDownloadUrl
+          );
 
-  } else {
+        const sourceNames =
+          Array.isArray(
+            story.sources
+          ) &&
+          story.sources.length
+            ? story.sources.join(
+                ", "
+              )
+            : story.source ||
+              "Unknown";
 
-    alert(
-      "Notification permission was not granted."
-    );
-  }
-}
+        const badge =
+          story.verified
+            ? `
+              <span
+                class="badge"
+              >
+                Verified source
+              </span>
+            `
+            : `
+              <span
+                class="badge single"
+              >
+                Single source
+              </span>
+            `;
 
-async function checkForNewPosts() {
+        return `
+          <article
+            class="card"
+          >
 
-  try {
+            ${imageBlock(
+              imageUrl,
+              story.title
+            )}
 
-    const response =
-      await fetch("/api/posts");
+            <div
+              class="card-content"
+            >
 
-    if (!response.ok) {
-      return;
-    }
+              <div class="meta">
 
-    const data =
-      await response.json();
+                <span>
+                  ${escapeHtml(
+                    story.category ||
+                    "World"
+                  )}
+                </span>
 
-    const posts =
-      Array.isArray(data.posts)
-        ? data.posts
-        : [];
+                <span>
+                  ${escapeHtml(
+                    getAgeLabel(
+                      story
+                    )
+                  )}
+                </span>
 
-    const newPosts =
-      posts.filter(
-    
+              </div>
+
+              ${badge}
+
+              <div class="headline">
+                ${escapeHtml(
+                  story.title
+                )}
+              </div>
+
+              ${
+                story.description
+                  ? `
+                    <div class="description">
+                      ${escapeHtml(
+                        story.description
+               
