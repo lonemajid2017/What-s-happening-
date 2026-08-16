@@ -1198,3 +1198,653 @@ function renderStories() {
                       ${escapeHtml(
                         story.description
                
+                      </div>
+                    `
+                    : ""
+              }
+
+              <div class="source">
+                Source:
+                ${escapeHtml(
+                  sourceNames
+                )}
+              </div>
+
+              ${
+                typeof story.importance ===
+                "number"
+                  ? `
+                    <div class="image-credit">
+                      Importance:
+                      ${escapeHtml(
+                        story.importance
+                      )}/100
+                    </div>
+                  `
+                  : ""
+              }
+
+              ${
+                story.imageSource
+                  ? `
+                    <div class="image-credit">
+                      Image source:
+                      ${escapeHtml(
+                        story.imageSource
+                      )}
+                    </div>
+                  `
+                  : ""
+              }
+
+              <div class="card-actions">
+
+                ${
+                  imageUrl
+                    ? `
+                      <a
+                        class="btn"
+                        href="${escapeHtml(
+                          imageUrl
+                        )}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Image
+                      </a>
+                    `
+                    : ""
+                }
+
+                ${
+                  articleUrl
+                    ? `
+                      <a
+                        class="btn"
+                        href="${escapeHtml(
+                          articleUrl
+                        )}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Original Article
+                      </a>
+                    `
+                    : ""
+                }
+
+              </div>
+
+            </div>
+
+          </article>
+        `;
+
+      })
+      .join("");
+}
+
+function render() {
+
+  renderCategories();
+  renderPosts();
+  renderStories();
+}
+
+async function loadData() {
+
+  try {
+
+    const [
+      newsResponse,
+      postsResponse
+    ] = await Promise.all([
+      fetch(
+        "/api/news",
+        {
+          cache: "no-store"
+        }
+      ),
+
+      fetch(
+        "/api/posts",
+        {
+          cache: "no-store"
+        }
+      )
+    ]);
+
+    if (
+      !newsResponse.ok ||
+      !postsResponse.ok
+    ) {
+      throw new Error(
+        "Unable to load dashboard data."
+      );
+    }
+
+    const news =
+      await newsResponse.json();
+
+    const posts =
+      await postsResponse.json();
+
+    newsData =
+      Array.isArray(
+        news.stories
+      )
+        ? news.stories
+        : [];
+
+    postsData =
+      Array.isArray(
+        posts.posts
+      )
+        ? posts.posts
+        : [];
+
+    const currentIds =
+      new Set(
+        postsData.map(
+          post =>
+            String(
+              post.id
+            )
+        )
+      );
+
+    previousPostIds =
+      currentIds;
+
+    if (
+      news.updatedAt
+    ) {
+
+      showStatus(
+        `Last updated: ${formatDate(
+          news.updatedAt
+        )}`
+      );
+
+    } else {
+
+      showStatus(
+        "News loaded."
+      );
+    }
+
+    render();
+
+  } catch (error) {
+
+    console.error(
+      error
+    );
+
+    showStatus(
+      "Dashboard data could not be loaded.",
+      "danger"
+    );
+  }
+}
+
+async function refreshNews() {
+
+  const button =
+    document.getElementById(
+      "refreshButton"
+    );
+
+  button.disabled =
+    true;
+
+  button.textContent =
+    "Refreshing...";
+
+  showStatus(
+    "Fetching latest news and generating posts..."
+  );
+
+  try {
+
+    const response =
+      await fetch(
+        "/api/refresh",
+        {
+          method: "POST"
+        }
+      );
+
+    const result =
+      await response.json();
+
+    if (!response.ok) {
+
+      throw new Error(
+        result.error ||
+        "Refresh failed."
+      );
+    }
+
+    await loadData();
+
+    showStatus(
+      `Refresh complete. ${
+        Array.isArray(
+          result.posts
+        )
+          ? result.posts.length
+          : postsData.length
+      } Tweet Ready posts available.`,
+      "success"
+    );
+
+  } catch (error) {
+
+    console.error(
+      error
+    );
+
+    showStatus(
+      error.message ||
+      "Refresh failed.",
+      "danger"
+    );
+
+  } finally {
+
+    button.disabled =
+      false;
+
+    button.textContent =
+      "Refresh";
+  }
+}
+
+async function enableNotifications() {
+
+  if (
+    !("Notification" in window)
+  ) {
+
+    alert(
+      "This browser does not support notifications."
+    );
+
+    return;
+  }
+
+  try {
+
+    const permission =
+      await Notification.requestPermission();
+
+    if (
+      permission ===
+      "granted"
+    ) {
+
+      new Notification(
+        "What's Happening",
+        {
+          body:
+            "Tweet Ready notifications are enabled."
+        }
+      );
+
+      showStatus(
+        "Notifications enabled.",
+        "success"
+      );
+
+    } else {
+
+      showStatus(
+        "Notification permission was not granted.",
+        "danger"
+      );
+    }
+
+  } catch (error) {
+
+    console.error(
+      error
+    );
+
+    showStatus(
+      "Unable to enable notifications.",
+      "danger"
+    );
+  }
+}
+
+async function checkForNewPosts() {
+
+  try {
+
+    const response =
+      await fetch(
+        "/api/posts",
+        {
+          cache: "no-store"
+        }
+      );
+
+    if (!response.ok) {
+      return;
+    }
+
+    const data =
+      await response.json();
+
+    const posts =
+      Array.isArray(
+        data.posts
+      )
+        ? data.posts
+        : [];
+
+    if (
+      previousPostIds.size ===
+      0
+    ) {
+
+      previousPostIds =
+        new Set(
+          posts.map(
+            post =>
+              String(
+                post.id
+              )
+          )
+        );
+
+      return;
+    }
+
+    const newPosts =
+      posts.filter(
+        post =>
+          !previousPostIds.has(
+            String(
+              post.id
+            )
+          )
+      );
+
+    if (
+      newPosts.length > 0 &&
+      "Notification" in window &&
+      Notification.permission ===
+        "granted"
+    ) {
+
+      new Notification(
+        "Tweet Ready",
+        {
+          body:
+            `${newPosts.length} new tweet${
+              newPosts.length === 1
+                ? ""
+                : "s"
+            } ready to post.`
+        }
+      );
+    }
+
+    previousPostIds =
+      new Set(
+        posts.map(
+          post =>
+            String(
+              post.id
+            )
+        )
+      );
+
+    if (
+      newPosts.length > 0
+    ) {
+
+      await loadData();
+    }
+
+  } catch (error) {
+
+    console.error(
+      "New post check failed:",
+      error
+    );
+  }
+}
+
+async function generateReplies() {
+
+  const input =
+    document.getElementById(
+      "replyInput"
+    );
+
+  const button =
+    document.getElementById(
+      "generateReplies"
+    );
+
+  const text =
+    input.value.trim();
+
+  if (!text) {
+
+    showStatus(
+      "Paste an X post first.",
+      "danger"
+    );
+
+    return;
+  }
+
+  button.disabled =
+    true;
+
+  button.textContent =
+    "Generating...";
+
+  repliesElement.innerHTML = `
+    <div class="loading">
+      Generating replies...
+    </div>
+  `;
+
+  try {
+
+    const response =
+      await fetch(
+        "/api/replies",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json"
+          },
+
+          body:
+            JSON.stringify({
+              text
+            })
+        }
+      );
+
+    const result =
+      await response.json();
+
+    if (!response.ok) {
+
+      throw new Error(
+        result.error ||
+        "Reply generation failed."
+      );
+    }
+
+    const replies =
+      Array.isArray(
+        result.replies
+      )
+        ? result.replies
+        : [];
+
+    if (!replies.length) {
+
+      repliesElement.innerHTML = `
+        <div class="empty">
+          No replies were generated.
+        </div>
+      `;
+
+      return;
+    }
+
+    repliesElement.innerHTML =
+      replies
+        .map(
+          reply => `
+            <article class="card">
+
+              <div class="card-content">
+
+                <div class="post-text">
+                  ${escapeHtml(
+                    typeof reply ===
+                    "string"
+                      ? reply
+                      : reply.text ||
+                        reply.reply ||
+                        ""
+                  )}
+                </div>
+
+                <div class="card-actions">
+
+                  <button
+                    class="btn primary"
+                    type="button"
+                  >
+                    Copy Reply
+                  </button>
+
+                </div>
+
+              </div>
+
+            </article>
+          `
+        )
+        .join("");
+
+    const buttons =
+      repliesElement
+        .querySelectorAll(
+          ".card-actions button"
+        );
+
+    buttons.forEach(
+      (button, index) => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            const reply =
+              replies[index];
+
+            const text =
+              typeof reply ===
+              "string"
+                ? reply
+                : reply.text ||
+                  reply.reply ||
+                  "";
+
+            copyText(
+              text
+            );
+          }
+        );
+      }
+    );
+
+    showStatus(
+      "Replies generated.",
+      "success"
+    );
+
+  } catch (error) {
+
+    console.error(
+      error
+    );
+
+    repliesElement.innerHTML = `
+      <div class="empty danger">
+        ${escapeHtml(
+          error.message ||
+          "Reply generation failed."
+        )}
+      </div>
+    `;
+
+  } finally {
+
+    button.disabled =
+      false;
+
+    button.textContent =
+      "Generate Replies";
+  }
+}
+
+document
+  .getElementById(
+    "refreshButton"
+  )
+  .addEventListener(
+    "click",
+    refreshNews
+  );
+
+document
+  .getElementById(
+    "notificationButton"
+  )
+  .addEventListener(
+    "click",
+    enableNotifications
+  );
+
+document
+  .getElementById(
+    "generateReplies"
+  )
+  .addEventListener(
+    "click",
+    generateReplies
+  );
+
+renderCategories();
+
+loadData();
+
+setInterval(
+  checkForNewPosts,
+  60000
+);
+
+setInterval(
+  loadData,
+  60000
+);
+
+</script>
+
+</body>
+</html>
